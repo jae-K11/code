@@ -28,11 +28,25 @@ a {
     text-decoration: none;
 }
 
+em, address {
+    font-style: normal; /* 글자가 눕는(이탤릭체) 스타일 똑바로 변경 */
+}
+
 /*** end 태그의 기본 스타일 삭제 (초기화) ***/
 .wrapper {
     width: 1260px; /* 포토샵 레이아웃 가이드 너비*/
     margin: 0 auto; /* 가운데 정렬 */
 }
+
+#wrap {
+    min-width: 1300px ; 
+    /* 홈페이지 넓이 1260px에 왼쪽/오른쪽에 여백을 20px정도 줌
+    1260 + 20 + 20 + 1300PX 
+    (브라우저가 줄어들었을때 가로스크롤바가 생겼을떄 왼쪽/오른쪽 여백 )
+    
+    MIN-WIDHT은 늘어나는건 상관없는데 줄어들때 이거보다 줄어들면 안됨 */
+}
+
 header{
     height: 84px ;
     /* header 는 대부분 디자인한 높이를 잡아주고 코딩함 
@@ -133,9 +147,21 @@ header .gnb ul li a {
 }
 .brand .cnt {
     color: rgba(255 , 255 ,255, 0.8); /* 흰색(#FFF) rgb값 255 - opacity 80% */
-    border-top: 1px solid rgba(255 , 255 ,255, 0.2);
+    border-top: 1px solid rgba(255 , 255 ,255, 0.2); /* 윗 실선 */
     padding: 10px 0 0 0 ;
 }
 footer {
-    margin:  200px 0 0 0;
+    padding: 49px 0 57px 0 ;
+    background-color: #2d2d2d;
+    color: rgba(255 , 255 ,255, 0.8);
+}
+footer .f_nav ul {
+    display: flex ;
+    gap : 44px; 
+}
+
+footer .f_info {
+    margin:  15px 0 9px 0;
+    display: flex;
+    gap : 38px ;
 }
