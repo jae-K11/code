@@ -1,0 +1,131 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+
+header {
+    display: flex;
+    justify-content: space-between;
+    /* logo 와 inner를 header 넓이 안에서 좌우 끝 배치 */
+    height: 100px;
+    padding: 0 41px; /* 여백값이 같을때 첫번째가 위아래값 , 두번째가 좌우값 ,
+    마진으로 줘도 상관없음 */
+}
+header .logo {
+    margin: 28px 0 0 0;
+}
+header .inner {
+    display: flex; /* gnb shop(쇼핑몰) 을 좌우로 */
+    align-items: center; /* 위아래 가운데 */
+    }
+ 
+header .inner .gnb ul {
+    display: flex;
+    padding: ;
+    gap: 40px;
+}
+header .inner .gnb ul li a {
+    display: block; /* a의 필수 값 */
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 100px;
+    /* header의 높이랑 1차메뉴의 a의 높이는 같아야함 a에 행간을 header의 높이값으로 준다
+    a의 높이가 생기고 글자는 위아래 가운데 정렬*/
+    padding: 0 18px;
+}
+header .inner .shop {
+    font-size: 20px;
+    font-weight: 700;
+    color: #04581A;
+    border: 1px solid #04581A;
+    padding: 10PX 39PX 10PX 39PX;
+    margin: 0 0 0 41PX;
+    border-radius: 22PX;
+}
+.visual {
+    background: url(../images/visual_bg.jpg) no-repeat center center / cover;
+    height: 600px;
+    color: #fff;
+    margin: 0 40px ;
+    border-radius: 22PX;
+    text-align: center;
+    box-sizing: border-box;
+}
+.visual h2 {
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: 0.03em; /* -30 */
+    padding: 207px 0 23px 0 ;
+}
+.product{
+    margin: 185px 0 0 0 ;
+}
+.product .tit h2 {
+    font-size: 20px;
+  color: #519E04;
+}
+
+.product .tit p {
+    font-size: 45px;
+    font-weight: 700;
+    color: #1d1d1d;
+    letter-spacing: 0.3px ;
+    padding: 22px 0 50px 0 ;
+}
+.product .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product .list ul li {
+    width: 404px;
+}
+.product .list ul li a {
+    display: block;
+
+}
+.product .list ul li a .photo {
+    font-size: 0;
+    line-height: 0;
+    /* 이미지 하단에 여백을 삭제하기 위해서 
+    절대 img태그에 직접주면 적용 안됨 img태그만 감싸는 요소에 줘야함*/
+}
+.product .list ul li a h3 {
+    font-size: 20px;
+    margin: 16px 0 0 0 ;
+    /* 한줄로 제한하는 3가지 */
+    white-space : nowrap ;
+    overflow: hidden; /* 글자 잘라주기 */
+    text-overflow: ellipsis; /* 잘리는 글자를 ...이라고 표시해줌 */
+}
+
+.network {
+    background: url(../images/network_bg.jpg) no-repeat center center / cover ;
+    margin: 110px 0 0 0 ;
+    height: 666px;
+    color: #fff;
+}
+.network h2 {
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: 0.3px ;
+    padding: 264px 0 33px 0 ;
+}
+.network .sub_tit {
+    margin: 0 0 10px 0 ;
+    color: rgba(255,255,255,0.8);
+}
+.network .cont {
+    color: rgba(255,255,255,0.8);
+}
+.network a {
+    display: inline-block;
+    border: 1px solid #FFF;
+    border-radius: 21px;
+    margin: 33px 0 0 0 ;
+    text-align: center;
+    padding: 8px 34px ;
+}
+
+footer{
+    margin: 400px 0 0 0 ;
+}
