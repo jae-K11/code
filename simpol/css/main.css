@@ -20,7 +20,6 @@ header .inner {
  
 header .inner .gnb ul {
     display: flex;
-    padding: ;
     gap: 40px;
 }
 header .inner .gnb ul li a {
