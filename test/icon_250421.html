@@ -10,11 +10,11 @@
     <div class="img_test">
         <div class="wrapper">
             <h1>svg태그로 아이콘을 저장하는 이유!!</h1>
-            <div class="group"><!-- inner를 좌우를 배치하려고-->
+            <div class="group"><!--inner를 좌우로 배치하려고-->
                 <div class="inner">
                     <h2>svg 이미지</h2>
                     <ul>
-                        <li><img src="images/sms_icon_over.svg" alt="메세지"></li>
+                        <li><img src="images/sms_icon_over.svg" alt="메시지"></li>
                         <li><img src="images/alert_icon_over.svg" alt="알람"></li>
                         <li><img src="images/cart_icon_over.svg" alt="장바구니"></li>
                     </ul>
@@ -22,7 +22,7 @@
                 <div class="inner">
                     <h2>png 이미지</h2>
                     <ul>
-                        <li><img src="images/sms_icon_over.png" alt="메세지"></li>
+                        <li><img src="images/sms_icon_over.png" alt="메시지"></li>
                         <li><img src="images/alert_icon_over.png" alt="알람"></li>
                         <li><img src="images/cart_icon_over.png" alt="장바구니"></li>
                     </ul>
@@ -33,16 +33,104 @@
     <div class="img_svg">
         <div class="wrapper">
             <h1>img태그로 아이콘 코딩하기</h1>
+            <h2>단점</h2>
+            <ul class="item">
+                <li>글자랑 아이콘이 위아래 정렬 X</li>
+                <li>마우스오버 X(마우스 오버했을때 이미지를 교체 - 이건 X)</li>
+            </ul>
+            <div class="btn_wrap">
+                <a href="#">
+                    <span>자세히보기</span>
+                    <!-- i태그라는건 아이콘을 의미함(지금 잘 안씀)
+                         이미지가 의미가 없음.. 그럼 대체텍스트를 비워도 됨 
+                         자세히보기의 꾸미기 아이콘이라서 대체텍스트가 없어도됨
+                         단, alt를 안쓰면 오류라서 alt="" 이렇게 비워둠 -->
+                    <i><img src="images/more_icon1.svg" alt=""></i>
+                </a>
+                <a href="#">
+                    <span>더보기</span>
+                    <i><img src="images/more_icon2.svg" alt=""></i>
+                </a>
+            </div><!--//btn_wrap-->
+            <div class="tnb">
+                <a href="#">
+                    <i><img src="images/lang_icon.svg" alt=""></i>
+                    <span>EN</span>
+                </a>
+                <a href="#">
+                    <i><img src="images/menu_icon.svg" alt=""></i>
+                    <span>메뉴</span>
+                </a>
+            </div><!--//tnb-->
+            <div class="hnb">
+                <a href="#"><img src="images/sms_icon.svg" alt="메시지"></a>
+                <a href="#"><img src="images/alert_icon.svg" alt="알림내역"></a>
+                <a href="#"><img src="images/cart_icon.svg" alt="장바구니"></a>
+            </div><!--hnb-->
         </div>
     </div><!--//img_svg-->
+
     <div class="svg_html">
         <div class="wrapper">
             <h1>svg코드를 html에 입력해서 아이콘 코딩하기</h1>
+            <h2>장점</h2>
+            <ul class="item">
+                <li>이미지를 저장하지 않아도 됨</li>
+                <li>아이콘의 색상 변경이 쉬움 (fill로 색상 변경 가능)</li>
+            </ul>
+            <h2>단점</h2>
+            <ul class="item">
+                <li>html코드가 너무 길다.</li>
+            </ul>
+            <div class="btn_wrap">
+                <a href="#">
+                    <span>자세히보기</span>
+                    <i>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_2_124" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                            <rect x="16" y="16" width="16" height="16" transform="rotate(-180 16 16)" fill="#D9D9D9"/>
+                            </mask>
+                            <g mask="url(#mask0_2_124)">
+                            <path d="M5.33333 1.56417L11.7692 8L5.33333 14.4358L4.38717 13.4897L9.877 8L4.38717 2.51034L5.33333 1.56417Z" fill="#666666"/>
+                            </g>
+                        </svg>                            
+                    </i>
+                </a>
+                <a href="#">
+                    <span>더보기</span>
+                    <i>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_2_127" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                            <rect width="20" height="20" fill="#D9D9D9"/>
+                            </mask>
+                            <g mask="url(#mask0_2_127)">
+                            <path d="M9.16669 10.8333H4.16669V9.16667H9.16669V4.16667H10.8334V9.16667H15.8334V10.8333H10.8334V15.8333H9.16669V10.8333Z" fill="#666666"/>
+                            </g>
+                        </svg>                            
+                    </i>
+                </a>
+            </div>
         </div>
     </div><!--//svg_html-->
+
     <div class="svg_css">
         <div class="wrapper">
             <h1>svg코드를 css에 입력해서 아이콘 코딩하기</h1>
+            <h2>장점</h2>
+            <ul class="item">
+                <li>html 코드가 깔끔함</li>
+                <li>이미지를 별도로 저장하지 않아도 됨</li>
+            </ul>
+            <h2>단점</h2>
+            <ul class="item">
+                <li>css가 복잡함</li>
+                <li>버튼 디자인이 똑같아도 아이콘이 다르면 class명을 별도로 줘야함</li>
+                <li>마우스 오버시 아이콘 색상이 변경되면 수정하는게 어려움</li>
+            </ul>
+            <div class="btn_wrap">
+                <a href="#" class="more1">자세히보기</a>
+                <a href="#" class="more2">더보기</a>
+            </div>
         </div>
     </div><!--//svg_css-->
 </body>

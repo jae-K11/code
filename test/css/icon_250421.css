@@ -3,15 +3,39 @@
 @import url(common.css);
 
 body {
-    color: #3d3d3d;
+    margin: 0 0 400px 0;
 }
 
 h1 {
-    font-size: 50px;
-    font-size: 700;
+    font-size: 40px;
+    font-weight: 800;
     color: #1d1d1d;
     margin: 100px 0 30px 0;
 }
+h2 {
+    font-size: 25px;
+    font-weight: 800;
+    color: #1d1d1d;
+    margin: 25px 0 10px 0;
+}
+ul.item {
+    margin: 10px 0 50px 20px;
+}
+ul.item li {
+    padding: 0 0 0 15px; /* 동그라미가 들어갈 여백 */
+    position: relative; /* before 정렬의 기준 */
+}
+ul.item li::before {
+    content: ""; /* 필수값 */
+    position: absolute; /* li를 기준으로 정렬 */
+    left: 0;
+    top: 10px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%; /* 동그라미 */
+    background-color: #ccc;
+}
+
 .img_test .group {
     display: flex;
     gap: 100px;
@@ -21,4 +45,94 @@ h1 {
 }
 .img_test .group .inner ul li img {
     width: 200px;
+}
+
+.img_svg .btn_wrap {
+    display: flex;
+    gap: 18px;
+}
+.img_svg .btn_wrap a {
+    border: 1px solid #666666;
+    border-radius: 25px;
+    display: flex; /* span i태그 좌우배치 */
+    align-items: center;
+    gap: 18px; /* span과 i 사이여백 */
+    padding: 6px 17px 2px 22px;
+}
+.img_svg .tnb {
+    margin: 50px 0 50px 0;
+}
+
+.svg_html .btn_wrap {
+    display: flex;
+    gap: 18px;
+}
+.svg_html .btn_wrap a {
+    border: 1px solid #666666;
+    border-radius: 25px;
+    display: block; /* a 필수값 */
+    padding: 6px 51px 6px 22px;
+    /* 오른쪽에 i태그 무시하고 여백 계산 */
+    position: relative; /* i태그 정렬의 기준 */
+}
+.svg_html .btn_wrap a i {
+    position: absolute; /* a를 기준으로 정렬 */
+    right: 17px;
+    top: 8px;
+}
+.svg_html .btn_wrap a:hover {
+    border-color: #1E78CC; /* 배경과 같은색으로 테두리색 */
+    background-color: #1E78CC;
+    color: #fff;
+}
+.svg_html .btn_wrap a:hover i svg path {
+    fill: #fff;
+}
+
+.svg_css .btn_wrap {
+    display: flex;
+    gap: 18px;
+}
+.svg_css .btn_wrap a {
+    border: 1px solid #666666;
+    border-radius: 25px;
+    display: block; /* a 필수값 */
+    padding: 6px 51px 6px 22px;
+    position: relative; /* after 정렬의 기준 */
+}
+
+.svg_css .btn_wrap a::before {
+    content: "";
+}
+.svg_css .btn_wrap a::after {
+    content: ""; 
+    /* after/before 가상선택자 필수값  - absolute로 위치를 조정해서 코딩 */
+    position: absolute; /* a를 기준으로 정렬 */
+    right: 17px;
+    /* before/after는 넓이/높이 필수 - background 크기 */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.svg_css .btn_wrap a.more1::after {
+    top: 9px;
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_2_124' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='16' height='16'%3E%3Crect x='16' y='16' width='16' height='16' transform='rotate(-180 16 16)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_2_124)'%3E%3Cpath d='M5.33333 1.56417L11.7692 8L5.33333 14.4358L4.38717 13.4897L9.877 8L4.38717 2.51034L5.33333 1.56417Z' fill='%23666666'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.svg_css .btn_wrap a.more2::after {
+    top: 7px;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_2_127' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_2_127)'%3E%3Cpath d='M9.16669 10.8333H4.16669V9.16667H9.16669V4.16667H10.8334V9.16667H15.8334V10.8333H10.8334V15.8333H9.16669V10.8333Z' fill='%23666666'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.svg_css .btn_wrap a:hover {
+    border-color: #0DA146;
+    background-color: #0DA146;
+    color: #fff;
+}
+.svg_css .btn_wrap a.more1:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_2_124' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='16' height='16'%3E%3Crect x='16' y='16' width='16' height='16' transform='rotate(-180 16 16)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_2_124)'%3E%3Cpath d='M5.33333 1.56417L11.7692 8L5.33333 14.4358L4.38717 13.4897L9.877 8L4.38717 2.51034L5.33333 1.56417Z' fill='%23ffffff'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.svg_css .btn_wrap a.more2:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_2_127' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_2_127)'%3E%3Cpath d='M9.16669 10.8333H4.16669V9.16667H9.16669V4.16667H10.8334V9.16667H15.8334V10.8333H10.8334V15.8333H9.16669V10.8333Z' fill='%23ffffff'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
