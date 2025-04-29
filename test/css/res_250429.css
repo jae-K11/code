@@ -59,7 +59,7 @@
 .news h2 {
     font-size: 45PX;
     font-weight: 800;
-    line-height: 1.5;
+    line-height: 1.2;
     color: #1D1D1D;
 }
 .news .more {
@@ -132,7 +132,7 @@
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
-                .news h2 {
+                .news h2 { 
                     font-size: 17PX;
                     font-weight: 700;
                     line-height: 1.5;
@@ -160,6 +160,77 @@
                     transform: rotate(360deg); /* 아이콘이 돌아감 */
                 }
 }/*@media*/
+.global {
+    margin: 222px 0 0 0 ;
+}
+.global .wrapper {
+    display: flex; /* txt / photo 좌우 배치 */
+    justify-content: space-between;
+}
+.global .txt {
+    width: calc(50% - 12px);
+    /* 2개니까 50%에 둘 사이 여백의 절반 */
+    padding: 34px 0;
+    /* 왼쪽글자의 높이에서 padding만큼 오른쪽 이미지가 늘어남 */
+}
+.global .txt h2 {
+    font-size: 45PX;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #1D1D1D;
+    margin: 0 0 30px 0;
+    position:relative; /* after 정렬의 기준 */
+}
+.global .txt h2::after {
+    content: "";
+    position: absolute; /* h2를 기준으로 정렬 */
+    left: 0;
+    bottom: -14px;
+    width: 130px;
+    height: 1px;
+    background-color: #d8d8d8;
+}
+.global .photo {
+    width: calc(50% - 12px);
+    overflow: hidden; 
+    border-radius: 20px;
+}
+.global .photo img {
+    /* 이미지가 들쑥날쑥해서 최대한 이미지를 맞춤 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width:640px) {
+                .global {
+                    margin: 111px 0 0 0 ;
+                }
+                .global .txt {
+                    width: calc(50% - 8px);
+                    /* 2개니까 50%에 둘 사이 여백의 절반 */
+                    padding: 16px 0;
+                    /* 왼쪽글자의 높이에서 padding만큼 오른쪽 이미지가 늘어남 */
+                }
+                .global .txt h2 {
+                    font-size: 25PX;
+                    margin: 0 0 22px 0;
+                }
+                .global .txt h2 br {
+                    display: none; /* br태그로 인한 줄바꿈 삭제 */
+                }
+                .global .txt p br {
+                    display: none;
+                }
+                .global .txt h2::after {
+                    bottom: -15px;
+                    width: 70px;
+                }
+                .global .photo {
+                    width: calc(50% - 12px);
+                    border-radius: 10px;
+                }
+}/*@media*/
+
 
 
 
