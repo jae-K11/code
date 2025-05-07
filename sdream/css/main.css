@@ -98,7 +98,7 @@ header .tnb .lang {
             header .tnb {
                 display: none; /* 숨김 */
             }
-}/*@media*/
+}/* @media */
 
 .visual {
     background: url(../images/visual_bg.jpg) no-repeat center center / cover ;
@@ -129,3 +129,142 @@ header .tnb .lang {
             };
 }/* @media */
 
+.project {
+    margin: 266px 0 0 0;
+}
+.project .wrapper {
+    display: flex; /* tit 와 list 좌우로 배치 */
+    justify-content: space-between;
+    align-items: flex-start; /* tit의 높이를 존재하는 만큼만 주기 위해서, top상단 고정전에 주는것 */
+}
+.project  .tit {
+    position: sticky; /* 감싸는 wrapper를 기준으로 정렬 무조건 .. sticky- 안보인다 라고 생각하기
+    sticky의 단점 : 감싸는 요소 중 한개라도 overflow:hidden 값을 가지고 있으면 적용안됨
+    사실상 못쓴다고 생각하면 된다*/
+    top: 20px; /* top은 상단에 고정되었을때 위치값 , 좌우정렬값 주면 안됨(flex에서 벗어남)*/
+}
+.project  .tit h2 {
+    color: #0078E9;
+    margin: 19px 0 10px 0;
+}
+.project .list {
+    width: 66.03% ; /* 너비 제한 , 832(사진 2개가로너비) / 1260*100 = 66.03  */
+    margin: 173px 0 0 0; /* 첫번째 사진 여백, 하지만 1줄같이내려감  */
+}
+.project .list ul li:nth-child(even) {
+    /* even - 짝수 ,odd - 홀수 / 짝수 사진 올라가게하기 */
+    transform: translateY(-173px);
+}
+
+.project .list ul {
+    display: flex; /* 사진 가로 정렬 */
+    flex-wrap: wrap; /* 2줄이상 허용 */
+    gap: 24px; /* 이미지 2개 사이의 여백 */
+}
+.project .list ul li {
+    width: calc(50% - 12px) ;
+    /*  li사진의 너비  
+        100% / 한줄에 보일 li의 갯수 = 100/2 = 50% 
+        한줄에 있는 여백에 총합 / 한줄에 보일 li의 갯수 = 24px/2 = 12px 
+        photo에게 너비 주면 안되고 li에게 주는거임 (모바일떄문)       */
+}
+.project .list ul li a {
+    display: block; 
+    position: relative; /* txt 정렬의 기준 */
+}
+.project .list ul li a .photo {
+    overflow: hidden; /* 이미지 제한 */
+    border-radius: 20px;
+    height: 500px; /* 이미지 높이, photo에게 너비 주면 안됨 */
+    position: relative; /* before 정렬의 기준 */
+}
+.project .list ul li a .photo::before {
+    content: "";
+    position: absolute; /*photo를 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    width: 100%; /* 색상 꽉 채워줌 */
+    height: 100%; /* 색상 꽉 채워줌 */
+    background-color: rgba(0,120,233,0.8);
+    opacity: 0; /* 존재는 하는데 안보이게 해줌 */
+    transition: 0.5s; /* 부드럽게 해주는 애니메이션 */
+}
+.project .list ul li a .photo img {
+    /* 이미지를 감싸는 영역 photo 사이즈 만큼만 나오게 리사이즈 */
+    width: 100%;
+    height: 100%; /* 꽉 채워서 사진 들어가는것 */
+    object-fit: cover;
+}
+.project .list ul li a .txt {
+    position: absolute; /* a를 기준으로 정렬  */
+    left: 40px; /* 띄어지는 사진 안쪽 여백 */
+    bottom: 60px; /* 자세히 보기 밑 여백 */
+    width: calc(100% - 80px); /* 왼쪽여백 오른쪽여백의 합 (80px), 사진 안쪽 여백 계산  */
+    color: #fff;
+}
+/* txt여백 주는 다른 방법 padding으로 주는법 
+    .project .list ul li a .txt {
+    position: absolute;
+    left: 0px; 
+    bottom: 0;
+    width: 100%;
+    padding: 0 40px ;
+    color: #fff; 
+} */
+
+.project .list ul li a .txt h3 {
+    font-family: 'Gmarket Sans';
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 0 0 13px 0 ;
+}
+
+.project .list ul li a .txt p {
+    display: none;
+}
+.project .list ul li a .txt span {
+    display: none; /* 숨김 - dispaly:none은 아예 태그가 존재하지 않는 것처럼 코딩됨 */
+    color: rgba(255,255,255,0.6);
+    padding: 0 20px 0 0 ;/* 아이콘과의 여백 */
+    position: relative; /* after정렬의 기준 */
+}
+.project .list ul li a .txt span::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_46_2122' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='15' height='15'%3E%3Crect width='15' height='15' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_46_2122)'%3E%3Cpath d='M9.04713 7.5L4.45338 2.90625C4.29713 2.75 4.22161 2.5651 4.22681 2.35156C4.23202 2.13802 4.31275 1.95313 4.469 1.79688C4.62525 1.64063 4.81015 1.5625 5.02369 1.5625C5.23723 1.5625 5.42213 1.64063 5.57838 1.79688L10.3753 6.60938C10.5003 6.73438 10.594 6.875 10.6565 7.03125C10.719 7.1875 10.7503 7.34375 10.7503 7.5C10.7503 7.65625 10.719 7.8125 10.6565 7.96875C10.594 8.125 10.5003 8.26563 10.3753 8.39063L5.56275 13.2031C5.4065 13.3594 5.22421 13.4349 5.01588 13.4297C4.80754 13.4245 4.62525 13.3438 4.469 13.1875C4.31275 13.0313 4.23463 12.8464 4.23463 12.6328C4.23463 12.4193 4.31275 12.2344 4.469 12.0781L9.04713 7.5Z' fill='white' fill-opacity='0.7'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/******* 오버 했을때 *********/
+.project .list ul li a:hover .photo::before {
+    opacity: 1; /* 마우스를 오버하면 보이게 해줌 ,transition 속성 써야되서 */
+}
+.project .list ul li a:hover .txt p, 
+.project .list ul li a:hover  .txt span  {
+    display: block;  /* none로 숨김거 block 로보여줌 */
+}
+.project .list ul li a:hover .txt span {
+    display: inline-block; /* 아이콘 줘야해서 자세히보기에 딱 맞는 사이즈로  */
+}
+@media screen and (max-width:640px) {
+
+}/*@media*/ 
+
+
+
+
+
+
+
+
+
+
+footer{
+    margin: 1500px 0 0 0;
+}
