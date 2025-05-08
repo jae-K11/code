@@ -6,6 +6,8 @@ body {
     line-height: 1.5; /* 배수 */
     color:#555;
     word-break: keep-all;
+    word-wrap: break-word;
+    /* 단어가 너무 긴 경우 줄바꿈 을 함 */
 }  
 .wrapper {
     width: 1260px;
