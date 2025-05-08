@@ -7,7 +7,7 @@ body {
     color:#555;
     word-break: keep-all;
     word-wrap: break-word;
-    /* 단어가 너무 긴 경우 줄바꿈 을 함 */
+    /* 단어가 너무 긴 경우 강제로 줄바꿈을 함 */
 }  
 .wrapper {
     width: 1260px;
