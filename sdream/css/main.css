@@ -126,7 +126,7 @@ header .tnb .lang {
             }
             .visual p br {
                 display: none; /* 줄바꿈 삭제 */
-            };
+            }
 }/* @media */
 
 .project {
