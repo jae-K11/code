@@ -138,7 +138,7 @@ header .tnb .lang {
     align-items: flex-start; /* tit의 높이를 존재하는 만큼만 주기 위해서, top상단 고정전에 주는것 */
 }
 .project  .tit {
-    position: sticky; /* 감싸는 wrapper를 기준으로 정렬 무조건 .. sticky- 안보인다 라고 생각하기
+    position: sticky; /* 감싸는 wrapper를 기준으로 정렬 무조건 , 감싸는 요소를 고정 
     sticky의 단점 : 감싸는 요소 중 한개라도 overflow:hidden 값을 가지고 있으면 적용안됨
     사실상 못쓴다고 생각하면 된다*/
     top: 20px; /* top은 상단에 고정되었을때 위치값 , 좌우정렬값 주면 안됨(flex에서 벗어남)*/
@@ -218,11 +218,11 @@ header .tnb .lang {
     font-size: 30px;
     font-weight: 700;
     line-height: 1.2;
-    padding: 0 0 13px 0 ;
 }
 
 .project .list ul li a .txt p {
-    display: none;
+    display: none; /* 숨김 -  display: none;은 아예 태그가 존재하지 않은것 처럼 숨김처리됨 */
+    margin: 13px 0 10px 0;
 }
 .project .list ul li a .txt span {
     display: none; /* 숨김 - dispaly:none은 아예 태그가 존재하지 않는 것처럼 코딩됨 */
@@ -241,13 +241,13 @@ header .tnb .lang {
     background-position: center center;
     background-repeat: no-repeat;
 }
+
 @media screen and (min-width:641px) {
                 /******* 오버 했을때 641px 이상(포함) 에서만 작동 *********/
                 .project .list ul li a:hover .photo::before {
                     opacity: 1; /* 마우스를 오버하면 보이게 해줌 ,transition 속성 써야되서 */
                 }
-                .project .list ul li a:hover .txt p, 
-                .project .list ul li a:hover  .txt span  {
+                .project .list ul li a:hover .txt p{
                     display: block;  /* none로 숨김거 block 로보여줌 */
                 }
                 .project .list ul li a:hover .txt span {
@@ -256,7 +256,6 @@ header .tnb .lang {
 }
 
 @media screen and (max-width:640px) { /*640px 이하(포함) 에서만 작동 */
-
                 .project {
                     margin: 109px 0 0 0;
                 }
@@ -267,13 +266,13 @@ header .tnb .lang {
                 }
                 .project  .tit {
                     position: relative; /* sticky를 하기 위해 다른속성(relative) 줌 */
-                    top: auto; /* top 값을 지정하지 않은 것처럼 취소하는 값, 0이랑 다름 */
+                    top: auto; /* auto- 최소화 , top 값을 지정하지 않은 것처럼 취소하는 값, 0이랑 다름 */
                 }
                 .project  .tit h2 {
                     margin: 0 0 11px 0;
                 }
                 .project .list {
-                    width: auto ; /* block요소이기 때문에 100% 들어감 */
+                    width: auto ; /*  auto-최소화, list가 block요소이기 때문에 100% 들어감 */
                     margin: 31px 0 0 0; /* 첫번째 사진 여백, 하지만 1줄같이내려감  */
                 }
 
