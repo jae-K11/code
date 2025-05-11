@@ -626,6 +626,19 @@ header .tnb .lang {
                 padding: 26px 50px; 
                 box-shadow: 3px 3px 10px 0 rgba(0,0,0,0.25); /* 박스 그림자 */
             }
+                .news .list ul li a .subject h3 span {
+                position: relative; /* 밑줄, h3 span태그로 감싼다*/
+            }
+              .news .list ul li a:hover .subject h3 span::after {
+                /* 밑줄 */
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                background-color: #1d1d1d;
+              }
             .news .more:hover {
                 color: #fff;
                 border: 1px solid #3FDDE2;
