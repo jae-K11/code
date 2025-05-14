@@ -198,10 +198,11 @@ header .tnb .search {
     /* 1줄제한*/
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; /* 긴 텍스트 말줄임표를 ,,,로 잘라주는 효과*/
     /* 2줄 제한
     line-height: 1.5;
-    height: 2.8em; */
+    height: 2.8em; /* 행간(1.5)x줄수()= ( 단위는em) 
+    overflow: hidden; */
 }
 .book .book_wrap .list ul li a strong {
     display: block;
@@ -387,7 +388,7 @@ header .tnb .search {
     position: absolute; /* a를 기준으로 정렬 */
     left: 40px;
     bottom: 40px;
-    width: calc(100% - 100px);
+    width: calc(100% - 80px); /* 80= 40px(left)*2 , 왼쪽 오른쪽 다 들어가야되서 */
     z-index: 11; 
     /* z-index 는 숫자가 높은게 위 , 흑백때문에 흰색 잘 보이려고*/
     transition: 0.5s;
@@ -467,12 +468,15 @@ header .tnb .search {
 
 @media screen and (min-width:641px) {
     /**** 오버했을때 pc버전 641px이상 ****/
+    .interview .list ul li a:hover .photo::before {
+        display: none;
+    } 
     .interview .list ul li a:hover .txt {
     opacity: 0;
     }
     .interview .list ul li a:hover .txt_over {
     opacity: 1;
-    bottom: -85px;
+    bottom: -85px; 
     }
     .interview .list ul li a:hover .photo img {
     filter: grayscale(0); /* 이미지 흑백 > 흑백 없음 */
@@ -482,7 +486,7 @@ header .tnb .search {
 @media screen and (max-width:640px) {
                 .interview {
                     background-color: transparent;
-                    margin: 100px 0;
+                    margin: 100px 0 172px 0;
                     padding: 0;
                 }
                 .interview .wrapper {
@@ -497,34 +501,30 @@ header .tnb .search {
                     margin: 0 8px 0 0;
                 }
                 .interview .tit p {
-                    display: none;
+                    display: none; /* 글자 숨김 */
                 }
                 .interview .list {
                     margin: 21px 0 0 0;
                 }
                 .interview .list ul {
-                    display: block;
+                    display: block; /* flex > block */
                 }
                 .interview .list ul li {
-                    width: auto;
+                    width: auto; /* 알아서 너비값 들어감 */
                 }
                 .interview .list ul li:nth-child(2),
                 .interview .list ul li:nth-child(3){
-                    display: none;
+                    display: none; /* 2번 ,3번 숨김 */
                 }
                 .interview .list ul li a .photo {
                     height: 351px; /*이미지 높이*/
                     border-radius: 50px 0 50px 0;
                 }
                 .interview .list ul li a .photo::before {
-                    display: none; 
+                    display: none; /* 안나오게 */
                 }
                 .interview .list ul li a .photo img {
                     filter: grayscale(0); /* 이미지 흑백 1>  칼라 0 */
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    transition: 0.5s; 
                 }
                 .interview .list ul li a .txt {
                     display: none; /* 안나오게 */
@@ -532,10 +532,11 @@ header .tnb .search {
                 .interview .list ul li a .txt_over {
                     position: absolute; /* a를 기준으로 정렬 */
                     left: 0;
-                    bottom: -98px; /* a:hover 했을때 20 더줌, 밑에서 위로 올라가는 애니메이션해야되서 */
+                    bottom: -72px; /* a:hover 했을때 20 더줌, 밑에서 위로 올라가는 애니메이션해야되서 */
                     z-index: 12; /* z-index 는 숫자가 높은게 위 , 백그라운드색상 앞으로 가게*/
-                    width: 282px; /* 백그라운드박스 오른쪽 와 이미지 사진 여백 남은거 */
+                    width: 88.12%; /* 282(글자박스너비)/320(사진박스너비)*100 = 88.12 */
                     padding: 30px 33px 26px 33px;
+                    border-radius: 30px 0 30px 0;
                     opacity: 1;
                 }
                 .interview .list ul li:nth-child(2) a .txt_over {
@@ -584,8 +585,8 @@ header .tnb .search {
 }
 .story .list ul li {
     width: calc(25% - 18px);
-    /* 100/한줄에 보이는 li의 갯수 = 25% 
-    한줄의 여백의 총합 / 한줄에 보이는 li의 갯수 = 24 * 3 (72) / 4 = 18*/
+    /* 100/한줄에 보이는 li의 갯수 = 100/4 = 25% 
+    한줄의 여백의 총합 / 한줄에 보이는 li의 갯수 = 24*3= 72 / 4 = 18px*/
     border: 1px solid #E6E6E6; 
     border-radius: 10px;
 }
@@ -601,18 +602,24 @@ header .tnb .search {
     height: 430px; /* 이미지 긴거*/
 }
 .story .list ul li a .photo img {
+    /* 이미지 꽉채우면서 비율유지*/
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* 빈공간없이 가득채움*/
     transition: 0.5s;
 }
 .story .list ul li a .txt {
-    padding: 11px 10px 17px 10px;
+    padding: 11px 10px 10px 10px;
 }
 .story .list ul li a .txt strong {
     display: block;
     color: #58463C;
     margin: 11px 0 0 0;
+    
+    /* 1줄제한 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .story .list ul li a .txt h3 {
     font-size: 20px;
@@ -621,7 +628,7 @@ header .tnb .search {
       /* 1줄제한*/
       white-space: nowrap;
       overflow: hidden;
-      text-overflow: ellipsis;
+      text-overflow: ellipsis; /* 긴 텍스트 말줄임표를 ,,,로 잘라주는 효과*/
 }
 .story .list ul li a .txt p {
     /* 7줄제한 -- 주의사항 : 절대 padding 주면 안됨
