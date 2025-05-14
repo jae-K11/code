@@ -316,14 +316,377 @@ header .tnb .search {
                     background-size: 25px;
                 }
 }
-
 /*@media */
 
+.interview {
+    background-color: #DDD8D1;
+    padding: 234px 0;
+    margin: 223px 0;
+
+}
+.interview .tit {
+    text-align: center;
+}
+.interview .tit h2 {
+    font-size: 40px;
+    color: #1d1d1d;
+    margin: 0 8px 0 0;
+}
+.interview .list {
+    margin: 47px 0 0 0;
+}
+.interview .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.interview .list ul li {
+    width: calc(33.33% - 40px);
+    /* 100 / li 한줄에 나오는 li 갯수 = 33.33 
+        한줄에 여백의 합 / 한줄에 나오는 li의 갯수 = 60+60= 120 /3 = 120/3 = 40 */
+}
+.interview .list ul li:nth-child(2) {
+    /* 디자인이 무조건 두번째 요소는 스타일이 다름 */
+    margin: 76px 0 0 0;
+}
+.interview .list ul li a {
+    display: block;
+    position: relative; /* txt , txt_over 정렬의 기준 */
+}
+.interview .list ul li a .photo {
+    position: relative; /* before 정렬의 기준 */
+    overflow: hidden;
+    height: 420px; /*이미지 높이*/
+    border-radius: 50px 0 50px 0;
+}
+.interview .list ul li:nth-child(2) a .photo {
+    /* 디자인이 무조건 두번째 요소는 스타일이 다름 */
+    border-radius: 0 50px 0 50px; 
+}
+.interview .list ul li a .photo::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 10; /* 이미지보다 순서를 위로
+     z-index가 없는것 보다 있으면 무조건 위 
+     z-index가 서로 있으면 높은숫자가 위로 올라감 
+     z-index 는 position값이 필수 */
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9));
+    transition: 0.5s;
+}
+.interview .list ul li a .photo img {
+    filter: grayscale(1); /* 이미지 흑백 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s; 
+}
+.interview .list ul li a .txt {
+    position: absolute; /* a를 기준으로 정렬 */
+    left: 40px;
+    bottom: 40px;
+    width: calc(100% - 100px);
+    z-index: 11; 
+    /* z-index 는 숫자가 높은게 위 , 흑백때문에 흰색 잘 보이려고*/
+    transition: 0.5s;
+}
+.interview .list ul li a .txt::after {
+    content: "";
+    position: absolute;
+    right: -13px;
+    top: 27px;
+    width: 38px;
+    height: 38px;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_15_1393' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='80' height='80'%3E%3Crect width='80' height='80' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_15_1393)'%3E%3Cpath d='M38.8302 41.1637H20.9968V38.8304H38.8302V20.9971H41.1635V38.8304H58.9968V41.1637H41.1635V58.9971H38.8302V41.1637Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.interview .list ul li a .txt strong {
+    font-size: 30px;
+    color: #fff;
+}
+.interview .list ul li a .txt_over {
+    position: absolute; /* a를 기준으로 정렬 */
+    left: 0;
+    bottom: -100px; /* a:hover 했을때 20 더줌, 밑에서 위로 올라가는 애니메이션해야되서 */
+    background-color: #58463C;
+    color: #fff;
+    z-index: 12; /* z-index 는 숫자가 높은게 위 , 백그라운드색상 앞으로 가게*/
+    width: calc(100% - 43px); /* 백그라운드박스 오른쪽 와 이미지 사진 여백 남은거 */
+    padding: 44px 40px 35px 40px;
+    border-radius: 50px 0 50px 0;
+
+    opacity: 0;
+    /* 부드럽게 나타났다 사라지는건 display:none으로 구현X 
+        opacity 0 > 1로 변경
+        opacity는 공간을 차지함 (주의요망) */
+    transition: 0.5s;
+}
+.interview .list ul li:nth-child(2) a .txt_over {
+    border-radius: 0 50px 0 50px ;
+}
+.interview .list ul li a .txt_over h3 {
+    font-size: 30px;
+}
+.interview .list ul li a .txt_over p {
+    margin: 10px 0 24px 0;
+    /* 2줄제한 -- 주의사항 : 절대 padding 주면 안됨
+    2줄 제한은 ... 원래 안됨 하지만 만드는 방법은있음  */
+    line-height: 1.5;
+    height: 3em; /* 행간x줄수= (단위는em) */
+    overflow: hidden;
+
+    /* 2줄이상 끝에 ... 해주게 추가하는 코드 */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* 줄수 */
+    word-break: normal; /* 줄바꿈 해제 */
+}
+.interview .list ul li a .txt_over span {
+    display: inline-block; /* block 주면 길어져서 inline-block */
+    color: rgba(255,255,255,0.8);
+    padding: 0 19px 0 0 ;
+    position: relative; /* after 정렬의 기준 */
+}
+.interview .list ul li a .txt_over span::after {
+    content: "";
+    position: absolute; /* span을 기준의 정렬 */
+    top: 2px;
+    right: -3px;
+    height: 20px;
+    width: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_23_296' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='20'%3E%3Crect width='20' height='20' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_23_296)'%3E%3Cpath d='M9.70784 10.2917H5.24951V9.70833H9.70784V5.25H10.2912V9.70833H14.7495V10.2917H10.2912V14.75H9.70784V10.2917Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.interview .more {
+    display: none;
+}
+
+@media screen and (min-width:641px) {
+    /**** 오버했을때 pc버전 641px이상 ****/
+    .interview .list ul li a:hover .txt {
+    opacity: 0;
+    }
+    .interview .list ul li a:hover .txt_over {
+    opacity: 1;
+    bottom: -85px;
+    }
+    .interview .list ul li a:hover .photo img {
+    filter: grayscale(0); /* 이미지 흑백 > 흑백 없음 */
+}
+}/*@media*/
+
+@media screen and (max-width:640px) {
+                .interview {
+                    background-color: transparent;
+                    margin: 100px 0;
+                    padding: 0;
+                }
+                .interview .wrapper {
+                    position: relative; /* more 정렬의 기준 */
+                }
+                .interview .tit {
+                    text-align: left;
+                }
+                .interview .tit h2 {
+                    font-size: 28px;
+                    color: #1d1d1d;
+                    margin: 0 8px 0 0;
+                }
+                .interview .tit p {
+                    display: none;
+                }
+                .interview .list {
+                    margin: 21px 0 0 0;
+                }
+                .interview .list ul {
+                    display: block;
+                }
+                .interview .list ul li {
+                    width: auto;
+                }
+                .interview .list ul li:nth-child(2),
+                .interview .list ul li:nth-child(3){
+                    display: none;
+                }
+                .interview .list ul li a .photo {
+                    height: 351px; /*이미지 높이*/
+                    border-radius: 50px 0 50px 0;
+                }
+                .interview .list ul li a .photo::before {
+                    display: none; 
+                }
+                .interview .list ul li a .photo img {
+                    filter: grayscale(0); /* 이미지 흑백 1>  칼라 0 */
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: 0.5s; 
+                }
+                .interview .list ul li a .txt {
+                    display: none; /* 안나오게 */
+                }
+                .interview .list ul li a .txt_over {
+                    position: absolute; /* a를 기준으로 정렬 */
+                    left: 0;
+                    bottom: -98px; /* a:hover 했을때 20 더줌, 밑에서 위로 올라가는 애니메이션해야되서 */
+                    z-index: 12; /* z-index 는 숫자가 높은게 위 , 백그라운드색상 앞으로 가게*/
+                    width: 282px; /* 백그라운드박스 오른쪽 와 이미지 사진 여백 남은거 */
+                    padding: 30px 33px 26px 33px;
+                    opacity: 1;
+                }
+                .interview .list ul li:nth-child(2) a .txt_over {
+                    border-radius: 0 50px 0 50px ;
+                }
+                .interview .list ul li a .txt_over h3 {
+                    font-size: 20px;
+                }
+                .interview .list ul li a .txt_over p {
+                    margin: 10px 0 5px 0;
+                }
+                .interview .more {
+                    display: block; /* 나타남 */
+                    position: absolute; /* wrapper를 기준으로 정렬 */
+                    right: 0;
+                    top: 0; 
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    background-color: #DDD8D1;
+                    background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_23_155' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='25' height='25'%3E%3Crect width='25' height='25' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_23_155)'%3E%3Cpath d='M11.4583 13.5413H5.20825V11.458H11.4583V5.20801H13.5416V11.458H19.7916V13.5413H13.5416V19.7913H11.4583V13.5413Z' fill='%2358463C'/%3E%3C/g%3E%3C/svg%3E%0A");
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                }
+                .interview .more span {
+                    display: none;
+                }
+}/*@media */
+
+.story {
+    margin: 226px 0 0 0 ;
+} 
+.story .wrapper {
+    position: relative; /* more 정렬의 기준 */
+}
+.story .tit h2 {
+    font-size: 40px;
+    color: #1d1d1d;
+}
+.story .list {
+    margin: 50px 0 0 0 ;
+}
+.story .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.story .list ul li {
+    width: calc(25% - 18px);
+    /* 100/한줄에 보이는 li의 갯수 = 25% 
+    한줄의 여백의 총합 / 한줄에 보이는 li의 갯수 = 24 * 3 (72) / 4 = 18*/
+    border: 1px solid #E6E6E6; 
+    border-radius: 10px;
+}
+.story .list ul li a {
+    display: block;
+}
+.story .list ul li a .photo {
+    overflow: hidden;
+    height: 300px; /*이미지 짧은거*/
+    border-radius: 10px 10px 0 0;
+}
+.story .list ul li.long a .photo {
+    height: 430px; /* 이미지 긴거*/
+}
+.story .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.story .list ul li a .txt {
+    padding: 11px 10px 17px 10px;
+}
+.story .list ul li a .txt strong {
+    display: block;
+    color: #58463C;
+    margin: 11px 0 0 0;
+}
+.story .list ul li a .txt h3 {
+    font-size: 20px;
+    color: #1d1d1d;
+    margin: 10px 0;
+      /* 1줄제한*/
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+}
+.story .list ul li a .txt p {
+    /* 7줄제한 -- 주의사항 : 절대 padding 주면 안됨
+    7줄 제한은 ... 원래 안됨 하지만 만드는 방법은있음  */
+    line-height: 1.5;
+    height: 10.5em; /* 행간x줄수= (단위는em) */
+    overflow: hidden;
+
+    /* 2줄이상 끝에 ... 해주게 추가하는 코드 */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7; /* 줄수 */
+    word-break: normal;
+}
+.story .list ul li.long a .txt p {
+    height: 3em; /* 행간*줄수 (단위는em)*/
+    -webkit-line-clamp: 2; /* 줄수 */
+} 
+.story .more {
+    position: absolute; /* wrapper를 기준으로 정렬 */
+    right: 0;
+    top: 25px; 
+    padding: 0 22px 0 0; /* 아이콘까지의 여백너비*/
+}
+.story .more::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 4px;
+    width: 18px;
+    height: 18px;
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_15_1364' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='18' height='18'%3E%3Crect width='18' height='18' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_15_1364)'%3E%3Cpath d='M8.25 9.75H3.75V8.25H8.25V3.75H9.75V8.25H14.25V9.75H9.75V14.25H8.25V9.75Z' fill='%233D3D3D'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+@media screen and (min-width:641px) {
+    /*** 오버스타일 ***/
+        .story .list ul li a:hover .photo img {
+            transform: scale3d(1.2, 1.2, 1);
+        }
+        .story .list ul li a .txt h3 span {
+            position: relative; /* after 정렬의 기준 */
+        }
+        .story .list ul li a .txt h3 span::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 1px;
+                background-color: #1d1d1d;
+                transition: 0.5s;
+        }
+        .story .list ul li a:hover .txt h3 span::after {
+            width: 100%;
+        }
+        
+}
 
 
+@media screen and (max-width:640px) {
+    /* 모바일 */
 
 
-
+}
 
 
 
