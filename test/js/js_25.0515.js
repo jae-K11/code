@@ -9,7 +9,7 @@
 
 
 $(document).ready(function(){
-    //$('.guoup').addClass('on')
+    //$('.group').addClass('on')
     console.log('document.ready 안 임')
     
     $('.group').on('mouseenter', function(){
@@ -17,11 +17,11 @@ $(document).ready(function(){
         $('.group').addClass('on')
         $('.group span').text('오버했음')
     })
-    $('.guoup').on('mouseleave', function(){
+    $('.group').on('mouseleave', function(){
         //group마우스를 올릴때마다 실행
         $('.group').removeClass('on')
         $('.group span').text('오버전')
-        //sonsole.log('되니?')
+        //console.log('되니?')
     })
 
     //문서가 로딩되고 단 1번만 실행 
