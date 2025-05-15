@@ -371,7 +371,7 @@ header .tnb .lang {
     width: 1605px;
 }
 .webzine .list ul li {
-    width: 297px; /* calc 안함 */
+    width: 297px; /* calc 안함- 브라우저를 줄이면 여백이 고정되고 너비도 고정이라 calc안줌 */
 }
 .webzine .list ul li a {
     display: block;
