@@ -41,3 +41,8 @@ body {
     overflow: hidden;
     color: transparent; /* 칼라 투명 */
 }
+/* 글자를 드래그 해서 선택했을떄 나타나는 스타일 */
+::selection {
+    color: #fff;
+    background-color: #BDAD96;
+  }
