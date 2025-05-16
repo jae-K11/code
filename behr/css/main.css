@@ -98,7 +98,7 @@ header .gnb .gnb_wrap ul li a {
     width: calc(50% + 630px); /* 50% =절반 , 630px = wrapper사이즈(1260) 절반 */
     position: relative;
     left: calc(50% - 630px); /* 50% =절반 , 630px = wrapper사이즈(1260) 절반 */
-    padding: 0px 0 10px 0; /*hidden을 주면 박스가 잘려서 margin말고 padding 줘야함 */
+    padding: 20px 0 10px 0; /*hidden을 주면 박스가 잘려서 margin말고 padding 줘야함 */
     overflow: hidden; /* 가로 스크롤바 삭제 , 하지만 박스그림자가 잘라짐 */
 }
 .webzine .list ul {
