@@ -190,7 +190,7 @@ header .gnb .gnb_wrap ul li a {
 
 @media screen and (max-width:640px) {
                 .webzine {
-                    margin: 240px 0 0 0;
+                    margin: 140px 0 0 0;
                 }
                 .webzine .tit p {
                     margin: 10px 0 0 0;
@@ -319,7 +319,7 @@ header .gnb .gnb_wrap ul li a {
 @media screen and (max-width:640px){
     .brand {
         padding: 110px 0 95px 0;
-        margin: 16px 0 0 0;
+        margin: 140px 0 0 0;
     }
     .brand .tit h2 {
         font-size: 30px;
