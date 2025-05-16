@@ -502,13 +502,13 @@ header .tnb .lang {
                     width: 1345px;
                 }
                 .webzine .list ul li {
-                    width: 250px; /* calc 안함 */
+                    width: 265px; /* calc 안함 */
                 }
                 .webzine .list ul li a {
                     border-radius: 10px;
                 }
                 .webzine .list ul li a .photo {
-                    height: 223px; /* 이미지 높이 */
+                    height: 220px; /* 이미지 높이 */
                 }
                 .webzine .list ul li a .txt {
                     padding: 38px 16px 35px 16px ; /* txt 내부 여백 */
