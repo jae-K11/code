@@ -1,0 +1,255 @@
+@import url(font.css);
+@import url(default.css);
+@import url(common_full.css);
+
+.visual .swiper-slide {
+    height: 800px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+.visual .swiper-slide.popup1 {
+    background-image: url(../images/popup01.jpg);
+}
+.visual .swiper-slide.popup2 {
+    background-image: url(../images/popup02.jpg);
+}
+.visual .swiper-slide.popup3 {
+    background-image: url(../images/popup03.jpg);
+}
+.visual h3 {
+    font-size: 50px;
+    font-weight: 700;
+    padding: 331px 0 28px 0;
+}
+.visual .paging {
+    position: absolute; /* swiper를 기준으로 정렬 */
+    left: 0;
+    bottom: 32px;
+    z-index: 10;
+    width: 100%;
+    display: flex; /* span태그를 좌우로 배치*/
+    justify-content: center; /* 가운데 */
+    gap: 5px;
+}
+.visual .paging .swiper-pagination-bullet { /* 기본 동그라미 스타일 */
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin: 0;
+    background: none;
+    opacity: 1;
+}
+.visual .paging .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    /* 팝업 동그라미 */
+    background-color: #fff;
+}
+.visual .btn_prev {
+    position: absolute; /* swiper 기준의 정렬 */
+    left: 20px;
+    top: 365px;
+    z-index: 10;
+    width: 60px;
+    height: 60px;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_138_66' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='60' height='60'%3E%3Crect width='60' height='60' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_138_66)'%3E%3Cpath d='M25 55L0 30L25 5L29.4375 9.4375L8.875 30L29.4375 50.5625L25 55Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.visual .btn_next {
+    position: absolute; /* swiper 기준의 정렬 */
+    right: 20px;
+    top: 365px;
+    z-index: 10;
+    width: 60px;
+    height: 60px;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_138_66' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='60' height='60'%3E%3Crect width='60' height='60' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_138_66)'%3E%3Cpath d='M25 55L0 30L25 5L29.4375 9.4375L8.875 30L29.4375 50.5625L25 55Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotate(180deg);
+}
+@media screen and (max-width:1440px) {
+    .visual .btn_prev,
+    .visual .btn_next {
+        display: none; /* 숨김 */
+    }
+}/*@media*/
+
+
+@media screen and (max-width:768px) {
+            .visual .swiper-slide {
+                height: 700px;
+            }
+
+            .visual h3 {
+                font-size: 25px;
+                font-weight: 700;
+                padding: 251px 0 28px 0;
+            }
+            .visual .paging {
+                position: absolute; /* swiper를 기준으로 정렬 */
+                left: 0;
+                bottom: 30px;
+                z-index: 10;
+                width: 100%;
+                display: flex; /* span태그를 좌우로 배치*/
+                justify-content: center; /* 가운데 */
+                gap: 5px;
+            }
+}/*@media*/
+
+.biz {
+    margin: 149px 0 0 0;
+}
+.biz .tit h2 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+}
+.biz .list {
+    margin: 35px 0 0 0;
+}
+.biz .list ul li a {
+    display: block;
+}
+.biz .list ul li a .photo {
+    overflow: hidden;
+    height: 264px;
+}
+.biz .list ul li a .photo img {
+    /* 이미지에 맞게 잘들어가는거*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.biz .list ul li a h3 {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+    padding: 23px 0 10px 0;
+}
+
+@media screen and (max-width:768px) {
+    .biz {
+        margin: 64px 0 0 0;
+    }
+    .biz .tit h2 {
+        font-size: 20px;
+    }
+    .biz .list {
+        margin: 23px 0 0 0;
+    }
+    .biz .list ul li a .photo {
+        overflow: hidden;
+        height: 220px;
+    }
+    .biz .list ul li a h3 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #1d1d1d;
+        padding: 20px 0 10px 0;
+    }
+}/*@media*/
+
+.notice {
+    background-color: #243484;
+    color: #fff;
+    padding: 109px 0 172px 0;
+    margin: 142px 0 0 0;
+}
+.notice .tit h2 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.notice .list {
+    margin: 46px 0 0 0;
+    width: calc(50% + 630px); /* wrapper사이즈 1260절반 = 630 을 더함 */
+    /*박스가 왼쪽으로 가게 하는법*/
+    position: relative; 
+    left: calc(50% - 630px)
+}
+.notice .list ul li {
+    width: 404px;
+}
+.notice .list ul li a {
+    display: block;
+    background-color: #fff;
+    color: #3d3d3d;
+    border-radius: 20px;
+}
+.notice .list ul li a .photo {
+    overflow: hidden;
+    height: 313px; /* 이미지 높이*/
+    border-radius: 20px 20px 0 0;
+}
+.notice .list ul li a .photo img {
+    /* 이미지에 맞게 잘들어가는거*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+.notice .list ul li a .txt {
+    padding: 30px 38px;
+}
+.notice .list ul li a .txt h3 {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+    margin: 0 0 10px 0;
+}
+
+@media screen and (max-width:1300px){
+        /* 1300일떄 사이즈 바껴서 wrapper가 무너짐 ,
+        list 영역을맞춰줘야함 왜냐면 밖으로 삐져나옴 */
+
+        .notice .list {
+            width: calc(100% - 20px); /* 모바일 20px*/
+            left: 20px
+        }
+}/*@media*/
+
+
+@media screen and (max-width:768px){
+
+    .notice {
+        padding: 59px 0 119px 0;
+        margin: 38px 0 0 0;
+    }
+    .notice .tit h2 {
+        font-size: 20px;
+    }
+    .notice .list {
+        margin: 28px 0 0 0;
+
+    }
+    .notice .list ul li {
+        width: 244px;
+    }
+    .notice .list ul li a {
+        border-radius: 10px;
+    }
+    .notice .list ul li a .photo {
+        height: 226px; /* 이미지 높이*/
+        border-radius: 10px 10px 0 0;
+    }
+    .notice .list ul li a .txt {
+        padding: 15px 20px;
+    }
+    .notice .list ul li a .txt h3 {
+        font-size: 18px;
+        margin: 0 0 5px 0;
+    }
+
+}/*@media */
+
+
+footer {
+    margin: 500px 0 0 0;
+}
