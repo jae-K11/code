@@ -13,6 +13,7 @@ body {
 }
 #wrap {
     position: relative; /* header 정렬의 기준 */
+    overflow: hidden;
 }
 
 @media screen and (max-width:1300px) { /* 1260 + 20(각각여백) + 20(각각여백) =1300 */

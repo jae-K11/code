@@ -2,6 +2,9 @@
 @import url(font.css);
 @import url(common_full.css);
 
+.visual {
+    position: relative; /* btn_wrap 정렬의 기준 */
+}
 .visual .popup .popup_wrap .popup_item {
     height: 800px;
     color: #fff;
@@ -44,11 +47,9 @@
 }
 .visual ul.slick-dots { /* 팝업 동그라미 */
     position: absolute; /* popup_wrap을 기준으로 정렬 */
-    left: 0;
+    right: 50%; /* 오른쪽에서 왼쪽으로 정렬 */
     bottom: 32px;
-    width: 100%;
     display: flex; /* li를 좌우로 배치 */
-    justify-content: center; /* 가운데 */
     gap: 10px
 }
 .visual ul.slick-dots li button {
@@ -62,18 +63,33 @@
 .visual ul.slick-dots li.slick-active button { /* 동그라미 안에 색 채워짐 */
     background-color: #fff;
 }
+.visual .btn_wrap { 
+    position: absolute; /*visual 기준으로 정렬 */
+    left: calc(50% + 10px);
+    bottom: 29px;
+    display: flex; /* js에서 요소에 display:inline-block을 줘서 코딩이 틀어짐*/
+}
 .visual .btn_wrap .ctrl_stop {
     display: block;
-    width: 50px;
-    height: 50px;
-    background-color: red;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_169_279' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='16' height='16'%3E%3Crect width='16' height='16' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_169_279)'%3E%3Cpath d='M10.6667 12.6668C10.3 12.6668 9.98611 12.5363 9.725 12.2752C9.46389 12.0141 9.33333 11.7002 9.33333 11.3335V4.66683C9.33333 4.30016 9.46389 3.98627 9.725 3.72516C9.98611 3.46405 10.3 3.3335 10.6667 3.3335C11.0333 3.3335 11.3472 3.46405 11.6083 3.72516C11.8694 3.98627 12 4.30016 12 4.66683V11.3335C12 11.7002 11.8694 12.0141 11.6083 12.2752C11.3472 12.5363 11.0333 12.6668 10.6667 12.6668ZM5.33333 12.6668C4.96667 12.6668 4.65278 12.5363 4.39167 12.2752C4.13056 12.0141 4 11.7002 4 11.3335V4.66683C4 4.30016 4.13056 3.98627 4.39167 3.72516C4.65278 3.46405 4.96667 3.3335 5.33333 3.3335C5.7 3.3335 6.01389 3.46405 6.275 3.72516C6.53611 3.98627 6.66667 4.30016 6.66667 4.66683V11.3335C6.66667 11.7002 6.53611 12.0141 6.275 12.2752C6.01389 12.5363 5.7 12.6668 5.33333 12.6668Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
 .visual .btn_wrap .ctrl_play {
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-color: blue;
+    display: none; /* 처음에는 숨김 */
+    width: 15px;
+    height: 15px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_169_292' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='16' height='16'%3E%3Crect width='16' height='16' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_169_292)'%3E%3Cpath d='M5.33325 11.45V4.54997C5.33325 4.36108 5.39992 4.20275 5.53325 4.07497C5.66659 3.94719 5.82214 3.8833 5.99992 3.8833C6.05547 3.8833 6.11381 3.89163 6.17492 3.9083C6.23603 3.92497 6.29436 3.94997 6.34992 3.9833L11.7833 7.4333C11.8833 7.49997 11.9583 7.5833 12.0083 7.6833C12.0583 7.7833 12.0833 7.88886 12.0833 7.99997C12.0833 8.11108 12.0583 8.21663 12.0083 8.31663C11.9583 8.41663 11.8833 8.49997 11.7833 8.56663L6.34992 12.0166C6.29436 12.05 6.23603 12.075 6.17492 12.0916C6.11381 12.1083 6.05547 12.1166 5.99992 12.1166C5.82214 12.1166 5.66659 12.0527 5.53325 11.925C5.39992 11.7972 5.33325 11.6389 5.33325 11.45Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
 }
+
 @media screen and (max-width:1440px) { 
     .visual .slick-prev,
     .visual .slick-next {
@@ -96,4 +112,162 @@
         bottom: 25px;
     }
     
+}/*@media*/
+
+
+.biz {
+    margin: 149px;
+}
+.biz h2 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+}
+.biz .list {
+    margin: 35px 0 0 0;
+    width: calc(100% + 24px);
+}
+.biz .list .list_wrap .list_item {
+    margin-right: 24px;
+}
+.biz .list .list_wrap .list_item a {
+    display: block;
+}
+.biz .list .list_wrap .list_item a .photo {
+    overflow: hidden; /* photo 필수 */
+    height: 264px; /* 높이만 주고 너비는 딴애가 들어감 */
+}
+
+.biz .list .list_wrap .list_item a .photo img {
+    /* photo사이즈대로 알아서 들어가 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.biz .list .list_wrap .list_item a h3 {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1,2;
+    color: #1d1d1d;
+    margin: 23px 0 0 0;
+}
+
+@media screen and (max-width:768px) {
+    .biz {
+        margin: 64px;
+    }
+    .biz h2 {
+        font-size: 20px;
+    }
+    .biz .list {
+        margin: 23px 0 0 0;
+        width: calc(100% + 16px); /* margin-right 같이 바껴야함 */
+    }
+    .biz .list .list_wrap .list_item {
+        margin-right: 16px;
+    }
+    .biz .list .list_wrap .list_item a .photo {
+        overflow: hidden; /* photo 필수 */
+        height: 220px; /* 높이만 주고 너비는 딴애가 들어감 */
+    }
+    
+    .biz .list .list_wrap .list_item a h3 {
+        font-size: 18px;
+        margin: 20px 0 0 0;
+    }
+}/*@media */
+
+.notice {
+    background-color: #243484;
+    margin: 142px 0 0 0;
+    padding: 109px 0 172px 0;
+    color: #fff;
+}
+.notice .tit h2 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.notice .list {
+    margin: 46px 0 0 0;
+    width: calc(50% + 630px); /* 브라우저(1260)의 반 630px */
+    position: relative;
+    left: calc(50% - 630px);/* wrapper 사이즈의 절반 630px */
+}
+.notice .list .list_wrap .list_item {
+    width: 404px;
+    margin-right: 24px;
+}
+.notice .list .list_wrap .list_item a {
+    display: block;
+    background-color: #fff;
+    border-radius: 20px;
+    color: #3d3d3d; 
+}
+
+.notice .list .list_wrap .list_item a .photo {
+    overflow: hidden;
+    height: 313px;
+    border-radius: 20px 20px 0 0;
+}
+.notice .list .list_wrap .list_item a .photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.notice .list .list_wrap .list_item a .txt {
+    padding: 31px 38px; /* 내부여백 */
+}
+.notice .list .list_wrap .list_item a h3 {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+
+@media screen and (max-width:1300px) {
+    .notice .list {
+        width: calc(100% - 20px); /* 모바일 20px */
+        left: 20px
+    }
+}/*@media*/
+
+
+@media screen and (max-width:768px) {
+    .notice {
+        margin: 38px 0 0 0;
+        padding: 59px 0 79px 0;
+    }
+    .notice .tit h2 {
+        font-size: 20px;
+    }
+    .notice .list {
+        margin: 28px 0 0 0;
+    }
+    .notice .list .list_wrap .list_item {
+        width: 404px;
+        margin-right: 24px;
+    }
+    .notice .list .list_wrap .list_item a {
+        border-radius: 10px;
+    }
+    
+    .notice .list .list_wrap .list_item a .photo {
+        height: 226px;
+        border-radius: 10px 10px 0 0;
+    }
+    .notice .list .list_wrap .list_item a .txt {
+        padding: 15px 20px; /* 내부여백 */
+    }
+    .notice .list .list_wrap .list_item a h3 {
+        font-size: 19px;
+        margin: 0 0 5px 0;
+    }
+}
+
+
+
+footer {
+    margin: 1000px 0 0 0;
 }
