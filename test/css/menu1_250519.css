@@ -140,7 +140,7 @@ header .tnb .search {
             color: #3d3d3d;
         }
         header .gnb .gnb_wrap ul.depth1 {
-            height: calc(100% - 56px);
+            height: calc(100% - 56px); /* 56px = header상단높이 */
             margin: 56px 0 0 0; /* 스크롤에 해당하지 않는 상단영역 */
             overflow-y: auto; /* 위아래스크롤바는 내부콘텐츠가 더 길때만 생김 */
             overflow-x: hidden; /* 좌우스크롤바 숨김 */
@@ -157,7 +157,7 @@ header .tnb .search {
             font-size: 22px;
             line-height: 1.2;
             color: #1d1d1d;
-            position: relative; /*after정렬의 기준*/
+            position: relative; /*오른쪽에 아이콘주려고 , after정렬의 기준*/
         }
         header .gnb .gnb_wrap ul.depth1 > li > a::after {
             content: "";
@@ -178,7 +178,7 @@ header .tnb .search {
         }
         header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > a {
             display: block;
-            padding: 5px 0;
+            padding: 5px 0;  /* 위아래 여백 ,행간 사이즈 */
         }
 
         header .gnb .gnb_close {
