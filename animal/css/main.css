@@ -394,9 +394,6 @@ header.fixed .logo a {
             }
 }/*@media*/
 
-
-
-
 .find {
     background-color: #0F4177;
     color: #fff;
@@ -445,11 +442,10 @@ header.fixed .logo a {
 .find .list .tab_content .tab_item > ul > li {
     width: calc(25% - 18px);
     /* 24+24+24 / 1줄에 나타나는 li갯수 4개 =18
-    25%= 4개의 li갯수 (100/4)*/
+    25%=(100/4), 4 = li갯수 */
 }
 .find .list .tab_content .tab_item > ul > li a {
     display: block;
-
 }
 .find .list .tab_content .tab_item > ul > li a .photo {
     overflow: hidden; /* photo 필수값*/
@@ -465,6 +461,7 @@ header.fixed .logo a {
 .find .list .tab_content .tab_item > ul > li a .subject {
     display: flex; /* 좌우로 */
     gap: 16px;
+    align-items: center;
     margin: 18px 0 0 0;
 }
 .find .list .tab_content .tab_item > ul > li a .subject strong {
