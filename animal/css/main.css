@@ -319,6 +319,7 @@ header.fixed .logo a {
     background-image: url(../images/visual_bg3.jpg);
 }
 .visual .swiper-slide .wrapper {
+    /* 글씨를 아래로 내리는경우  wrapper에게 줘야함*/
     height: 700px;
     display: flex;
     flex-direction: column;
@@ -331,7 +332,7 @@ header.fixed .logo a {
     line-height: 1.2;
 }
 .visual .btn_wrap {
-    position: absolute; /* swiper를 기준으로 정렬 */
+    position: absolute; /* swiper를 기준으로 정렬 ,브라우저에 relative 있음 */
     left: 0;
     bottom: 23px;
     z-index: 10;
