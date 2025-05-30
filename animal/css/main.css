@@ -38,7 +38,9 @@ header {
     display: flex; /*logo gnb util 좌우로 배치 */
     justify-content: space-between; /*logo gnb util 양끝 정렬 */
     align-items: center; /* 위아래 가운데 정렬 */
-    padding: 0 20px; /* wrapper 여백 준것 만큼 ,좌우 20px */
+    padding: 0 20px; 
+    /* @media 의 wrapper가 margin 20px 준것만큼,
+    브라우저 사이즈가 줄어들떄 맞아보임 */
 }
 header .logo a {
     display: block;
