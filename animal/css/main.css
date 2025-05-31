@@ -55,7 +55,8 @@ header.fixed {
 }
 header.fixed .logo a {
     background-image: url(../images/logo.svg); 
-    /*fixed 는 ckground-image 로 바껴야함 */
+    /*/*background 이미지만 바뀔경우 background-image 로 바꿔서 등록해야되고
+    만약 background 넣을꺼면 no-repeat 등 뒤에속성 그대로 가져아야함 */ */
 }
 
     
