@@ -1,0 +1,92 @@
+/* 모든 페이지에 공통적으로 들어가는 기본 스타일 */
+html, body {
+    font-family: "Brawler", "Pretendard", sans-serif;
+    /* 앞에 쓴 서체를 적용 하고 지원이 안되면 두번쨰 서채 적용 */
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5; /* 배수 */
+    color:#555;
+    word-break: keep-all;
+    word-wrap: break-word;
+    /* 단어가 너무 긴 경우 강제로 줄바꿈을 함 */
+}  
+.wrapper {
+    width: 1260px;
+    margin: 0 auto; /* 가운데 정렬 */
+}
+#wrap {
+    position: relative; /* header 정렬의 기준 */
+    overflow-x: hidden; /* swiper때문에, 가로스크롤 삭제 ,x-가로만 */
+    width: 100%;
+}
+@media screen and (max-width:1300px) { 
+    /* 20 + 20 = 40 +1260 = 1300*/
+
+    /* 1260 * 0.05(5%) = 63
+    63 + 63 = 126 
+    126 + 1260 = 1386 */
+    .wrapper {
+        width: auto;
+        margin: 0 20px;
+    }
+}
+@media screen and (max-width:768px) {
+    /* 브라우저 넓이가 640px이하에서만 작동 */
+            body {
+                font-size: 16px;
+            }
+}
+/* 글자를 숨겨야 하는 경우 blind 클래스를 적용 */
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    color: transparent; /* 칼라 투명 */
+}
+.skip_nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000; /* 맨위 */
+    width: 100%;
+}
+.skip_nav a {
+    display: block;
+    text-align: center ;
+    padding: 10px 0;
+    background-color: aqua;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: -1000px;
+    width: 100%;
+}
+.skip_nav a:focus {
+    top: 0;
+}
+
+/* css 변수 */
+:root {
+    --header-h: 100px; /*header 높이*/
+    --tit-font-color: #1d1d1d;
+    --point-font-color:  #AA1515;
+    --bold-weight: 700;
+    --tit-font-size: 2.65rem; /* 45px / 17 (body font size) = 2.65*/
+    --tit-line-height: 1.2;
+    --tit-ico:url("data:image/svg+xml,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.952637 5.95994C0.952637 6.16727 0.98258 6.38215 1.06494 6.58571C1.42805 7.49045 2.35268 8.04837 3.52812 7.57715C3.80888 7.46406 11.584 4.3088 11.584 4.3088C11.584 4.3088 8.52187 12.1272 8.40583 12.4175C7.96036 13.5371 8.49567 14.5511 9.40533 14.8904C9.60747 14.9658 9.81711 15.0035 10.023 14.9997C10.7679 14.996 11.423 14.5549 11.745 13.6728C11.7936 13.5409 15.6232 2.9517 15.7055 2.69912C15.7542 2.54834 15.8441 2.19398 15.8441 1.94895C15.8441 1.42496 15.6531 0.931122 15.2825 0.55792C14.9194 0.188486 14.4328 0 13.9199 0C13.6691 0 13.467 0.0452367 13.16 0.14325C12.9766 0.203565 3.10512 3.90167 2.26284 4.21832C1.42057 4.53498 0.952635 5.21353 0.956378 5.95994' fill='%23AA1515'/%3E%3C/svg%3E%0A");;
+    /* 금호 꼬다리 */
+}
+
+@media screen and (max-width:1024px) {
+    :root {
+    --header-h: 56px; /*header 높이*/
+    }
+}
+@media screen and (max-width:768px) { /* 모바일 */
+    :root {
+    --tit-font-size: 1.75rem; /* 28px / 16(body font size) = 1.75 */
+    }
+}
