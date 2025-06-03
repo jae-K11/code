@@ -518,7 +518,7 @@ header.fixed .logo a {
     margin: 16px 0 0 0;
 }
 .find .list .tab_content .tab_item > ul > li a  ul.detail li {
-    display: flex;
+    display: flex; /* flex를 줘야지 1줄제한 같이 바뀜 */
     gap: 5px;
 }
 .find .list .tab_content .tab_item > ul > li a  ul.detail li strong {
