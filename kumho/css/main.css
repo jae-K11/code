@@ -646,10 +646,10 @@ section .tit h2 {
 .service .list[data-bg="bg1"] {
     background-image: url(../images/main/service04.jpg);
 }
-.service .list.bg2[data-bg="bg2"] {
+.service .list[data-bg="bg2"] {
     background-image: url(../images/main/service02.jpg);
 }
-.service .list.bg3[data-bg="bg3"] {
+.service .list[data-bg="bg3"] {
     background-image: url(../images/main/service03.jpg);
 }
 .service .list ul {
