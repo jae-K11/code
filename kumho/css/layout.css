@@ -345,5 +345,160 @@ header.menu_over .util .search .search_open::before {
 }/*@media*/
 
 footer {
-    margin: 1500px 0 0 0; 
+    background-color: var(--tit-color);
+    color: #fff;
+    padding: 5.64em 0 6em 0; /*96/17 102/17 */
+    position: relative; /* top버튼 정렬의 기준 */
+}
+footer .top {
+    position: absolute; /*footer*/
+    right: 1.76em; /* 30/17*/
+    top: 0.76em; /* 13/17 */
+    background-color: var(--point-color);
+    border-radius: 50%;
+    padding: 10px 0 0 0;
+    color: #fff;
+    width: 54px;
+    height: 54px;
+    text-align: center;
+}
+footer .top::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 4px; 
+    width: 0.82em;
+    height: 0.82em;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.83317 13.667L7.83317 3.52116L12.4998 8.18783L13.6665 7.00033L6.99984 0.333659L0.333171 7.00032L1.49984 8.18782L6.1665 3.52116L6.1665 13.667L7.83317 13.667Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+footer .wrapper {
+    display: flex;
+    flex-direction: row-reverse; /* 좌우 반대 */
+    justify-content: space-between;
+    align-items: flex-start; /*family_site를 안늘어나게 하려고 */
+}
+footer .family_site {
+    position: relative; /* ul정렬의 기준점 */
+}
+footer .family_site .family_open {
+    display: block;
+    border: 1px solid #fff;
+    height: 3em;
+    padding: 0.47em 2.70em 0 1.11em ; /* 8/17 46/17  19/17 , 밑여백을 0주고 height높이로 줘서
+    family_site ul의 높이 맞추기 */
+    position: relative;
+}
+footer .family_site .family_open::after {
+    content: "";
+    position: absolute;
+    right: 13px;
+    top: 16px;
+    width: 0.82em;
+    height: 0.47em;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.0018 2.35026L2.10179 7.25025C1.93512 7.41692 1.7379 7.49747 1.51012 7.49192C1.28235 7.48636 1.08512 7.40025 0.918457 7.23359C0.75179 7.06692 0.668457 6.8697 0.668457 6.64192C0.668457 6.41414 0.75179 6.21692 0.918457 6.05025L6.05179 0.93359C6.18513 0.800257 6.33513 0.700257 6.50179 0.63359C6.66846 0.566924 6.83513 0.533591 7.0018 0.533591C7.16846 0.533591 7.33513 0.566924 7.5018 0.63359C7.66846 0.700257 7.81846 0.800257 7.9518 0.93359L13.0851 6.06692C13.2518 6.23359 13.3324 6.42803 13.3268 6.65025C13.3212 6.87247 13.2351 7.06692 13.0685 7.23359C12.9018 7.40025 12.7046 7.48359 12.4768 7.48359C12.249 7.48359 12.0518 7.40025 11.8851 7.23359L7.0018 2.35026Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+footer .family_site ul {
+    display: none;
+    position: absolute; /*family_site 정렬의 기준점*/
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #4E4E4E;
+    padding: 1em 0 1em 1.35em;
+}
+footer .family_site ul li a {
+    display: block;
+    line-height: 1.7;
+}
+footer .f_nav ul {
+    display: flex;
+    gap: 0.2em 2.52em; /*43/17*/
+    flex-wrap: wrap; /*여러줄 허용 */
+}
+footer .f_nav ul li {
+    position: relative; /* */
+}
+footer .f_nav ul li::after {
+    content: "";
+    position: absolute;
+    right: -1.29em; /* gap의 절반정도 */
+    top: 0.4em;
+    width: 1px;
+    height: 0.64em;
+    background-color: rgba(255,255,255,0.2);
+}
+footer .f_nav ul li:last-child::after {
+    display: none;
+}
+footer .f_info {
+    margin: 2.35em 0 3.41em 0; 
+}
+footer .f_info span {
+    margin-right: 2.23em; /* 38/17*/
+    display: inline-block;
+}
+footer .copyright {
+    color: rgba(255,255,255,0.7);
+}
+@media screen and (max-width:1024px) {
+    footer {
+        padding: 5.25em 0 4.93em 0; /*84/16 79/16 */
+    }
+    footer .top {
+        position: absolute; /*footer*/
+        right: 1.76em; /* 30/17*/
+        top: -0.25em; /* 13/17 */
+        transform: translateY(-50%);
+    }
+    footer .wrapper {
+        display: block;
+    }
+    footer .family_site {
+        position: relative; /* ul정렬의 기준점 */
+        margin: 0 0 2.81em 0;
+    }
+    footer .family_site .family_open {
+        display: block;
+        border: 1px solid #fff;
+        height: 3em;
+        width: 100%;
+        max-width: 300px;
+        padding: 0.47em 2.70em 0 1.11em ; /* 8/17 46/17  19/17 , 밑여백을 0주고 height높이로 줘서
+        family_site ul의 높이 맞추기 */
+
+    }
+    footer .family_site .family_open::after {
+        content: "";
+        position: absolute;
+        right: 13px;
+        top: 16px;
+        width: 0.82em;
+        height: 0.47em;
+        background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.0018 2.35026L2.10179 7.25025C1.93512 7.41692 1.7379 7.49747 1.51012 7.49192C1.28235 7.48636 1.08512 7.40025 0.918457 7.23359C0.75179 7.06692 0.668457 6.8697 0.668457 6.64192C0.668457 6.41414 0.75179 6.21692 0.918457 6.05025L6.05179 0.93359C6.18513 0.800257 6.33513 0.700257 6.50179 0.63359C6.66846 0.566924 6.83513 0.533591 7.0018 0.533591C7.16846 0.533591 7.33513 0.566924 7.5018 0.63359C7.66846 0.700257 7.81846 0.800257 7.9518 0.93359L13.0851 6.06692C13.2518 6.23359 13.3324 6.42803 13.3268 6.65025C13.3212 6.87247 13.2351 7.06692 13.0685 7.23359C12.9018 7.40025 12.7046 7.48359 12.4768 7.48359C12.249 7.48359 12.0518 7.40025 11.8851 7.23359L7.0018 2.35026Z' fill='white'/%3E%3C/svg%3E%0A");
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    footer .family_site ul {
+        display: none;
+        position: absolute; /*family_site 정렬의 기준점*/
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #4E4E4E;
+        padding: 1em 0 1em 1.35em;
+    }
+    footer .family_site ul li a {
+        display: block;
+        line-height: 1.7;
+    }
+    footer .f_nav ul {
+        display: flex;
+        gap: 0.2em 2.52em; /*43/17*/
+        flex-wrap: wrap; /*여러줄 허용 */
+    }
 }

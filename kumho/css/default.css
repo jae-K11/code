@@ -27,6 +27,7 @@ button {
     color: inherit;
     line-height: inherit;
     cursor: pointer; /* 마우스 오버시 손바닥 모양으로 바뀌는 거 */
+    text-align: left;
 }
 * {
     margin: 0;
