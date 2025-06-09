@@ -32,7 +32,7 @@ html, body {
 }
 @media screen and (max-width:768px) {
     /* 브라우저 넓이가 640px이하에서만 작동 */
-            body {
+        html, body {
                 font-size: 16px;
             }
 }

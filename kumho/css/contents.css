@@ -1,0 +1,364 @@
+/* 회사소개 > ceo인사말 */
+
+.cnt_ceo {
+    /* background color (배경색) 줘야 하는데 wrapper 밖으로 나갔어서
+    before나 after로 처리해야한다 */
+    position: relative; /* brfore 정렬의 기준*/
+}
+.cnt_ceo .wrapper {
+    position: relative; /* photo 정렬의 기준 */
+}
+.cnt_ceo::before { 
+    content: "";
+    position: absolute;
+    left: 2.64em; /* 45/17 */
+    top:  0;
+    width: calc(100% - 5.28em ); /*2.64em*2 = 5.28 */
+    height: 17.35em; /*295/17*/
+    background-color: #EBEBEB;
+    border-radius: 30px;
+    z-index: -1; /*cnt_ceo 영역안에서 맨 아래  */
+}
+.cnt_ceo .ceo_tit {
+    padding:  3.82em 0 0 37.58em; /* 65/17 639/17*/
+}
+.cnt_ceo .ceo_tit strong {
+    color: var(--point-color);
+    display: block;
+}
+.cnt_ceo .ceo_tit h2 {
+    font-size: 1.47rem; /*25px / 17*/
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+    color: var(--tit-color);
+    margin: 0.47em 0 1.94em 0; /* 8/17 33/17 */
+}
+.cnt_ceo .ceo_tit p {
+    color: var(--tit-color)
+}
+.cnt_ceo .photo {
+    position: absolute;
+    left: 0;
+    top: 3.82em; 
+    width: 33.88%; /* 428/17*/
+    height: 42.47em; /*722/17*/
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.25);
+}
+.cnt_ceo .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cnt_ceo .ceo_detail {
+    margin: 6.47em 0 2.41em 44.20%;
+}
+.cnt_ceo .ceo_detail .sign {
+    display: flex;
+    margin: 1.05em 0 0 0;
+    gap: 2em;
+    align-items: center;
+}
+.cnt_ceo .ceo_detail .sign strong {
+    font-weight: var(--bold-weight);
+    color: var(--tit-color);
+}
+
+/*회사소개 > 찾아오시는길 */
+.cnt_map .map {
+    position: relative;
+    left: calc(50% - 630px);
+    width: calc(50% + 630px);
+}
+.cnt_map .map iframe {
+    width: 100%;
+    height: 605px;
+    border: 0;
+}
+@media screen and (max-width:1300px) {
+    .cnt_map .map {
+        left: 20px;
+        width: calc(100% - 20px);
+    }
+}
+
+.cnt_map .map_wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 4.29em 0 3.52em 0;
+}
+.cnt_map .map_tit {
+    font-size: 1.76rem; /*30/17*/
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+    color: var(--tit-color);
+}
+.cnt_map .map_subtit {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--tit-color);
+    font-size: 1.17rem;
+}
+.cnt_map .map_subtit .nav_kakao {
+    border: 1px solid var(--tit-color);
+    padding: 13px 26px 13px 62px;
+    border-radius: 50px;
+    position: relative;
+}
+.cnt_map .map_subtit .nav_kakao::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    background-color: #F9E000;
+    border-radius: 50%;
+    height: 46px;
+    width: 46px;
+}
+.cnt_map .map_subtit .nav_kakao::after {
+    content: "";
+    left: 16px;
+    top: 9px;
+    position: absolute;
+    height: 32px;
+    width: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='32' viewBox='0 0 24 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.0017 0.00108435C18.6331 -0.00323141 23.9901 5.04708 24 11.2959C24.0045 14.129 22.7756 16.5493 20.9234 18.6132C17.5454 22.377 14.59 26.3403 12.9764 31.0972C12.8306 31.5267 12.6137 32.0145 11.9901 31.9996C11.3118 31.9834 11.1295 31.4368 10.9685 30.9741C9.45422 26.6215 6.92435 22.8611 3.72745 19.4462C1.82714 17.4162 0.303193 15.0772 0.0474825 12.3297C-0.575946 5.63403 5.01223 -0.0905153 12.0017 0.00108435ZM7.92312 11.403C7.9392 13.4703 9.86051 15.2787 12.0209 15.26C14.1998 15.2413 16.0925 13.427 16.084 11.3655C16.0756 9.30638 14.1541 7.50028 11.9814 7.50979C9.81283 7.51913 7.90722 9.34742 7.92312 11.4029V11.403Z' fill='%23007DFD'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.cnt_map .map_subtit .nav_naver {
+    border: 1px solid var(--tit-color);
+    padding: 13px 26px 13px 62px;
+    border-radius: 50px;
+    position: relative;
+}
+.cnt_map .map_subtit .nav_naver::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    background-color: #6BBC44;
+    border-radius: 50%;
+    height: 46px;
+    width: 46px;
+}
+.cnt_map .map_subtit .nav_naver::after {
+    content: "";
+    left: 15px;
+    top: 13px;
+    position: absolute;
+    height: 23px;
+    width: 25px;
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='23' viewBox='0 0 25 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_187_634)'%3E%3Cpath d='M25 0V23H16.6125L8.38753 11.4209V23H0V0H8.38753L16.6125 12.0446V0H25Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_187_634'%3E%3Crect width='25' height='23' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.cnt_map .list {
+    border-top: 1px solid #3d3d3d;
+    padding: 2.88em 0;
+}
+.cnt_map .list .list_call {
+    display: flex;
+}
+.cnt_map .list .list_call .list_tit {
+    width: 294px;
+}
+.cnt_map .list .list_call .list_tit h3 {
+    font-size: 1.76rem; /*30/17*/
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+    color: var(--tit-color);
+}
+.cnt_map .list .list_call ul li {
+    display: flex;
+    gap: 25px;
+    padding: 20px 0;
+}
+.cnt_map .list .list_call ul li strong {
+    font-size: 1.17rem;
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+    color: var(--tit-color);
+}
+.cnt_map .list .list_call ul li a {
+    display: block;
+    border: 1px solid #3d3d3d;
+    border-radius: 30px;
+    padding: 9px 36px 8px 15px;
+    position: relative;
+}
+.cnt_map .list .list_call ul li a::after {
+    content: "";
+    position: absolute;
+    right: 17px;
+    top: 15px;
+    width: 14px;
+    height: 14px;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H7V1.75H1.75V12.25H12.25V7H13.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM5.275 9.775L4.225 8.725L11.2 1.75H8.5V0.25H13.75V5.5H12.25V2.8L5.275 9.775Z' fill='%233D3D3D'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.cnt_map .list .list_bus {
+    display: flex;
+}
+.cnt_map .list .list_bus .list_tit {
+    width: 294px;
+}
+.cnt_map .list .list_bus .list_tit h3 {
+    font-size: 1.76rem; /*30/17*/
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+    color: var(--tit-color);
+}
+.cnt_map .list .list_bus ul li {
+    display: flex;
+    gap: 25px;
+    padding: 20px 0;
+}
+.cnt_map .list .list_bus ul li strong {
+    font-size: 1.17rem;
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+    color: var(--tit-color);
+}
+@media screen and (max-width:1100px) {
+    .cnt_map .map_wrap {
+        display: block;
+        justify-content: space-between;
+        padding: 4.29em 0 3.52em 0;
+    }
+    .cnt_map .map_subtit {
+        margin: 30px 0 0 0;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        color: var(--tit-color);
+        font-size: 1.17rem;
+    }
+    .cnt_map .list .list_call {
+        display: block;
+    }
+}
+@media screen and (max-width:768px) {
+    .cnt_map .map_wrap {
+        display: block;
+        justify-content: space-between;
+        padding: 4.29em 0 3.52em 0;
+    }
+    .cnt_map .map_tit h2 {
+        font-size: 1.17rem; /*30/17*/
+    }
+    .cnt_map .map_subtit {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        color: var(--tit-color);
+        font-size: 1.06rem;
+    }
+    .cnt_map .map_subtit .nav_kakao {
+        padding: 9px 13px 9px 30px;
+    }
+    .cnt_map .map_subtit .nav_kakao::before {
+        left: 5px;
+        top: 7px;
+        height: 26px;
+        width: 26px;
+    }
+    .cnt_map .map_subtit .nav_kakao::after {
+        left: 12px;
+        top: 8px;
+        height: 22px;
+        width: 15px;
+    }
+    .cnt_map .map_subtit .nav_naver {
+        padding: 9px 13px 9px 30px;
+    }
+    .cnt_map .map_subtit .nav_naver::before {
+        left: 5px;
+        top: 7px;
+        height: 26px;
+        width: 26px;
+    }
+    .cnt_map .map_subtit .nav_naver::after {
+        left: 11px;
+        top: 8px;
+        height: 22px;
+        width: 15px;
+    }
+    .cnt_map .list {
+        border-top: 1px solid #3d3d3d;
+        padding: 2.88em 0;
+    }
+    .cnt_map .list .list_call {
+        display: block;
+    }
+    .cnt_map .list .list_call .list_tit {
+        width: 294px;
+    }
+    .cnt_map .list .list_call .list_tit h3 {
+        font-size: 1.76rem; /*30/17*/
+        font-weight: var(--bold-weight);
+        line-height: var(--tit-line-height);
+        color: var(--tit-color);
+    }
+    .cnt_map .list .list_call ul li {
+        display: flex;
+        gap: 25px;
+        padding: 20px 0;
+    }
+    .cnt_map .list .list_call ul li strong {
+        font-size: 1.17rem;
+        font-weight: var(--bold-weight);
+        line-height: var(--tit-line-height);
+        color: var(--tit-color);
+    }
+    .cnt_map .list .list_call ul li a {
+        display: block;
+        border: 1px solid #3d3d3d;
+        border-radius: 30px;
+        padding: 9px 36px 8px 15px;
+        position: relative;
+    }
+    .cnt_map .list .list_call ul li a::after {
+        content: "";
+        position: absolute;
+        right: 17px;
+        top: 15px;
+        width: 14px;
+        height: 14px;
+        background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.75 13.75C1.3375 13.75 0.984375 13.6031 0.690625 13.3094C0.396875 13.0156 0.25 12.6625 0.25 12.25V1.75C0.25 1.3375 0.396875 0.984375 0.690625 0.690625C0.984375 0.396875 1.3375 0.25 1.75 0.25H7V1.75H1.75V12.25H12.25V7H13.75V12.25C13.75 12.6625 13.6031 13.0156 13.3094 13.3094C13.0156 13.6031 12.6625 13.75 12.25 13.75H1.75ZM5.275 9.775L4.225 8.725L11.2 1.75H8.5V0.25H13.75V5.5H12.25V2.8L5.275 9.775Z' fill='%233D3D3D'/%3E%3C/svg%3E%0A");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    .cnt_map .list .list_bus {
+        display: flex;
+    }
+    .cnt_map .list .list_bus .list_tit {
+        width: 294px;
+    }
+    .cnt_map .list .list_bus .list_tit h3 {
+        font-size: 1.76rem; /*30/17*/
+        font-weight: var(--bold-weight);
+        line-height: var(--tit-line-height);
+        color: var(--tit-color);
+    }
+    .cnt_map .list .list_bus ul li {
+        display: flex;
+        gap: 25px;
+        padding: 20px 0;
+    }
+    .cnt_map .list .list_bus ul li strong {
+        font-size: 1.17rem;
+        font-weight: var(--bold-weight);
+        line-height: var(--tit-line-height);
+        color: var(--tit-color);
+    }
+}
