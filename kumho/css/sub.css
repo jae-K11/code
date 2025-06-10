@@ -151,6 +151,11 @@
     text-align: center;
     color: var(--tit-color);
 }
+@media screen and (max-width:1024px) {
+    .page_tit {
+        font-size: 1.88rem; /*32/17*/
+    }
+}
 @media screen and (max-width:768px) {
     .page_tit {
         margin: 2.17em 0 1.2em 0; /* 98/45 , 54/45*/
