@@ -20,7 +20,7 @@
     z-index: -1; /*cnt_ceo 영역안에서 맨 아래  */
 }
 .cnt_ceo .ceo_tit {
-    padding:  3.82em 0 0 37.58em; /* 65/17 639/17*/
+    padding:  3.82em 0 0 43.58%; /* 65/17 639/17*/
 }
 .cnt_ceo .ceo_tit strong {
     color: var(--point-color);
@@ -40,7 +40,7 @@
     position: absolute;
     left: 0;
     top: 3.82em; 
-    width: 33.88%; /* 428/17*/
+    width: 33.88%; /* 427/17 = 사진 너비  */
     height: 42.47em; /*722/17*/
     border-radius: 20px;
     overflow: hidden;
@@ -52,7 +52,7 @@
     object-fit: cover;
 }
 .cnt_ceo .ceo_detail {
-    margin: 6.47em 0 2.41em 44.20%;
+    margin: 6.47em 0 2.41em 44.20%; /* 44.20% =사진부터 오른쪽여백까지의 너비 */
 }
 .cnt_ceo .ceo_detail .sign {
     display: flex;
@@ -64,6 +64,72 @@
     font-weight: var(--bold-weight);
     color: var(--tit-color);
 }
+
+@media screen and (max-width:1420px) {
+    .cnt_ceo::before { 
+        left: 20px; /*내가 wrapper 에게 줬던 값 동일하게 */
+        width: calc(100% - 40px); /* 20px*2(left) */
+        border-radius: 15px;
+    }
+    .cnt_ceo .wrapper {
+        margin: 0 40px;
+    }  
+    .cnt_ceo .ceo_tit {
+        padding-left: 40%;
+    }
+    .cnt_ceo .ceo_detail {
+        margin-left: 40%;
+    }
+}
+@media screen and (max-width:768px) {
+    .cnt_ceo::before { 
+       display: none;
+    }
+    .cnt_ceo .wrapper {
+        margin: 0 40px;
+    }  
+    .cnt_ceo .ceo_tit {
+        background-color: #EBEBEB;
+        border-radius: 0.6em;
+        padding:  2.31em 1.87em; /* 37/16  30/16*/
+    }
+    .cnt_ceo .ceo_tit h2 {
+        font-size: 1.25rem; /*20/16*/
+        font-weight: var(--bold-weight);
+        line-height: var(--tit-line-height);
+        color: var(--tit-color);
+        margin: 1.65em 0; /* 33/16*/
+    }
+    .cnt_ceo .photo {
+        position: relative;
+        left: auto;
+        top: auto; 
+        width: 100%; 
+        height: 25.18em; /*403/17*/
+        border-radius: 10px;
+        margin: 1.25em auto 0 auto;
+        max-width: 350px;
+    }
+    .cnt_ceo .photo img {
+        object-position: center top;
+    }
+    
+    .cnt_ceo .ceo_detail {
+        margin: 2.0em 0 2.41em 0;
+    }
+    .cnt_ceo .ceo_detail .sign {
+        display: flex;
+        margin: 6.37em 0 0 0;
+        gap: 0;
+        align-items: center;
+        flex-direction: column;
+    }
+    .cnt_ceo .ceo_detail .sign strong {
+        font-weight: var(--bold-weight);
+        color: var(--tit-color);
+    }
+}
+
 
 /*회사소개 > 찾아오시는길 */
 .cnt_map .map {
@@ -361,4 +427,78 @@
         line-height: var(--tit-line-height);
         color: var(--tit-color);
     }
+}
+
+/* 회사소개 > 연혁 */
+.cnt_history {
+    margin: 0 0 11.17em 0;
+}
+.cnt_history .his_tit {
+    margin: 5.47em 0 2.94em 0; /* 90/17 0 50/17 0*/
+}
+.cnt_history .his_tit strong {
+    display: block;
+    color: var(--point-color);
+    margin: 0 0 0.29em 0;
+} 
+.cnt_history .his_tit h2 {
+    font-size: 2.05rem; /*35/17 rem*/ 
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+    color: var(--tit-color);
+}
+.cnt_history .his_photo .photo {
+    overflow: hidden;
+    height: 19.41em; /* 330/17*/
+}
+.cnt_history .his_photo .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cnt_history .his_year_group {
+    margin: 5.88em 0; /*100/17*/
+    display: flex;
+    justify-content: space-between;
+}
+.cnt_history .his_year_group.reverse {
+    flex-direction: row-reverse; /* 가로반전 */
+}
+.cnt_history .his_year_group .year_tit {
+    width: 390px; /* 테스트필요, 이미지 너비와 동일 */
+}
+.cnt_history .his_year_group .year_cont {
+    width: 708px ; /* 테스트 필요 */
+} 
+.cnt_history .his_year_group .year_tit h3 {
+    font-size: 2.64rem; /*45/17 rem*/
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+    color: var(--tit-color);
+    margin: 0 0 0.58em 0; /*10/17*/
+}
+.cnt_history .his_year_group .year_tit .photo {
+    overflow: hidden;
+    border-radius: 15px;
+    height: 22.94em; /*390/17*/
+    margin: 1.17em 0 0 0;
+}
+.cnt_history .his_year_group .year_tit h3 .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cnt_history .his_year_group .year_cont h4 {
+    font-size: var(--tit-font-size);
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+    color: var(--tit-color);
+ 
+}
+.cnt_history .his_year_group .year_cont ul {
+    margin: 0.58em 0 3.52em 0; /*10/17 60/17*/
+
+}
+.cnt_history .his_nav {
+    display: none;
 }
