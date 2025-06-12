@@ -152,20 +152,76 @@
     color: var(--tit-color);
 }
 @media screen and (max-width:1024px) {
-    .page_tit {
-        font-size: 1.88rem; /*32/17*/
-    }
+        .page_tit {
+            font-size: 1.88rem; /*32/17*/
+        }
 }
 @media screen and (max-width:768px) {
-    .page_tit {
-        margin: 2.17em 0 1.2em 0; /* 98/45 , 54/45*/
-        font-size: 1.56rem; /*25/16*/
-        font-weight: var(--bold-weight);
-        line-height: var(--tit-line-height);
-        text-align: center;
-        color: var(--tit-color);
-    }
+        .page_tit {
+            margin: 2.17em 0 1.2em 0; /* 98/45 , 54/45*/
+            font-size: 1.56rem; /*25/16*/
+            font-weight: var(--bold-weight);
+            line-height: var(--tit-line-height);
+            text-align: center;
+            color: var(--tit-color);
+        }
 }
+
+
 .contents {
     min-height: 20em;
+}
+
+.contents .table_wrap table {
+    width: 100%; /* 테이블은 콘텐츠 만큼 넓이가 잡힘 , 넓이 100 줘야함 */
+    border-collapse: collapse; /* 칸과 칸사이의 여백이 결합,
+                                칸에 준 border값을 적용시키기 위한 값*/
+    border-top: 2px solid #222;
+}
+.contents .table_wrap table caption {
+    display: none; /* 접근성상 쓴거라서 숨김*/
+}
+.contents .table_wrap table th,
+.contents .table_wrap table td {
+    /* 모든 칸의 기본 속성*/
+    border: 1px solid #DBDBDB;
+    padding: 1.94em 0.35em;
+    text-align: center;
+}
+.contents .table_wrap table th:first-child,
+.contents .table_wrap table td:first-child {
+    border-left-width: 0;
+    /* 테이블 왼쪽 끝에 선 삭제*/
+}
+.contents .table_wrap table th:last-child,
+.contents .table_wrap table td:last-child {
+    border-right-width: 0;
+    /*테이블 오른쪽 끝에 선 삭제*/
+}
+.contents .table_wrap table thead th,
+.contents .table_wrap table thead td {
+    /* 상단에 제목칸 */
+    background-color: #F4F4F4;
+    
+    font-size: 1.29rem;
+    font-weight: var(--bold-weight);
+    color: var(--tit-color);
+}
+.contents .table_wrap table tbody th {
+    color: var(--tit-color);
+    font-weight: var(--bold-weight);
+}
+.contents .table_wrap table tbody td {
+    color: #3d3d3d;
+}
+
+@media screen and (max-width:768px) {
+
+        .contents .table_wrap {
+            overflow-x: auto; /* */
+        }
+        .contents .table_wrap table {
+            min-width: 700px; /* 찌그러드는 글씨 최소한 막는거 */
+        }
+    
 }
