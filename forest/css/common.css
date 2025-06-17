@@ -76,20 +76,24 @@ html, body {
     --base-color: #555;
     --point-color:  #A9DB1B;
     --bold-weight: 700;
+    --display-size: 4.11rem; /*70*/
     --tit-size: 2.64rem; /* 45px / 17 =2.64 */
     --sub-tit-size: 1.17rem; /*20/17*/
     --tit-line-height: 1.2;
+    
 }
 
 @media screen and (max-width:1024px) {
     :root {
     --header-h: 56px; /*header 높이*/
     --header-h-m: -56px; /* header 높이 마이너스 값 */
+    --display-size: 3.23rem; /*55*/
     --tit-size: 2.23rem; /* 38px / 17 (body font size) = 2.23*/
     }
 }
 @media screen and (max-width:768px) { /* 모바일 */
     :root {
+    --display-size: 2.5rem; /*40*/
     --tit-size: 1.87rem; /* 30px / 16(body font size) = 1.87 */
     --sub-tit-size: 1.25rem; /* 20/16*/
     }
