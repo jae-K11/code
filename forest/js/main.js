@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     const myFullpage = new fullpage('#fullpage', {  /* html에서 페이지 전체를 감싸는 요소 */
 
-		navigation: false, /* 오른쪽에 각 페이지의 paging */
+		navigation: true, /* 오른쪽에 각 페이지의 paging */
 		navigationPosition: 'left', /* 위치 */
 		navigationTooltips: ['Main', '나무심기', '숲활동', '활동이야기','footer'], /* 툴팁 */
 		showActiveTooltip: true, /* 현재 활성화된 페이지의 툴팁에 특정 클래스 주기 */
@@ -24,6 +24,8 @@ $(document).ready(function(){
 			}else if(destination.index == 1){ /* index가 2면 슬라이드는 세번째 슬라이드입니다. index 수는 0/1/2/3 */
 				//console.log('2번째 슬라이드가 로딩 되었을때');
 				$('body').addClass('bg_white')
+				/**********tree 숫가자 넘어가는 애니메이션 *************/
+				$('.counter').counterUp();
 			}else if(destination.index == 2){ /* index가 2면 슬라이드는 세번째 슬라이드입니다. index 수는 0/1/2/3 */
 				//console.log('3번째 슬라이드가 로딩 되었을때');
 				$('body').removeClass('bg_white')
@@ -33,7 +35,7 @@ $(document).ready(function(){
 			}
 		},
 
-		responsiveWidth: 769, /* 768부터 모바일임, fullpage를 적용시키지 않을 모바일 사이즈 */
+		responsiveWidth: 1025, /* 768부터 모바일임, fullpage를 적용시키지 않을 모바일 사이즈 */
         responsiveHeight: 700 /* 브라우저 높잉가 700이하로 줄면 fullpage 안함*/
 	});//fullpage
 
@@ -84,7 +86,5 @@ $(document).ready(function(){
 		
 	
 	});
-	/**********tree 숫가자 넘어가는 애니메이션 *************/
-	$('.counter').counterUp();
-
+	
 })/*$(document)*/

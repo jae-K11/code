@@ -19,7 +19,13 @@ html, body {
     overflow-x: hidden; /* swiper때문에, 가로스크롤 삭제 ,x-가로만 */
     width: 100%;
 }
-@media screen and (max-width:1300px) { 
+@media screen and (max-width:1540px) {
+    .wrapper {
+        width: auto;
+        margin: 0 94px 0 123px ; 
+    }
+}
+@media screen and (max-width:1024px) { 
     /* 20 + 20 = 40 +1260 = 1300*/
 
     /* 1260 * 0.05(5%) = 63
