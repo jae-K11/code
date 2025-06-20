@@ -1,0 +1,181 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common_full.css);
+
+
+.visual {
+    height: 800px;
+    background: url(../images/inter_images01.jpg) no-repeat center center / cover;
+}
+.slogan {
+    margin: 165px 0;
+}
+.slogan .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}   
+.slogan p {
+    font-size: 45px;
+    font-weight: 700;
+    color: #ccc;
+    line-height: 1.5;
+    position: relative; /*span 정렬의 기준*/
+    white-space: nowrap; /*줄바꿈금지*/
+}
+.slogan p span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #8F1308;
+    width: 0;
+    overflow: hidden;
+}
+
+@media screen and (max-width:768px) {
+    .slogan p {
+        font-size: 30px;
+    }
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+}
+.banner .photo {
+    overflow: hidden;
+    height: 426px;
+    width: 50%;
+    transition: 0.2s;
+}
+.banner .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.life {
+    padding: 205px 0 224px 0;
+    transition: 0.5s;
+}
+.life h2 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #1d1d1d;
+    margin: 0 0 20px 0;
+    transition: 0.5s;
+}
+.life.dark {
+    background-color: #1d1d1d;
+    color: #fff;
+}
+.life.dark h2 {
+    color: #fff;
+}
+.medi {
+    margin: 40px 20px;
+}
+.medi .bg {
+    height: 718px;
+    background: url(../images/inter_images03.jpg) no-repeat center center / cover;
+    clip-path: path('M382 98.5L41.5 548L1 1266.5L2305.5 1338L2255.5 98.5L1731 613.5L1568.5 2L1309.5 663.5L831.5 98.5L632 679.5L382 98.5Z');
+}
+.medi .photo {
+    overflow: hidden;
+    height: 718px;
+    border-radius: 30px;
+    position: relative; /*h2정렬의 기준*/
+}
+.medi .photo h2 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    color: #767676;
+    font-size: 70px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 0 30px 0  0;
+}
+.medi .photo h2::after {
+    content: "";
+    position: absolute;
+    right: -30px;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    background: url(../images/inter_conner.png) no-repeat left bottom / contain ;
+}
+.medi .photo h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -30px;
+    width: 30px;
+    height: 30px;
+    background: url(../images/inter_conner.png) no-repeat left bottom / contain ;
+
+}
+.medi .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width:768px) {
+    .medi .photo {
+        height: 450px;
+        border-radius: 15px;
+    }
+    .medi .photo h2 {
+        font-size: 35px;
+        padding: 5px 10px;
+        border-radius: 0 15px 0  0;
+    }
+    .medi .photo h2::after {
+        right: -15px;
+        width: 15px;
+        height: 15px;
+    }
+    .medi .photo h2::before {
+        top: -15px;
+        width: 15px;
+        height: 15px;
+    }
+}
+
+.icon {
+    margin: 50px 0 500px 0;
+    text-align: center;
+}
+.icon button {
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    mask-image: url("data:image/svg+xml,%3Csvg width='181' height='181' viewBox='0 0 181 181' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_8_23' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='181' height='181'%3E%3Crect width='180.295' height='180.295' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_8_23)'%3E%3Cpath d='M90.1477 45.0739C86.0159 45.0739 82.4789 43.6027 79.5366 40.6604C76.5942 37.7181 75.1231 34.181 75.1231 30.0493C75.1231 25.9175 76.5942 22.3805 79.5366 19.4381C82.4789 16.4958 86.0159 15.0247 90.1477 15.0247C94.2795 15.0247 97.8165 16.4958 100.759 19.4381C103.701 22.3805 105.172 25.9175 105.172 30.0493C105.172 34.181 103.701 37.7181 100.759 40.6604C97.8165 43.6027 94.2795 45.0739 90.1477 45.0739ZM67.6108 165.271V67.6108C60.0985 66.9848 52.4609 66.0457 44.6982 64.7937C36.9355 63.5416 29.5484 61.9766 22.5369 60.0985L26.2931 45.0739C36.0591 47.7032 46.4511 49.6126 57.4692 50.802C68.4872 51.9915 79.3801 52.5862 90.1477 52.5862C100.915 52.5862 111.808 51.9915 122.826 50.802C133.844 49.6126 144.236 47.7032 154.002 45.0739L157.758 60.0985C150.747 61.9766 143.36 63.5416 135.597 64.7937C127.834 66.0457 120.197 66.9848 112.685 67.6108V165.271H97.66V120.197H82.6354V165.271H67.6108Z' fill='%23CCCCCC'/%3E%3C/g%3E%3C/svg%3E%0A");
+    mask-position: center center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+}
+.icon button:hover {
+    background-color: #FF809B;
+}
+
+.fixed_bg {
+    margin: 100px 0;
+    height: 500px;
+    background-image: url(../images/inter_images04.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.fixed_bg h2 {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 200px 0 0 0;
+}
