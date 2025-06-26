@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--jquery 라이브러리 -->
+    <script src="js/jquery-3.7.1.min.js"></script> <!-- 제이커리 돌아가는거 -->
+
+    <!--swiper 라이브러리 -->
+    <script src="js/swiper-bundle.min.js"></script> <!-- 스위퍼 돌어가는거 -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"> 
+
+    <link rel="stylesheet" href="css/main.css"><!--내꺼-->
+    <script src="js/main.js"></script> <!--내꺼 main js-->
+    <script src="js/common.js"></script>
+    <title>greenpeace</title>
+</head>
+<body>
+<div id="wrap">
+    <header></header>
+    <main class="container">
+        <section class="visual">
+            <h2 class="blind">팝업</h2>
+            <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                    <li class="swiper-slide">
+                        <div class="photo"><img src="images/main/visual01.jpg" alt=""></div>
+                        <div class="txt_wrap">
+                            <div class="wrapper">
+                                <div class="txt_inner">
+                                    <div class="txt pc"><h3>지금 함께<br>바다를 지켜주세요</h3></div>
+                                    <div class="txt pc"><p>파괴적인 어업에 대항하고, 플라스틱 오염과<br>기후위기를 막기 위한 캠페인을 펼치며 바다를 보호하기 위해 활동하고 있습니다</p></div>
+                                    
+                                    
+                                    <div class="txt mobile"><h3>지금 함께<br>바다를 지켜주세요</h3></div>
+                                    <div class="txt mobile"><p>파괴적인 어업에 대항하고, 플라스틱 오염과<br>기후위기를 막기 위한 캠페인을 펼치며 바다를 보호하기 위해 활동하고 있습니다</p></div>
+                            </div><!--//txt_inner-->
+                            </div>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="photo"><img src="images/main/visual02.jpg" alt=""></div>
+                        <div class="txt_wrap">
+                            <div class="wrapper">
+                                <div class="txt_inner">
+                                    <div class="txt pc"><h3>우리는 숲이 없이는<br>살아갈 수 없습니다</h3></div>
+                                    <div class="txt pc"><p>야생 동식물의 터전을 보호하는 것은 물론 지구 전체가<br>건강하게 살아갈 수 있도록 건강하고 깨끗한 숲을 지키기 위해 노력합니다</p></div>
+
+                                    <div class="txt mobile"><h3>우리는 숲이 없이는<br>살아갈 수 없습니다</h3></div>
+                                    <div class="txt mobile"><p>야생 동식물의 터전을 보호하는 것은 물론 지구 전체가<br>건강하게 살아갈 수 있도록 건강하고 깨끗한 숲을 지키기 위해 노력합니다</p></div>
+                            </div>
+                            </div>
+                        </div>
+                    </li> 
+                    <li class="swiper-slide">
+                        <div class="photo"><img src="images/main/visual03.jpg" alt=""></div>
+                        <div class="txt_wrap">
+                            <div class="wrapper">
+                                <div class="txt_inner">
+                                    <div class="txt pc"><h3>북극의 파괴를<br>함께 막아주세요</h3></div>
+                                    <div class="txt pc"><p>북극은 지구 전체의 온도를 조절하고, 기후위기를 완화할 수 있는<br>결정적인 역할을 맡고 있습니다. 우리는 지구 전체의 미래를 위해 나서야 합니다</p></div>
+
+                                    <div class="txt mobile"><h3>북극의 파괴를<br>함께 막아주세요</h3></div>
+                                    <div class="txt mobile"><p>북극은 지구 전체의 온도를 조절하고, 기후위기를 완화할 수 있는<br>결정적인 역할을 맡고 있습니다. 우리는 지구 전체의 미래를 위해 나서야 합니다</p></div>
+                            </div>
+                            </div>
+                        </div>
+                    </li> 
+                    <li class="swiper-slide">
+                        <div class="photo"><img src="images/main/visual04.jpg" alt=""></div>
+                        <div class="txt_wrap">
+                            <div class="wrapper">
+                                <div class="txt_inner">
+                                    <div class="txt pc"><h3>일회용 플라스틱은 이제 그만!</h3></div>
+                                    <div class="txt pc"><p>플라스틱 문제는 '전 지구적 위기'입니다 한 번 쓰고 버리는<br>플라스틱으로 아름다운 지구가 수 세기 동안 오염되는 것을 이젠 막아야 합니다</p></div>
+
+                                    <div class="txt mobile"><h3>일회용 플라스틱은 이제 그만!</h3></div>
+                                    <div class="txt mobile"><p>플라스틱 문제는 '전 지구적 위기'입니다 한 번 쓰고 버리는<br>플라스틱으로 아름다운 지구가 수 세기 동안 오염되는 것을 이젠 막아야 합니다</p></div>
+                            </div>
+                            </div>
+                        </div>
+                    </li> 
+                </ul>
+                <div class="ctrl_wrap">
+                    <button class="btn_prev">이전팝업보기</button>
+                    <button class="btn_next">다음팝업보기</button>
+                    <button class="btn_stop">일시정지</button>
+                    <button class="btn_play">재생</button>
+                </div>
+            </div><!--//swiper-->
+            
+            <div class="scroll_down"><a href="#">scroll down</a></div>
+        </section><!--//visual-->
+    </main>
+    <footer></footer>
+</div>
+</body>
+</html>
