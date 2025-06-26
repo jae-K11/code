@@ -3,6 +3,10 @@
 @import url(common.css);
 @import url(layout.css);
 
+.visual {
+    position: relative; /*ctrl_wrap , scroll_down 정렬의 기준*/
+}
+
 .visual .swiper-slide .photo {
     overflow: hidden;
     height: 100dvh;
@@ -16,7 +20,7 @@
 .visual .swiper-slide .txt_wrap {
     position: absolute; /*swiper-slide정렬의 기준*/
     left: 0;
-    bottom: 44.66%;
+    bottom: 37.66%;
     width: 100%;
 }
 .visual .swiper-slide .txt_wrap .txt.mobile {
@@ -34,17 +38,76 @@
     line-height: var(--tit-line-heigh);
 }
 .visual .swiper-slide .txt_wrap .txt_inner { 
-  
     transform: translateY(100px);
     opacity: 0;
     transition: 1s;
-    transition-delay: 1s;
+    transition-delay: 0.5s;
 }
 .visual .swiper-slide .txt_wrap .txt .txt_inner{
     transition-delay: 1s;
 }
-
 .visual .swiper-slide.swiper-slide-active .txt_wrap .txt_inner  {
     transform: translateY(0);
     opacity: 1;
+}
+.visual .control {
+    position: absolute;
+    z-index: 10;
+    bottom: 28.88%; /* 287/900*100 */
+    right: calc(50% - 524px);
+    width: auto;
+}
+.visual .control .ctrl_wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+}
+.visual .control .ctrl_wrap button {
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 15px 15px;
+}
+.visual .control .ctrl_wrap button.btn_prev {
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_124_302' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect x='30' y='30' width='30' height='30' transform='rotate(-180 30 30)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_124_302)'%3E%3Cpath d='M11.9067 14.9976L21.0942 24.1851C21.4067 24.4976 21.5578 24.8673 21.5473 25.2944C21.5369 25.7215 21.3755 26.0913 21.063 26.4038C20.7505 26.7163 20.3807 26.8726 19.9536 26.8726C19.5265 26.8726 19.1567 26.7163 18.8442 26.4038L9.25048 16.7788C9.00048 16.5288 8.81298 16.2476 8.68798 15.9351C8.56298 15.6226 8.50048 15.3101 8.50048 14.9976C8.50048 14.6851 8.56298 14.3726 8.68798 14.0601C8.81298 13.7476 9.00048 13.4663 9.25048 13.2163L18.8755 3.5913C19.188 3.2788 19.5526 3.12775 19.9692 3.13817C20.3859 3.14859 20.7505 3.31005 21.063 3.62255C21.3755 3.93505 21.5317 4.30484 21.5317 4.73192C21.5317 5.15901 21.3755 5.5288 21.063 5.8413L11.9067 14.9976Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    width: 30px;
+    height: 30px;
+}
+.visual .control .ctrl_wrap button.btn_next {
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_124_296' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_124_296)'%3E%3Cpath d='M18.0933 15.0025L8.90578 5.81494C8.59328 5.50244 8.44224 5.13265 8.45265 4.70557C8.46307 4.27848 8.62453 3.90869 8.93703 3.59619C9.24953 3.28369 9.61932 3.12744 10.0464 3.12744C10.4735 3.12744 10.8433 3.28369 11.1558 3.59619L20.7495 13.2212C20.9995 13.4712 21.187 13.7524 21.312 14.065C21.437 14.3775 21.4995 14.69 21.4995 15.0025C21.4995 15.315 21.437 15.6275 21.312 15.94C21.187 16.2525 20.9995 16.5337 20.7495 16.7837L11.1245 26.4087C10.812 26.7212 10.4474 26.8722 10.0308 26.8618C9.6141 26.8514 9.24952 26.69 8.93702 26.3775C8.62452 26.065 8.46827 25.6952 8.46827 25.2681C8.46827 24.841 8.62452 24.4712 8.93702 24.1587L18.0933 15.0025Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    width: 30px;
+    height: 30px;
+}
+.visual .control .ctrl_wrap button.btn_stop,
+.visual .control .ctrl_wrap button.btn_play{
+    position: relative;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.visual .control .ctrl_wrap button.btn_stop::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_124_299' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='24'%3E%3Crect width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_124_299)'%3E%3Cpath d='M16 18.999C15.45 18.999 14.9792 18.8032 14.5875 18.4115C14.1958 18.0199 14 17.549 14 16.999V6.99902C14 6.44902 14.1958 5.97819 14.5875 5.58652C14.9792 5.19486 15.45 4.99902 16 4.99902C16.55 4.99902 17.0208 5.19486 17.4125 5.58652C17.8042 5.97819 18 6.44902 18 6.99902V16.999C18 17.549 17.8042 18.0199 17.4125 18.4115C17.0208 18.8032 16.55 18.999 16 18.999ZM8 18.999C7.45 18.999 6.97917 18.8032 6.5875 18.4115C6.19583 18.0199 6 17.549 6 16.999V6.99902C6 6.44902 6.19583 5.97819 6.5875 5.58652C6.97917 5.19486 7.45 4.99902 8 4.99902C8.55 4.99902 9.02083 5.19486 9.4125 5.58652C9.80417 5.97819 10 6.44902 10 6.99902V16.999C10 17.549 9.80417 18.0199 9.4125 18.4115C9.02083 18.8032 8.55 18.999 8 18.999Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .control .ctrl_wrap button.btn_play::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_151_10' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='28' height='28'%3E%3Crect x='28' y='28' width='28' height='28' transform='rotate(-180 28 28)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_151_10)'%3E%3Cpath d='M20.6205 13.0083C20.7955 13.1249 20.9268 13.2708 21.0143 13.4458C21.1018 13.6208 21.1455 13.8055 21.1455 13.9999C21.1455 14.1944 21.1018 14.3791 21.0143 14.5541C20.9268 14.7291 20.7955 14.8749 20.6205 14.9916L11.1122 21.0291C11.015 21.0874 10.9129 21.1312 10.8059 21.1604C10.699 21.1895 10.5969 21.2041 10.4997 21.2041C10.1886 21.2041 9.91634 21.0923 9.68301 20.8687C9.44968 20.6451 9.33301 20.368 9.33301 20.0374L9.33301 7.96243C9.33301 7.63188 9.44968 7.3548 9.68301 7.13118C9.91634 6.90757 10.1886 6.79577 10.4997 6.79577C10.5969 6.79577 10.699 6.81035 10.8059 6.83952C10.9129 6.86868 11.015 6.91243 11.1122 6.97077L20.6205 13.0083Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .control .ctrl_wrap .pagination {
+    color:#fff;
+    opacity: 0.6;
+    font-size: 14px;
+    min-width: 32px;
+    text-align: center;
 }
