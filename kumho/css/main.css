@@ -141,7 +141,7 @@
     .visual .ctrl_wrap {
         /*브라우저가 줄어들때 따라오게 하는법
         common.css에서 1300px 모바일 wrapper의 margin 여백과 똑같이 주면됨 */
-        left: 20px 
+        left: 20px;
     }
 }
 @media screen and (max-width:1024px) {

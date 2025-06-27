@@ -3,99 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--jquery 라이브러리 -->
-    <script src="js/jquery-3.7.1.min.js"></script> <!-- 제이커리 돌아가는거 -->
-
-    <!--swiper 라이브러리 -->
-    <script src="js/swiper-bundle.min.js"></script> <!-- 스위퍼 돌어가는거 -->
-    <link rel="stylesheet" href="css/swiper-bundle.min.css"> 
-
-    <link rel="stylesheet" href="css/main.css"><!--내꺼-->
-    <script src="js/main.js"></script> <!--내꺼 main js-->
-    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="css/main.css">
     <title>greenpeace</title>
 </head>
 <body>
-<div id="wrap">
-    <header></header>
-    <main class="container">
-        <section class="visual">
-            <h2 class="blind">팝업</h2>
-            <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
-                <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
-                    <li class="swiper-slide">
-                        <div class="photo"><img src="images/main/visual01.jpg" alt=""></div>
-                        <div class="txt_wrap">
-                            <div class="wrapper">
-                                <div class="txt_inner">
-                                    <div class="txt pc"><h3>지금 함께<br>바다를 지켜주세요</h3></div>
-                                    <div class="txt pc"><p>파괴적인 어업에 대항하고, 플라스틱 오염과<br>기후위기를 막기 위한 캠페인을 펼치며 바다를 보호하기 위해 활동하고 있습니다</p></div>
-                                    
-                                    
-                                    <div class="txt mobile"><h3>지금 함께<br>바다를 지켜주세요</h3></div>
-                                    <div class="txt mobile"><p>파괴적인 어업에 대항하고, 플라스틱 오염과<br>기후위기를 막기 위한 캠페인을 펼치며 바다를 보호하기 위해 활동하고 있습니다</p></div>
-                            </div><!--//txt_inner-->
-                            </div>
-                        </div>
-                    </li>
-                    <li class="swiper-slide">
-                        <div class="photo"><img src="images/main/visual02.jpg" alt=""></div>
-                        <div class="txt_wrap">
-                            <div class="wrapper">
-                                <div class="txt_inner">
-                                    <div class="txt pc"><h3>우리는 숲이 없이는<br>살아갈 수 없습니다</h3></div>
-                                    <div class="txt pc"><p>야생 동식물의 터전을 보호하는 것은 물론 지구 전체가<br>건강하게 살아갈 수 있도록 건강하고 깨끗한 숲을 지키기 위해 노력합니다</p></div>
-
-                                    <div class="txt mobile"><h3>우리는 숲이 없이는<br>살아갈 수 없습니다</h3></div>
-                                    <div class="txt mobile"><p>야생 동식물의 터전을 보호하는 것은 물론 지구 전체가<br>건강하게 살아갈 수 있도록 건강하고 깨끗한 숲을 지키기 위해 노력합니다</p></div>
-                                </div><!--//txt_inner-->
-                            </div>
-                        </div>
-                    </li> 
-                    <li class="swiper-slide">
-                        <div class="photo"><img src="images/main/visual03.jpg" alt=""></div>
-                        <div class="txt_wrap">
-                            <div class="wrapper">
-                                <div class="txt_inner">
-                                    <div class="txt pc"><h3>북극의 파괴를<br>함께 막아주세요</h3></div>
-                                    <div class="txt pc"><p>북극은 지구 전체의 온도를 조절하고, 기후위기를 완화할 수 있는<br>결정적인 역할을 맡고 있습니다. 우리는 지구 전체의 미래를 위해 나서야 합니다</p></div>
-
-                                    <div class="txt mobile"><h3>북극의 파괴를<br>함께 막아주세요</h3></div>
-                                    <div class="txt mobile"><p>북극은 지구 전체의 온도를 조절하고, 기후위기를 완화할 수 있는<br>결정적인 역할을 맡고 있습니다. 우리는 지구 전체의 미래를 위해 나서야 합니다</p></div>
-                                </div><!--//txt_inner-->
-                            </div>
-                        </div>
-                    </li> 
-                    <li class="swiper-slide">
-                        <div class="photo"><img src="images/main/visual04.jpg" alt=""></div>
-                        <div class="txt_wrap">
-                            <div class="wrapper">
-                                <div class="txt_inner">
-                                    <div class="txt pc"><h3>일회용 플라스틱은 이제 그만!</h3></div>
-                                    <div class="txt pc"><p>플라스틱 문제는 '전 지구적 위기'입니다 한 번 쓰고 버리는<br>플라스틱으로 아름다운 지구가 수 세기 동안 오염되는 것을 이젠 막아야 합니다</p></div>
-
-                                    <div class="txt mobile"><h3>일회용 플라스틱은 이제 그만!</h3></div>
-                                    <div class="txt mobile"><p>플라스틱 문제는 '전 지구적 위기'입니다 한 번 쓰고 버리는<br>플라스틱으로 아름다운 지구가 수 세기 동안 오염되는 것을 이젠 막아야 합니다</p></div>
-                                </div><!--//txt_inner-->
-                            </div>
-                        </div>
-                    </li> 
-                </ul>
-                <div class="control">
-                    <div class="ctrl_wrap">
-                        <button class="btn_stop"><span class="blind">일시정지</span></button>
-                        <button class="btn_play"><span class="blind">재생</span></button>
-                        <button class="btn_prev"><span class="blind">이전팝업보기</span></button>
-                        <div class="pagination"><span class="blind">숫자</span></div>
-                        <button class="btn_next"><span class="blind">다음팝업보기</span></button>
+    <div id="wrap">
+        <header></header>
+        <main class="container">
+            <section class="visual">
+                <div class="wrapper">
+                    <div class="inner">
+                        <h2>지금 함께<br>
+                            바다를 지켜주세요</h2>
+                        <p>파괴적인 어업에 대항하고, 플라스틱 오염과 <br>
+                            기후위기를 막기 위한 캠페인을 펼치며 바다를 보호하기 위해 활동하고 있습니다</p>
                     </div>
-                </div><!--//control-->
-            </div><!--//swiper-->
-            
-            <div class="scroll_down"><a href="#">scroll down</a></div>
-        </section><!--//visual-->
-    </main>
-    <footer></footer>
-</div>
+                </div>
+            </section>
+            <section class="work">
+                <div class="wrapper">
+                    <div class="tit">
+                        <strong>그린피스캠페인</strong>
+                        <h2>녹색 지구,<br>
+                            우리 모두의 선택입니다</h2>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li class="bg1"><a href="#">해양</a></li>
+                            <li class="bg2"><a href="#">건강한 삶</a></li>
+                            <li class="bg3"><a href="#">기후</a></li>
+                            <li class="bg4"><a href="#">산림</a></li>
+                            <li class="bg5"><a href="#">플라스틱</a></li>
+                            <li class="bg6"><a href="#">북극</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="campaign">
+                <div class="wrapper">
+                    <h3>이 지구에는 당신이 필요합니다</h3>
+                    <p>그린피스는 국제환경단체로서 환경 보호에 앞장서고 있습니다.<br>
+                        지구는 여전히 위태롭습니다.<br>
+                        하지만 아직 해결할 시간이 있습니다.</p>
+                    <a href="#">지금 함께하기</a>
+                </div>
+            </section>
+            <section class="news">
+                <div class="wrapper">
+                    <div class="tit">
+                        <strong>그린피스 뉴스룸</strong>
+                        <h2>환경을 위한 보도,<br>
+                            지구의 내일과 연결됩니다</h2>
+                    </div>
+                    <div class="list"> 
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <div class="photo">
+                                        <strong>해양</strong>
+                                        <img src="images/main/news01.jpg" alt="">
+                                    </div> 
+                                    <h3>[성명서] UNOC3 폐막 “글로벌 해양조약, 발효 카운트다운”</h3>  
+                                    <p>제3차 유엔 해양총회(UNOC3)가 지난 13일(프랑스 현지 시간) 막을 내렸다. 이번 해양총회의 가장 큰 성과는 ‘글로벌 해양조약’ (해양법에 관한 국제연합협약에 따른 국가관할권 이원지역의 해양생물다양성 보전 및 지속가능한 이용에 대한 협정 ∙BBNJ) 비준에 속도를 냈다는 점이다.</p>
+                                    <div class="date">
+                                        <span>2025.06.16</span>
+                                        <span>그린피스</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="photo">
+                                        <strong>기후</strong>
+                                        <img src="images/main/news02.jpg" alt="">
+                                    </div> 
+                                    <h3>[보도] 용인 반도체 국가산단 LNG 6기 발전 허가… ‘기후 목표·주민 건강·법적 정당성 모두 외면</h3>  
+                                    <p>국제환경단체 그린피스는 경기환경운동연합·용인 반도체국가산단 재검토 요구 모임과 함께 ‘용인 반도체 국가산단 LNG 발전소 건설 저지 캠페인 설명회’를 진행했다. </p>
+                                    <div class="date">
+                                        <span>2025.06.16</span>
+                                        <span>그린피스</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="photo">
+                                        <strong>플라스틱</strong>
+                                        <img src="images/main/news03.jpg" alt="">
+                                    </div> 
+                                    <h3>[보도] 해녀와 어민 등 제주도민 "거대한 쓰레기장 된 제주바다"</h3>  
+                                    <p>6월 5일 환경의날을 맞아 플뿌리연대가 제주도민들과 함께 새 정부에 오염된 해양생물인형을 건네며 플라스틱 생산 감축을 촉구하는 퍼포먼스를 진행하고 있다.</p>
+                                    <div class="date">
+                                        <span>2025.06.12</span>
+                                        <span>그린피스</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="photo">
+                                        <strong>플라스틱</strong>
+                                        <img src="images/main/news04.jpg" alt="">
+                                    </div> 
+                                    <h3>[보도] 제주 김녕 해변, 미세플라스틱 얼마나 있을까</h3>  
+                                    <p>6월 4일, 국내⋅외 16개 시민단체로 구성된 플뿌리연대(‘플’라스틱 문제를 ‘뿌리’뽑는 ‘연대’) 주최로 ｢새로운 시작, 플라스틱 생산 감축으로｣ 포럼이 진행됐다.</p>
+                                    <div class="date">
+                                        <span>2025.06.12</span>
+                                        <span>그린피스</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
+    </div>
 </body>
 </html>
