@@ -21,7 +21,6 @@ header .logo a {
     margin-bottom: 20px; /* 너무 밑으로 내려가있어서 올려줌 */
 }
 
-
 header .util {
     display: flex;
     gap: 25px;

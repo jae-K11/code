@@ -8,7 +8,83 @@
 </head>
 <body>
     <div id="wrap">
-        <header></header>
+         <!-- 고정될때 fixed
+         메뉴가 상단으로 사라질때 gnb_up
+         pc버전에 서 메뉴에 마우스를 오버하면 menu_over
+         mobile버전에서 메뉴를 클릭하면 menu_open 
+         -->
+        <header class="">
+            <h1 class="logo"><a href="index.html"><span class="blind">그린피스</span></a></h1>
+            <nav class="gnb">
+                <button class="gnb_open"><span class="blind">메뉴열기</span></button>
+                <div class="gnb_wrap">
+                    <div class="gnb_util">
+                        <div class="lang">
+                            <button class="lang_open"><span>KR</span></button>
+                        </div>
+                        <div class="search">
+                            <button class="search_open"><span>검색</span></button>
+                        </div>
+                    </div><!--//gnb_util-->
+                    <ul class="depth1">
+                        <li>
+                            <a href="#"><span>재단소개</span></a>
+                            <ul class="depth2">
+                                <li><a href="#"><span>개요</span></a></li>
+                                <li><a href="#"><span>미션</span></a></li>
+                                <li><a href="#"><span>행동방식</span></a></li>
+                                <li><a href="#"><span>보고서</span></a></li>
+                                <li><a href="#"><span>사람들</span></a></li>
+                                <li><a href="#"><span>인재채용</span></a></li>
+                                <li><a href="#"><span>엠버서더</span></a></li>
+                                <li><a href="#"><span>연락처</span></a></li>
+                            </ul><!--//depth2-->
+                        </li>
+                        <li>
+                            <a href="#"><span>캠페인</span></a>
+                            <ul class="depth2">
+                                <li><a href="#"><span>해양</span></a></li>
+                                <li><a href="#"><span>건강한 삶</span></a></li>
+                                <li><a href="#"><span>기후</span></a></li>
+                                <li><a href="#"><span>산림</span></a></li>
+                                <li><a href="#"><span>플라스틱</span></a></li>
+                                <li><a href="#"><span>북극</span></a></li>
+                            </ul><!--//depth2-->
+                        </li>
+                        <li>
+                            <a href="#"><span>후원 및 참여</span></a>
+                            <ul class="depth2">
+                                <li><a href="#"><span>후원하기</span></a></li>
+                                <li><a href="#"><span>청원하기</span></a></li>
+                                <li><a href="#"><span>참여하기</span></a></li>
+                            </ul><!--//depth2-->
+                        </li>
+                        <li>
+                            <a href="#"><span>뉴스룸</span></a>
+                            <ul class="depth2">
+                                <li><a href="#"><span>최근소식</span></a></li>
+                                <li><a href="#"><span>뉴스룸</span></a></li>
+                                <li><a href="#"><span>미디어 라이브</span></a></li>
+                            </ul><!--//depth2-->
+                        </li>
+                    </ul><!--//depth1-->
+                    <button class="gnb_close"><span class="blind">메뉴닫기</span></button>
+                </div><!--//gnb_wrap-->
+                <div class="gnb_bg">
+                </div><!--메뉴열었을때 아래에서 비주얼의 검은색을 담당 -->
+            </nav>
+            <div class="util">
+                <div class="lang">
+                    <button class="lang_open"><span class="blind">KR</span></button>
+                </div>
+                <div class="search">
+                    <button class="search_open"><span class="blind">검색</span></button>
+                </div>
+                <div class="sponsor">
+                    <a href="#"><span>후원하기</span></a>
+                </div>
+            </div><!--//util-->
+        </header>
         <main class="container">
             <section class="visual">
                 <div class="wrapper">
@@ -41,7 +117,7 @@
             </section>
             <section class="campaign">
                 <div class="wrapper">
-                    <h3>이 지구에는 당신이 필요합니다</h3>
+                    <h2>이 지구에는 당신이 필요합니다</h2>
                     <p>그린피스는 국제환경단체로서 환경 보호에 앞장서고 있습니다.<br>
                         지구는 여전히 위태롭습니다.<br>
                         하지만 아직 해결할 시간이 있습니다.</p>
@@ -123,16 +199,18 @@
                             </li>
                         </ul>
                     </div><!--//list-->
-                    <a href="#" class="more"><span>더보기</span></a>
+                    <div class="more">
+                        <a href="#"><span>더보기</span></a>
+                    </div>
                 </div>
             </section>
             <section class="together">
                 <div class="wrapper">
                     <div class="together_wrap">
                         <div class="tit">
-                            <h3>Together,<br>
+                            <h2>Together,<br>
                                 <span>we are the<br></span>
-                                change.</h3>
+                                change.</h2>
                             <p>그린피스와 함께<br>
                                 더 나은 내일을 만들어가요<br>
                                 변화는 우리로부터 시작됩니다</p>
@@ -145,20 +223,26 @@
                         <ul>
                             <li>
                                 <div class="item">
+                                    <div class="txt">
                                     <strong>63,036</strong> <span>해리</span>
+                                    </div>
                                     <p>반 세기 동안 전 세계 바다에서 그린피스의 환경감시선은 환경 보호의 최전선을 지켜왔습니다.
                                         지구의 약 세 바퀴 거리를 항해했으며 오늘도 가장 시급한 환경 문제를 해결하고 있습니다.</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="item">
+                                    <div class="txt">
                                     <strong>55</strong> <span>개국 이상</span>
+                                    </div>
                                     <p>그린피스는 전 세계 55개국에 사무소를 두어 각 지역 및 전 지구적인 문제에 대응합니다. 환경 문제에는 국경이 없습니다.</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="item">
+                                    <div class="txt">
                                     <strong>223,797</strong> <span>명</span>
+                                    </div>
                                     <p>그린피스의 후원자는 어느새 20만 명을 넘었습니다. 보여주신 신뢰와 공감에 책임감을 갖고 오늘도 지구를 위한 변화를 만들고 있습니다.</p>
                                 </div>
                             </li>
@@ -187,8 +271,10 @@
                              <li class="bg4">
                                 <a href="#"><span>기후위기, 문제를 넘어 해결의 길로- 정상훈 기후에너지 캠페이너</span></a>
                             </li>
-                        </ul>
-                        <a href="#" class="more"><span>더보기</span></a>
+                        </ul>    
+                    </div>
+                    <div class="more">
+                        <a href="#"><span>더보기</span></a>
                     </div>
                 </div>
             </section>
@@ -197,25 +283,6 @@
             <div class="wrapper">
                 <div class="f_logo">
                     <img src="images/common/logo.svg" alt="">
-                </div>
-                <div class="sns">
-                    <ul>
-                        <li class="blog">
-                            <a href="#"><span class="blind">블로그</span></a>
-                        </li>
-                         <li class="facebook">
-                            <a href="#"><span class="blind">페이스북</span></a>
-                        </li>
-                         <li class="insta">
-                            <a href="#"><span class="blind">인스타</span></a>
-                        </li>
-                         <li class="youtube">
-                            <a href="#"><span class="blind">유튜브</span></a>
-                        </li>
-                         <li class="x">
-                            <a href="#"><span class="blind">x</span></a>
-                        </li>
-                    </ul>
                 </div>
                 <div class="info_wrap">
                     <div class="f_nav">
@@ -247,6 +314,25 @@
                         <address>주소: 서울특별시 용산구 한강대로 257, 6층</address>
                     </div>
                     <div class="copyright">Copyright ⓒ Greenpeace All rights reserved</div>
+                </div>
+                <div class="sns">
+                    <ul>
+                        <li class="blog">
+                            <a href="#"><span class="blind">블로그</span></a>
+                        </li>
+                         <li class="facebook">
+                            <a href="#"><span class="blind">페이스북</span></a>
+                        </li>
+                         <li class="insta">
+                            <a href="#"><span class="blind">인스타</span></a>
+                        </li>
+                         <li class="youtube">
+                            <a href="#"><span class="blind">유튜브</span></a>
+                        </li>
+                         <li class="x">
+                            <a href="#"><span class="blind">x</span></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </footer>
