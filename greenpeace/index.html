@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.7.1.min.js"></script> <!--제이쿼리-->
+
     <link rel="stylesheet" href="css/main.css">
+    <!-- <script src="js/main.js"></script>내꺼 -->
+    <script src="js/common.js"></script><!--내꺼-->
     <title>greenpeace</title>
 </head>
 <body>
     <div id="wrap">
          <!-- 고정될때 fixed
-         메뉴가 상단으로 사라질때 gnb_up
+         메뉴가 상단으로 사라질때 gnb_up / gnb_up은 fixed클래스가 있을떄만 작동
          pc버전에 서 메뉴에 마우스를 오버하면 menu_over
          mobile버전에서 메뉴를 클릭하면 menu_open 
          -->
-        <header class="">
+        <header class="menu_open">
             <h1 class="logo"><a href="index.html"><span class="blind">그린피스</span></a></h1>
             <nav class="gnb">
                 <button class="gnb_open"><span class="blind">메뉴열기</span></button>
@@ -27,8 +31,9 @@
                         </div>
                     </div><!--//gnb_util-->
                     <ul class="depth1">
-                        <li>
-                            <a href="#"><span>재단소개</span></a>
+                        <!--pc버전 over클래스추가, 모바일 open클래스 추가-->
+                        <li class="open">
+                            <a href="https://www.cheongju.go.kr/www/index.do"><span>재단소개</span></a>
                             <ul class="depth2">
                                 <li><a href="#"><span>개요</span></a></li>
                                 <li><a href="#"><span>미션</span></a></li>
@@ -70,8 +75,7 @@
                     </ul><!--//depth1-->
                     <button class="gnb_close"><span class="blind">메뉴닫기</span></button>
                 </div><!--//gnb_wrap-->
-                <div class="gnb_bg">
-                </div><!--메뉴열었을때 아래에서 비주얼의 검은색을 담당 -->
+                <div class="gnb_bg"> </div><!--메뉴열었을때 아래에서 비주얼의 검은색을 담당 -->
             </nav>
             <div class="util">
                 <div class="lang">

@@ -57,10 +57,11 @@ header .util .search .search_open::before {
 }
 /****************아래로 스크롤 내릴떄 header가 사라짐 *********************/
 header.fixed.gnb_up {
-    top: var(--header-h-m);
+    top: var(--header-h-m); /*header의 top 속성을 준 값 -100주면 사라짐*/
 }
 header.fixed.gnb_up.menu_over {
-    top: 0;
+    top: 0; /*메뉴에 마우스를 오버하면서 스크롤을 내릴경우, 
+            메뉴 못움직이게 하는것 */
 }
 /****************header에 fixed 클래스 추가 *********************/
 
@@ -196,7 +197,7 @@ header.menu_over .util .search .search_open::before {
         gap: 11px;
     }
     header .gnb .gnb_util {
-        display: none;
+        display: none; /*숨겼다가 메뉴오버시 flex줘서 나타남 */
         position: absolute; /* gnb_wrap기준으로 정렬*/
         left: 20px;
         top: 15px;
@@ -253,7 +254,7 @@ header.menu_over .util .search .search_open::before {
         padding: 0 20px; /* 좌우여백, 만약 선이 삐져나갔을경우 주면안됨 */
         height: calc(100% - var(--header-h));
         overflow-x: hidden; /* 좌우스크롤 없애기*/
-        overflow-y: auto;
+        overflow-y: auto; /*알아서*/
         border-top: 1px solid #EDEDED;
     }
     header .gnb .gnb_wrap ul.depth1 > li {
@@ -284,7 +285,7 @@ header.menu_over .util .search .search_open::before {
         border-radius: 0.62em; /*10 / 16*/
         margin: 0.81em 0 0 0; /* 13/16 */
         padding: 1.43em 1.25em;  /* 박스 내부여백 */
-        display: none;
+        display: none; /*숨기고 자바에서 보이게*/
     }
     header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > a {
         display: block;
@@ -321,10 +322,10 @@ header.menu_over .util .search .search_open::before {
 
     /**** 메뉴가 열였을때 ***/
     header.menu_open .gnb  .gnb_util {
-        display: flex; /* display : none 으로 숨긴거 나타나기 */
+        display: flex; /* 위에 none준거 여기서 block으로바꾼후 flex줌(나타남)*/
     }
     header.menu_open .gnb .gnb_wrap {
-        right: 0;
+        right: 0; /*header .gnb .gnb_wrap 값 메뉴오버시 right: 0;주석걸면 메뉴없어지고 나오면 메뉴생김*/
     }
     header.menu_open .gnb .gnb_close {
         display: block;

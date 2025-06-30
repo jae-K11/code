@@ -1,5 +1,7 @@
 header {
     position: fixed;/*body정렬의기준*/
+    left: 0;
+    top: 0;
     height: 100px;
     width: 100%;
     padding: 0 20px;
@@ -9,6 +11,8 @@ header {
     color: #fff;
     z-index: 100;
     border-bottom: 1px solid rgba(255,255,255,0.2);
+
+    transition:  top 0.5s;
 }
 header .logo a {
     display: block;
@@ -58,6 +62,14 @@ header .util .sponsor a {
     border-radius: 5px;
 }
 
+/************* 아래로 스크롤 내릴때 header가 사라짐 ***************/
+header.fixed.gnb_up {
+    top: -100px /*header의 top 속성을 준 값 -100주면 사라짐*/
+}
+header.fixed.gnb_up.menu_over {
+    top: 0; /*메뉴에 마우스를 오버하면서 스크롤을 내릴경우, 
+            메뉴 못움직이게 하는것 */
+}
 /************* header에 fixed 클래스 추가 ***************/
 
 header.fixed,
@@ -88,7 +100,7 @@ header.menu_over .util .search .search_open::before {
 
 
 @media screen and (min-width:1180px) {
-
+        header .gnb .gnb_bg,
         header .gnb .gnb_open,
         header .gnb .gnb_util,
         header .gnb .gnb_close {
@@ -108,12 +120,27 @@ header.menu_over .util .search .search_open::before {
             font-weight: 700;
             line-height: 100px; /*header높이값과 동일*/
         }
+        header .gnb .gnb_wrap ul.depth1 > li.over > a {
+            color: #66CC01;
+        }
+        header .gnb .gnb_wrap ul.depth1 > li.over > a span {
+            position: relative; /*after정렬의 기준*/
+        }
+        header .gnb .gnb_wrap ul.depth1 > li.over > a span::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -37px;
+            height: 3px;
+            width: 100%;
+            background-color: #66CC01;
+        }
         header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
             display: none;
             position: absolute; /* depth1 > li를 기준으로 정렬 */
             left: 0;
             top: 100px; /*header 높이값과 동일*/
-
+            padding-top: 7px; /*depth2윗여백 */
         }
      
 /*************** menu_over 추가시 ***************/
@@ -126,7 +153,7 @@ header.menu_over .util .search .search_open::before {
             background-color: #fff;
             width: 100%;
             height: 399px;
-            z-index: -1;
+            z-index: -1; /*header 안에 있는 요소중 맨 아래 */
             box-shadow: 0 4px 4px 0 rgba(0,0,0,0.1);
         }
 
@@ -154,9 +181,11 @@ header.menu_over .util .search .search_open::before {
 }
 
 @media screen and (max-width:1179px) { /*모바일*/
+
     header {
         padding: 0 0 0 20px; /*왼쪽만 여백*/
         border-bottom: 0;
+        height: 56px;
     }
     header .logo a {
         height: 17px;
@@ -166,8 +195,8 @@ header.menu_over .util .search .search_open::before {
         display: none;
     }
     header .gnb .gnb_util {
-        display: flex;
-        position: absolute;
+        display: none; /*숨겼다가 메뉴오버시 flex줘서 나타남 */
+        position: absolute; /*gnb_wrap을 기준으로 정렬*/
         top: 16px;
         left: 20px;
         gap: 7px;
@@ -209,19 +238,22 @@ header.menu_over .util .search .search_open::before {
     header .gnb .gnb_wrap {
         position: fixed;
         top: 0;
-        right: 0;
+        right: -100%;
         height: 100%;
         width: calc(100% - 60px);
-        max-width: 450px;/*메뉴를 열었을때 최대 450px*/
+        max-width: 600px;/*메뉴를 열었을때 최대 600px*/
         background-color: #fff;
         color: #1d1d1d;
+        z-index: 10; /*gnb_bg줘서 올라가게*/
+
+        transition: 0.5s;
     }
     header .gnb .gnb_wrap ul.depth1 {
-        margin: 56px 0 0 0;
+        margin-top: 56px;
         height: calc(100% - 56px);
-        overflow: hidden;
-        overflow-y: auto;
-        border-top: 1px solid #EDEDED;
+        overflow-x: hidden; /*좌우스크롤없애기*/
+        overflow-y: auto; /*알아서*/
+        border-top: 1px solid #EDEDED; /*메뉴헤더 선*/
     }
     header .gnb .gnb_wrap ul.depth1 > li {
         border-bottom: 1px solid #EDEDED;
@@ -251,6 +283,7 @@ header.menu_over .util .search .search_open::before {
         margin: 0 15px 18px 18px;
         padding: 16px 0 19px 16px;
         border-radius: 5px;
+        display: none; /*숨기고 자바에서 보이게*/
     }
     header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 > li > a {
         display: block;
@@ -266,10 +299,55 @@ header.menu_over .util .search .search_open::before {
         background-position: center center;
         background-repeat: no-repeat;
     }
+    header .gnb .gnb_bg {
+        display: none;
+        position: fixed;  /* body를 기준으로 정렬  */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+    }
 
 
+    /** 2차메뉴 열였을때 **/
+    header .gnb .gnb_wrap ul.depth1 > li.open > a {
+        color: #66CC01;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.open > a::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_252_519' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='16' height='16'%3E%3Crect x='16' width='16' height='16' transform='rotate(90 16 0)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_252_519)'%3E%3Cpath d='M7.9987 9.64975L12.8987 4.74975C13.0654 4.58308 13.2626 4.50253 13.4904 4.50808C13.7181 4.51364 13.9154 4.59975 14.082 4.76641C14.2487 4.93308 14.332 5.1303 14.332 5.35808C14.332 5.58586 14.2487 5.78308 14.082 5.94975L8.9487 11.0664C8.81537 11.1997 8.66536 11.2997 8.4987 11.3664C8.33203 11.4331 8.16536 11.4664 7.9987 11.4664C7.83203 11.4664 7.66536 11.4331 7.4987 11.3664C7.33203 11.2997 7.18203 11.1997 7.0487 11.0664L1.91537 5.93308C1.7487 5.76641 1.66814 5.57197 1.6737 5.34975C1.67925 5.12753 1.76537 4.93308 1.93203 4.76641C2.0987 4.59975 2.29592 4.51641 2.5237 4.51641C2.75148 4.51641 2.9487 4.59975 3.11537 4.76641L7.9987 9.64975Z' fill='%2366CC01'/%3E%3C/g%3E%3C/svg%3E%0A");
+        transform: rotate(180deg);
+    }
 
-}/*@media 모바일끝*/
+    /** 메뉴가 열였을때 **/
+    header.menu_open .gnb .gnb_util {
+        display: flex; /* 위에 none준거 여기서 block으로바꾼후 flex줌(나타남)*/
+    }
+    header.menu_open .gnb .gnb_wrap {
+        right: 0; /*  header .gnb .gnb_wrap 값 */
+    }
+    header.menu_open .gnb .gnb_close {
+        display: block;
+    }
+    header.menu_open .gnb .gnb_bg {
+        display: block;
+
+        animation-name: gnb_bg;
+        animation-duration: 0.5s; /*몇초*/
+        animation-iteration-count: 1; /*몇번*/
+        animation-fill-mode: forwards; 
+    }
+
+    @keyframes gnb_bg {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+
+
+    
+
+
+}/*@media 모바일 끝*/
 
 
 
