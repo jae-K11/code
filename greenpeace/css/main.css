@@ -41,6 +41,11 @@
 .work .wrapper {
     display: flex; /*tit와 list 좌우배치*/
     justify-content: space-between;
+    align-items: flex-start;
+}
+.work .tit {
+    position: sticky; /*wrapper가 align-items: flex-start;같이 줘야함*/
+    top: 20px;
 }
 .work .tit strong {
     color: #66CC01;
@@ -136,6 +141,10 @@
         }
         .work .wrapper {
             display: block;
+        }
+        .work .tit {
+            position: relative;
+            top: 0;
         }
         .work .tit h2 {
             font-size: 30px;
@@ -399,6 +408,8 @@ footer{
         gap: 25px;
     }
 }
+
+
 
 @media screen and (max-width:768px) {
 

@@ -39,7 +39,7 @@ $(document).ready(function(){//문서가 로딩 되고 단 1번실행
        }, 500
        )
     })
-    //console.log('로딩됬다 단1번 ㅋ')
+    //console.log('로딩됬다 단1번')
     resize_chk() //함수의 실행
     scroll_chk()
 

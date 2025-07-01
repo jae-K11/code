@@ -267,6 +267,7 @@ header.menu_over .util .search .search_open::before {
         padding: 16px;
         position: relative; /*after 정렬*/
     }
+    
     header .gnb .gnb_wrap ul.depth1 > li > a::after {
         content: "";
         position: absolute;
@@ -342,9 +343,6 @@ header.menu_over .util .search .search_open::before {
         0% {opacity: 0;}
         100% {opacity: 1;}
     }
-
-
-    
 
 
 }/*@media 모바일 끝*/
