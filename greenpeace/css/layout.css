@@ -1,5 +1,5 @@
 header {
-    position: fixed;/*body정렬의기준*/
+    position: absolute;/*body정렬의기준*/
     left: 0;
     top: 0;
     height: 100px;
