@@ -1,1 +1,27 @@
-/* header 와 footer 같이 모든 페이지 공통사항 저장 */
+header {
+    position: fixed; /*body기준정렬*/
+    left: 0;
+    top: 0;
+    z-index: 100;
+    height: var(--header-h);
+    width: 100%;
+    display: flex; /*logo, gnb, util*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: #fff;
+}
+header .logo a {
+    display: block;
+    width: 74px;
+    height: 60px;
+    background: url(../images/common/logo_w.svg) no-repeat center center / contain;
+}
+header .gnb .gnb_open,
+header .gnb .gnb_close {
+    display: none;
+}
+header .gnb ul.depth1 > li > ul.depth2 {
+    display: none;
+}
+
