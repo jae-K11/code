@@ -10,16 +10,33 @@
 
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
+    <script src="js/common.js"></script>
     <title>가평문화관광</title>
 </head>
 <body>
     <div id="wrap">
-        <header>
+        <!--고정될때 fixed 추가 
+        메뉴가 상단으로 사라질때 gnb_up
+        pc에서 메뉴 오버 menu_over
+        모바일 메뉴 클릭 menu_open
+        
+        -->
+        <header class="">
             <h1 class="logo"><a href="index.html"><span class="blind">가평문화관광</span></a></h1>
             <nav class="gnb">
-                <button class="gnb_open"><span>메뉴열기</span></button>
+                <button class="gnb_open"><span class="blind">메뉴열기</span></button>
+                <div class="gnb_wrap">
+                    <div class="gnb_util">
+                        <div class="lang">
+                            <button class="lang_open"><span class>KR</span></button>
+                        </div>
+                        <div class="search">
+                            <button class="search_open"><span class>검색</span></button>
+                        </div>
+                    </div><!--//gnb_util-->
+                    <!-- pc버전 over, 모바일버전- open -->
                     <ul class="depth1">
-                        <li>
+                        <li class="">
                             <a href="#"><span>관광명소</span></a>
                             <ul class="depth2">
                                 <li><a href="#">가평9경</a></li>
@@ -65,14 +82,15 @@
                             </ul><!--//depth2-->
                         </li>
                     </ul><!--//depth1-->
-                <button class="gnb_close"><span>메뉴닫기</span></button>
+                <button class="gnb_close"><span class="blind">메뉴닫기</span></button>
+            </div><!--//gnb_wrap-->
             </nav>
             <div class="util">
                 <div class="lang">
-                    <button class="lang_open"><span>KR</span></button>
+                    <button class="lang_open"><span class="blind">KR</span></button>
                 </div>
                 <div class="search">
-                    <button class="search_open"><span>검색</span></button>
+                    <button class="search_open"><span class="blind">검색</span></button>
                 </div>
             </div><!--//util-->
         </header>
@@ -134,7 +152,53 @@
                     </div><!--//ctrl_wrap-->
                 </div><!--//swiper-->
             </section><!--//visual-->
-            <section class="infor"></section><!--//infor-->
+            <section class="infor">
+                <div class="wrapper">
+                    <div class="tit">
+                        <h2>가평 여행가이드</h2>
+                        <p>가평을 즐기는 최상의 방법! 여행정보의 모든 것을 알려드립니다.</p>
+                    </div>
+                    <div class="group">
+                        <div class="bg bg1">
+                            <div class="group_tit">
+                                <h3>테마여행</h3>
+                                <p>취향대로 떠나는 특별한 테마여행</p>
+                            </div>
+                            <a href="#" class="more"><span>자세히보기</span></a>
+                        </div><!--//bg1-->
+                        <div class="bg bg2">
+                            <div class="group_tit">
+                                <h3>힐링트레킹</h3>
+                                <p>명산을 따라 걷는  등산코스 </p>
+                            </div>
+                            <a href="#" class="more"><span>자세히보기</span></a>
+                        </div><!--//bg2-->
+                        <div class="bg bg3">
+                            <div class="group_tit">
+                                <h3>관광지도</h3>
+                                <p>내 손안에 가평 여행 가이드</p>
+                            </div>
+                            <a href="#" class="more"><span>자세히보기</span></a>
+                        </div><!--//bg3-->
+                        <div class="bg bg4">
+                            <div class="group_tit">
+                                <h3>추천여행</h3>
+                                <p>당일치기부터 1박 2일까지 추천 여행코스</p>
+                            </div>
+                            <a href="#" class="more"><span>자세히보기</span></a>
+                        </div><!--//bg4-->
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li class="ico1"><a href="#"><span>관광해설사 문의</span></a></li>
+                            <li class="ico1"><a href="#"><span>관광Q&A</span></a></li>
+                            <li class="ico1"><a href="#"><span>관광안내도</span></a></li>
+                            <li class="ico1"><a href="#"><span>홍보책자 신청</span></a></li>
+                            <li class="ico1"><a href="#"><span>버스안내</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section><!--//infor-->
             <section class="Tour"></section><!--//Tour-->
             <section class="sns"></section><!--//sns-->
             <section class="Notice"></section><!--//Notice-->

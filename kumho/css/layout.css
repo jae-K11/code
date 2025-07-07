@@ -93,7 +93,7 @@ header.menu_over .util .search .search_open::before {
     header .gnb .gnb_util,
     header .gnb .gnb_open,
     header .gnb .gnb_close {
-        display: none; /* 모바일에서만 숨김 */
+        display: none; /*pc숨김*/
     }
     header .gnb .gnb_wrap ul.depth1 {
         display: flex;
