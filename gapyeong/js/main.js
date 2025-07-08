@@ -39,4 +39,29 @@ $(document).ready(function(){
         $('.visual .ctrl_wrap button.btn_stop').show()
     })     
     /*************visual 의 swiper 연결 : 끝 *************/
+
+    /*************Tour 의 tap: 시작 *************/
+
+    let Tour_content //클릭한메뉴 이름(id)
+    $('.Tour .list .tab_list ul li').on('click', function(){
+        //console.log('눌려')
+        if($(this).hasClass('active') == false){
+            //console.log('선택안된메뉴')
+            Tour_content = $(this).attr('data-content')
+            console.log(Tour_content)
+
+            $('.Tour .list .tab_content .tab_item').removeClass('active')
+            $('.Tour .list .tab_content').find('#'+Tour_content).addClass('active')
+
+            $('.Tour .list .tab_list ul li').removeClass('active')
+            $(this).addClass('active')
+            
+
+            $('.Tour .list .tab_list ul li').attr('aria-selected', 'false')
+            $(this).attr('aria-selected', 'true')
+        }
+    })
+    
+    /*************Tour 의 tap: 끝 *************/
+
 })

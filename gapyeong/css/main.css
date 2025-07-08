@@ -411,7 +411,9 @@
     padding: 7px 27px;
     border-radius: 30px;
 }
-.Tour .list .tab_list ul li.item1.active button {
+.Tour .list .tab_list ul li.item1.active button,
+.Tour .list .tab_list ul li.item2.active button,
+.Tour .list .tab_list ul li.item3.active button {
     background-color: #005BAC;
 }
 .Tour .list .tab_content {
@@ -484,6 +486,7 @@
     display: block;
     font-size: 20px;
     margin: 0 0 6px 0;
+    font-weight: var(--bold-weight);
     color: var(--tit-color);
 
     white-space: nowrap;     
@@ -496,13 +499,37 @@
   text-overflow: ellipsis;  
 }
 .Tour .list .tab_content .control button{
-    content: "";
-    left: 0;
-    top: 0;
-    position: absolute;
     display: inline-block;
     background-color: #DADADA;
     border-radius: 50%;
     width: 59px;
     height: 59px;
+    position: relative;
+    
+}
+.Tour .list .tab_content .control button.prev {
+    position: absolute;
+    left: 140px;
+    top: 137px;
+}
+.Tour .list .tab_content .control button.next {
+    position: absolute;
+    right: 140px;
+    top: 137px;
+}
+.Tour .list .tab_content .control button.prev::before,
+.Tour .list .tab_content .control button.next::before {
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 19px;
+    width: 21px;
+    height: 21px;
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_160_2186' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='21' height='21'%3E%3Crect width='21' height='21' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_160_2186)'%3E%3Cpath d='M3.1063 10.4992L9.53755 16.9304C9.7563 17.1492 9.86202 17.4044 9.85473 17.6961C9.84744 17.9877 9.73442 18.2429 9.51567 18.4617C9.29692 18.6804 9.04171 18.7898 8.75005 18.7898C8.45838 18.7898 8.20317 18.6804 7.98442 18.4617L1.24692 11.7461C1.07192 11.5711 0.940672 11.3742 0.853172 11.1554C0.765672 10.9367 0.721922 10.7179 0.721922 10.4992C0.721922 10.2804 0.765672 10.0617 0.853172 9.84293C0.940673 9.62418 1.07192 9.42731 1.24692 9.25231L7.98442 2.51481C8.20317 2.29606 8.46203 2.19033 8.76099 2.19762C9.05994 2.20491 9.3188 2.31793 9.53755 2.53668C9.7563 2.75543 9.86567 3.01064 9.86567 3.30231C9.86567 3.59397 9.7563 3.84918 9.53755 4.06793L3.1063 10.4992Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.Tour .list .tab_content .control button.next::before {
+    transform: rotate(180deg);
 }
