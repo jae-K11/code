@@ -40,28 +40,79 @@ $(document).ready(function(){
     })     
     /*************visual 의 swiper 연결 : 끝 *************/
 
-    /*************Tour 의 tap: 시작 *************/
+    /*************tour 의 tap: 시작 *************/
 
-    let Tour_content //클릭한메뉴 이름(id)
-    $('.Tour .list .tab_list ul li').on('click', function(){
+    let tour_content //클릭한메뉴 이름(id)
+    $('.tour .list .tab_list ul li').on('click', function(){
         //console.log('눌려')
         if($(this).hasClass('active') == false){
             //console.log('선택안된메뉴')
-            Tour_content = $(this).attr('data-content')
-            console.log(Tour_content)
+            tour_content = $(this).attr('data-content')
+            console.log(tour_content)
 
-            $('.Tour .list .tab_content .tab_item').removeClass('active')
-            $('.Tour .list .tab_content').find('#'+Tour_content).addClass('active')
+            $('.tour .list .tab_content .tab_item').removeClass('active')
+            $('.tour .list .tab_content').find('#'+tour_content).addClass('active')
 
-            $('.Tour .list .tab_list ul li').removeClass('active')
+            $('.tour .list .tab_list ul li').removeClass('active')
             $(this).addClass('active')
             
 
-            $('.Tour .list .tab_list ul li').attr('aria-selected', 'false')
+            $('.tour .list .tab_list ul li').attr('aria-selected', 'false')
             $(this).attr('aria-selected', 'true')
         }
     })
     
-    /*************Tour 의 tap: 끝 *************/
+    /*************tour 의 tap: 끝 *************/
+
+    /*************tour 의 swiper : 시작 *************/
+
+    const tour_swiper = new Swiper('.tour .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 1, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+        breakpoints: {
+            360: {    /* 1560px 이상일때 적용 */
+                slidesPerView: 'auto',    /*    'auto'   라고 쓰면 css에서 적용한 넓이값이 적용됨 */
+                spaceBetween: 24,
+            },
+
+        },
+        centeredSlides: false, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
+        loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        // autoplay: {  /* 팝업 자동 실행 */
+        //     delay: 2500,
+        //     disableOnInteraction: true,
+        // },
+        navigation: {
+            nextEl: '.tour .btn_prev',
+            prevEl: '.tour .btn_next',
+        },     
+    });
+    // swiper.autoplay.stop();  /* 일시정지 기능 */
+    // swiper.autoplay.start();  /* 재생 기능 */
+
+    /*************tour 의 swiper : 끝 *************/
+
+    /*************sns 의 swiper : 시작 *************/
+
+    const sns_swiper = new Swiper('.sns .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 1, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+        breakpoints: {
+            640: {    /* 640px 이상일때 적용 */
+                slidesPerView: 4,    /*    'auto'   라고 쓰면 css에서 적용한 넓이값이 적용됨 */
+                spaceBetween: 24,
+            },
+        },
+        //centeredSlides: true, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
+        loop: false,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+        autoplay: {  /* 팝업 자동 실행 */
+            delay: 30000,
+            disableOnInteraction: true,
+        },
+    });
+
+
+    /*************sns 의 swiper : 끝 *************/
+
 
 })

@@ -199,7 +199,7 @@
                     </div>
                 </div>
             </section><!--//infor-->
-            <section class="Tour" id="skip_content">
+            <section class="tour" id="skip_content">
                 <div class="tit">
                     <h2>가평 관광명소</h2>
                     <p>여행의 즐거움을 더하는 가평의 자연·체험·힐링 명소를 소개합니다.</p>
@@ -216,176 +216,230 @@
                         <div class="tab_item item1 active" id="tab_item1">
                             <h3 class="blind">가평9경</h3>
                             <div class="inner">
-                            <ul>
-                                <li class="item">
-                                    <a href="#" class="link">
-                                        <div class="photo"><img src="images/main/item1_1.jpg" alt=""></div>
-                                        <div class="txt">
-                                            <strong>제 1 경 청평호반</strong>
-                                            <p>경기 가평군 설악면 회곡리, 청평면 호명리·</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="link">
-                                        <div class="photo"><img src="images/main/item1_2.jpg" alt=""></div>
-                                        <div class="txt">
-                                            <strong>제 2 경 호명호수</strong>
-                                            <p>경기 가평군 청평면 상천리 일원</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="link">
-                                        <div class="photo"><img src="images/main/item1_3.jpg" alt=""></div>
-                                        <div class="txt">
-                                            <strong>제 3 경 용추계곡</strong>
-                                            <p>경기 가평군 가평읍 승안리 일원</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="link">
-                                        <div class="photo"><img src="images/main/item1_4.jpg" alt=""></div>
-                                        <div class="txt">
-                                            <strong>제 4 경 명지산</strong>
-                                            <p>경기 가평군 북면 도대리 일원</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="link">
-                                        <div class="photo"><img src="images/main/item1_5.jpg" alt=""></div>
-                                        <div class="txt">
-                                            <strong>제 5 경 도마치계곡</strong>
-                                            <p>경기 가평군 북면 적목리 일원</p>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
+                                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                                        <li class="swiper-slide">
+                                            <a href="#">
+                                                <div class="photo"><img src="images/main/item1_1.jpg" alt=""></div>
+                                                <div class="txt">
+                                                    <strong>제 1 경 청평호반</strong>
+                                                    <p>경기 가평군 설악면 회곡리, 청평면 호명리·</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide item2">
+                                            <a href="#">
+                                                <div class="photo"><img src="images/main/item1_2.jpg" alt=""></div>
+                                                <div class="txt">
+                                                    <strong>제 2 경 호명호수</strong>
+                                                    <p>경기 가평군 청평면 상천리 일원</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide item3">
+                                            <a href="#">
+                                                <div class="photo"><img src="images/main/item1_3.jpg" alt=""></div>
+                                                <div class="txt">
+                                                    <strong>제 3 경 용추계곡</strong>
+                                                    <p>경기 가평군 가평읍 승안리 일원</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <a href="#">
+                                                <div class="photo"><img src="images/main/item1_4.jpg" alt=""></div>
+                                                <div class="txt">
+                                                    <strong>제 4 경 명지산</strong>
+                                                    <p>경기 가평군 북면 도대리 일원</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide item5">
+                                            <a href="#">
+                                                <div class="photo"><img src="images/main/item1_5.jpg" alt=""></div>
+                                                <div class="txt">
+                                                    <strong>제 5 경 도마치계곡</strong>
+                                                    <p>경기 가평군 북면 적목리 일원</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div><!--//swiper-->
                         </div><!--//inner-->
-                        <div class="control">
-                            <button class="prev" data-control="prev"></button>
-                            <button class="next" data-control="next"></button>
-                        </div><!--//control-->
+                        <button class="btn_prev"><span class="blind">이전버튼</span></button>
+                        <button class="btn_next"><span class="blind">다음버튼</span></button>
                         </div><!--//tab_item1-->
                         <div class="tab_item item2" id="tab_item2">
                             <h3 class="blind">자연</h3>
                             <div class="inner">
-                            <ul>
-                                <li class="item">
-                                    <a href="#" class="link">
-                                        <div class="photo"><img src="images/main/item2_1.jpg" alt=""></div>
-                                        <div class="txt">
-                                            <strong>자라섬</strong>
-                                            <p>경기 가평군 가평읍 자라섬로 60</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="link">
-                                        <div class="photo"><img src="images/main/item2_2.jpg" alt=""></div>
-                                        <div class="txt">
-                                            <strong>명지산 구름다리</strong>
-                                            <p>북면 도대리 산266</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="link">
-                                        <div class="photo"><img src="images/main/item2_3.jpg" alt=""></div>
-                                        <div class="txt">
-                                            <strong>청평페리</strong>
-                                            <p>청평면 고성리 786-20</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="link">
-                                        <div class="photo"><img src="images/main/item2_4.jpg" alt=""></div>
-                                        <div class="txt">
-                                            <strong>아침고요동물원</strong>
-                                            <p>가평군 상면 임초밤안골로 301</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="link">
-                                        <div class="photo"><img src="images/main/item2_5.jpg" alt=""></div>
-                                        <div class="txt">
-                                            <strong>잣향기푸른숲</strong>
-                                            <p>경기 가평군 상면 행현리 축령</p>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
+                                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                                        <li class="swiper-slide">
+                                            <a href="#">
+                                                <div class="photo"><img src="images/main/item2_1.jpg" alt=""></div>
+                                                <div class="txt">
+                                                    <strong>자라섬</strong>
+                                                    <p>경기 가평군 가평읍 자라섬로 60</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide item2">
+                                            <a href="#">
+                                                <div class="photo"><img src="images/main/item2_2.jpg" alt=""></div>
+                                                <div class="txt">
+                                                    <strong>명지산 구름다리</strong>
+                                                    <p>북면 도대리 산266</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide item3">
+                                            <a href="#">
+                                                <div class="photo"><img src="images/main/item2_3.jpg" alt=""></div>
+                                                <div class="txt">
+                                                    <strong>청평페리</strong>
+                                                    <p>청평면 고성리 786-20</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <a href="#">
+                                                <div class="photo"><img src="images/main/item2_4.jpg" alt=""></div>
+                                                <div class="txt">
+                                                    <strong>아침고요동물원</strong>
+                                                    <p>가평군 상면 임초밤안골로 301</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide item5">
+                                            <a href="#">
+                                                <div class="photo"><img src="images/main/item2_5.jpg" alt=""></div>
+                                                <div class="txt">
+                                                    <strong>잣향기푸른숲</strong>
+                                                    <p>경기 가평군 상면 행현리 축령</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div><!--//swiper-->
                         </div><!--//inner-->
-                        <div class="control">
-                            <button class="prev" data-control="prev"></button>
-                            <button class="next" data-control="next"></button>
-                        </div><!--//control-->
+                        <div class="paging">
+                            <button class="btn_prev"><span class="blind">이전버튼</span></button>
+                            <button class="btn_next"><span class="blind">다음버튼</span></button>
+                        </div>
                         </div><!--//tab_item2-->
                         <div class="tab_item item3" id="tab_item3">
                             <h3 class="blind">문화</h3>
                             <div class="inner">
-                            <ul>
-                                <li class="item">
-                                    <a href="#" class="link">
-                                        <div class="photo"><img src="images/main/item3_1.jpg" alt=""></div>
-                                        <div class="txt">
-                                            <strong>꿈의동산 놀이공원</strong>
-                                            <p>청평면 에덴벚꽃길 157-69</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="link">
-                                        <div class="photo"><img src="images/main/item3_2.jpg" alt=""></div>
-                                        <div class="txt">
-                                            <strong>더스테이힐링파크</strong>
-                                            <p>설악면 위곡리 303-3</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="link">
-                                        <div class="photo"><img src="images/main/item3_3.jpg" alt=""></div>
-                                        <div class="txt">
-                                            <strong>이탈리아 마을</strong>
-                                            <p>청평면 호반로 1063</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="link">
-                                        <div class="photo"><img src="images/main/item3_4.jpg" alt=""></div>
-                                        <div class="txt">
-                                            <strong>자연과별천문대</strong>
-                                            <p>북면 백둔리 122-3</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="#" class="link">
-                                        <div class="photo"><img src="images/main/item3_5.jpg" alt=""></div>
-                                        <div class="txt">
-                                            <strong>에델바이스 스위스 테마파크</strong>
-                                            <p>설악면 다락재로 226-57</p>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
+                                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                                        <li class="swiper-slide">
+                                            <a href="#">
+                                                <div class="photo"><img src="images/main/item3_1.jpg" alt=""></div>
+                                                <div class="txt">
+                                                    <strong>꿈의동산 놀이공원</strong>
+                                                    <p>청평면 에덴벚꽃길 157-69</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide item2">
+                                            <a href="#">
+                                                <div class="photo"><img src="images/main/item3_2.jpg" alt=""></div>
+                                                <div class="txt">
+                                                    <strong>더스테이힐링파크</strong>
+                                                    <p>설악면 위곡리 303-3</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide item3">
+                                            <a href="#">
+                                                <div class="photo"><img src="images/main/item3_3.jpg" alt=""></div>
+                                                <div class="txt">
+                                                    <strong>이탈리아 마을</strong>
+                                                    <p>청평면 호반로 1063</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide">
+                                            <a href="#">
+                                                <div class="photo"><img src="images/main/item3_4.jpg" alt=""></div>
+                                                <div class="txt">
+                                                    <strong>자연과별천문대</strong>
+                                                    <p>북면 백둔리 122-3</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide item5">
+                                            <a href="#">
+                                                <div class="photo"><img src="images/main/item3_5.jpg" alt=""></div>
+                                                <div class="txt">
+                                                    <strong>에델바이스 스위스 테마파크</strong>
+                                                    <p>설악면 다락재로 226-57</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div><!--//swiper-->
                         </div><!--//inner-->
-                        <div class="control">
-                            <button class="prev" data-control="prev"></button>
-                            <button class="next" data-control="next"></button>
-                        </div><!--//control-->
+                        <div class="paging">
+                            <button class="btn_prev"><span class="blind">이전버튼</span></button>
+                            <button class="btn_next"><span class="blind">다음버튼</span></button>
+                        </div>
                         </div><!--//tab_item3-->
                     </div><!--//tab_content-->
                 </div><!--//list-->
-            </section><!--//Tour-->
-            <section class="sns"></section><!--//sns-->
-            <section class="Notice"></section><!--//Notice-->
+            </section><!--//tour-->
+            <section class="sns">
+                <div class="wrapper">
+                <div class="tit">
+                    <h2>SNS #가평핫플</h2>
+                    <p>감성 여행지부터 핫한 체험 명소까지, SNS 속 생생한 가평을 함께 만나보세요.</p>
+                </div>
+                <div class="list">
+                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                        <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo"><img src="images/main/sns01.jpg" alt=""></div>
+                                    <div class="txt">
+                                        <p>겨울여행은 아침고요수목원 #아침고요수목원 #오색별빛정원 #불빛축제 #빛축제 #가평여행 #서울근교 #가평가볼만한곳  </p>
+                                    </div>
+                                    <div class="icon"><span>페이스북</span></div>
+                                </a>
+                                
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo"><img src="images/main/sns02.jpg" alt=""></div>
+                                    <div class="txt">
+                                        <p>가평 설악면에서 만나는 양들이 반겨주는 힐링목장, 자연 속 귀여운 동물 친구과 힐링하러 가평으로 떠나보세요</p>
+                                    </div>
+                                    <div class="icon"><span>인스타</span></div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo"><img src="images/main/sns03.jpg" alt=""></div>
+                                    <div class="txt">
+                                        <p>갓평이와 송송이가 추천하는 가평여행 BEST5  #가평 #shorts</p>
+                                    </div>
+                                    <div class="icon"><span>유튜브</span></div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo"><img src="images/main/sns04.jpg" alt=""></div>
+                                    <div class="txt">
+                                        <p>경기 최고 "악"산에 출렁다리가!!? / 풍경에 감탄하고 만난 인생 콩국수 </p>
+                                    </div>
+                                    <div class="icon"><span>유튜브</span></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                </div><!--//wrapper-->
+            </section><!--//sns-->
+            <section class="notice"></section><!--//notice-->
         </mian>
         <footer></footer>
     </div><!--//wrap-->
