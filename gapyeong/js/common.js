@@ -34,6 +34,13 @@ $(document).ready(function(){
         $('header').removeClass('menu_over')
         $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
     })
+    $('header .util .lang .lang_open').on('mouseenter focusout', function(){
+        console.log('아웃')
+       $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
+       $('header').removeClass('menu_over')
+    })
+
+ 
 
     /******** 모바일 메뉴 열고 닫기 *********/
     $('header .gnb .gnb_open').on('click', function(){
@@ -62,9 +69,6 @@ $(document).ready(function(){
             }
         }
     })
-     $('header .util .lang .lang_open').on('mouseenter focusin', function(){
-        console.log ('누름')
-     })
 
 
 
