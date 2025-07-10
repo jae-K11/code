@@ -22,7 +22,7 @@ $(document).ready(function(){
     scroll_chk()
     resize_chk()
 
-    $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter', function(){
+    $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter focusin', function(){
         if(device_status == 'pc') {
             //console.log('오버했다')
             $('header').addClass('menu_over')
@@ -62,6 +62,11 @@ $(document).ready(function(){
             }
         }
     })
+     $('header .util .lang .lang_open').on('mouseenter focusin', function(){
+        console.log ('누름')
+     })
+
+
 
 })//$(document).ready
 
