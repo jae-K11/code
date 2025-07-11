@@ -34,8 +34,8 @@ $(document).ready(function(){
         $('header').removeClass('menu_over')
         $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
     })
-    $('header .util .lang .lang_open').on('mouseenter focusout', function(){
-        console.log('아웃')
+    $('header .util .lang .lang_open').on('focusout', function(){
+        //console.log('아웃')
        $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
        $('header').removeClass('menu_over')
     })

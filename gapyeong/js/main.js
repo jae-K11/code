@@ -68,10 +68,22 @@ $(document).ready(function(){
 
     const tour_swiper = new Swiper('.tour .swiper', { /* 팝업을 감싼는 요소의 class명 */
         slidesPerView: 1, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
-        spaceBetween: 24, /* 팝업과 팝업 사이 여백 */
+        spaceBetween: 30, /* 팝업과 팝업 사이 여백 */
         breakpoints: {
-            320: {    /* 1560px 이상일때 적용 */
-                slidesPerView: 'auto',
+            600: {    /* 1560px 이상일때 적용 */
+                slidesPerView: 2,
+                spaceBetween: 16,
+            },
+            880: {    /* 1560px 이상일때 적용 */
+                slidesPerView: 3,
+                spaceBetween: 16,
+            },
+            1160: {    /* 1560px 이상일때 적용 */
+                slidesPerView: 4,
+                spaceBetween: 24,
+            },
+            1460: {    /* 1560px 이상일때 적용 */
+                slidesPerView: 5,
                 spaceBetween: 24,
             },
         },
@@ -82,8 +94,8 @@ $(document).ready(function(){
         //     disableOnInteraction: true,
         // },
         navigation: {
-            nextEl: '.tour .btn_prev',
-            prevEl: '.tour .btn_next',
+            nextEl: '.tour .btn_next',
+            prevEl: '.tour .btn_prev',
         },     
     });
     // swiper.autoplay.stop();  /* 일시정지 기능 */
@@ -97,7 +109,7 @@ $(document).ready(function(){
         slidesPerView: 1, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
         spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
         breakpoints: {
-            550: {    
+            520: {    
                 slidesPerView: 2,    /*    'auto'   라고 쓰면 css에서 적용한 넓이값이 적용됨 */
                 spaceBetween: 10,
             },
@@ -105,7 +117,7 @@ $(document).ready(function(){
                 slidesPerView: 2,    /*    'auto'   라고 쓰면 css에서 적용한 넓이값이 적용됨 */
                 spaceBetween: 15,
             },
-            768: {   
+            870: {   
                 slidesPerView: 3,    /*    'auto'   라고 쓰면 css에서 적용한 넓이값이 적용됨 */
                 spaceBetween: 24,
             },
