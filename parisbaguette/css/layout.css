@@ -1,0 +1,65 @@
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: var(--header-h);
+    width: 100%;
+    display: flex; /*logo nav util정렬*/
+    z-index: 100;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 0 20px;
+}
+header .logo a {
+    display: block;
+    width: 271px;
+    height: 19px;
+    background: url(../images/common/logo_w.svg) no-repeat center center / contain;
+}
+header .util .search .search_open {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+header .util .search .search_open::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    height: 26px;
+    width: 26px;
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_157_505' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='26' height='26'%3E%3Crect x='0.25' y='0.249023' width='25.5' height='25.5' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_157_505)'%3E%3Cpath d='M10.2936 17.3957C8.3251 17.3957 6.65759 16.7124 5.29104 15.3459C3.92449 13.9791 3.24121 12.3116 3.24121 10.3434C3.24121 8.37508 3.92449 6.70757 5.29104 5.34084C6.65759 3.97429 8.3251 3.29102 10.2936 3.29102C12.2618 3.29102 13.9293 3.97429 15.2958 5.34084C16.6625 6.70757 17.3459 8.37508 17.3459 10.3434C17.3459 11.131 17.2262 11.867 16.9868 12.5512C16.7472 13.2355 16.4234 13.839 16.0154 14.3617L21.9146 20.2674C22.139 20.496 22.2512 20.7788 22.2512 21.1158C22.2512 21.4529 22.1369 21.7337 21.9083 21.9581C21.6837 22.1824 21.4019 22.2946 21.0628 22.2946C20.7237 22.2946 20.4419 22.1824 20.2176 21.9581L14.3247 16.0652C13.7977 16.4734 13.1899 16.7972 12.5014 17.0366C11.8129 17.276 11.077 17.3957 10.2936 17.3957ZM10.2936 14.9785C11.5834 14.9785 12.6784 14.5285 13.5785 13.6283C14.4787 12.7284 14.9287 11.6334 14.9287 10.3434C14.9287 9.05331 14.4787 7.95831 13.5785 7.05838C12.6784 6.15826 11.5834 5.7082 10.2936 5.7082C9.0035 5.7082 7.90842 6.15826 7.00831 7.05838C6.10837 7.95831 5.6584 9.05331 5.6584 10.3434C5.6584 11.6334 6.10837 12.7284 7.00831 13.6283C7.90842 14.5285 9.0035 14.9785 10.2936 14.9785Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+header .gnb .gnb_open,
+header .gnb .gnb_util,
+header .gnb .gnb_close {
+    display: none;
+}
+header .gnb .gnb_wrap ul.depth1 {
+    display: flex;
+}
+header .gnb .gnb_wrap ul.depth1 li {
+    width: 157px;
+    position: relative; /*depth2 정렬기준*/
+}
+header .gnb .gnb_wrap ul.depth1 li a {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: var(--header-h);
+    text-align: center;
+}
+header .gnb .gnb_wrap ul.depth1 li > ul.depth2 {
+    display: none;
+}
+
+/*************haeder에서 menu_over 열였을때 ****************/
+header.menu_over .gnb .gnb_wrap ul.depth1 li > ul.depth2  {
+    display: block;
+}
+
+
