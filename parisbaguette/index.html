@@ -11,14 +11,18 @@
     
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
+    <script src="js/common.js"></script>
     <title>파리바게뜨</title>
 </head>
 <body>
     <div id="wrap"></div>
     <!--
+    상단고정 fixed
+    메뉴가 상단으로 사라질때 gnb_up
     pc에서 메뉴열릴때 menu_over
+    mobile에서 메뉴를 클릭하면 menu_open 
     -->
-    <header class="menu_over">
+    <header class="">
         <h1 class="logo"><a html="index.html"><span class="blind">파리바게뜨</span></a></h1>
         <nav class="gnb">
             <button class="gnb_open"><span class="blind">메뉴열기</span></button>
@@ -29,7 +33,7 @@
                     </div><!--//search-->
                 </div><!--//gnb_util-->
                 <ul class="depth1">
-                    <li>
+                    <li class="">
                         <a href="#"><span>브랜드소개</span></a>
                         <ul class="depth2">
                             <li><a href="#">회사소개</a></li>

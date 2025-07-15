@@ -9,7 +9,9 @@ header {
     justify-content: space-between;
     align-items: center;
     color: #fff;
+    border-bottom: rgba(255,255,255,0.2);
     padding: 0 20px;
+    transition: top 0.5s;
 }
 header .logo a {
     display: block;
@@ -34,6 +36,30 @@ header .util .search .search_open::before {
     background-repeat: no-repeat;
     background-size: contain;
 }
+/*************아래로 스크롤내릴때 header사라짐 ****************/
+header.fixed.gnb_up {
+    top: var(--header-h-m);
+}
+
+/*************haeder에서 fixed 추가 ****************/
+header.fixed,
+header.menu_over {
+    background-color: #fff;
+    color: var(--tit-color);
+    box-shadow: 0  4px 4px 0 rgba(0,0,0,0.1);
+}
+header.fixed .logo a,
+header.menu_over .logo a{
+    background: url(../images/common/logo_w.svg) no-repeat center center / contain;
+    background-image: url(../images/common/logo.svg);
+}
+header.fixed .util .search .search_open::before,
+header.menu_over .util .search .search_open::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_157_505' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='26' height='26'%3E%3Crect x='0.25' y='0.249023' width='25.5' height='25.5' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_157_505)'%3E%3Cpath d='M10.2936 17.3957C8.3251 17.3957 6.65759 16.7124 5.29104 15.3459C3.92449 13.9791 3.24121 12.3116 3.24121 10.3434C3.24121 8.37508 3.92449 6.70757 5.29104 5.34084C6.65759 3.97429 8.3251 3.29102 10.2936 3.29102C12.2618 3.29102 13.9293 3.97429 15.2958 5.34084C16.6625 6.70757 17.3459 8.37508 17.3459 10.3434C17.3459 11.131 17.2262 11.867 16.9868 12.5512C16.7472 13.2355 16.4234 13.839 16.0154 14.3617L21.9146 20.2674C22.139 20.496 22.2512 20.7788 22.2512 21.1158C22.2512 21.4529 22.1369 21.7337 21.9083 21.9581C21.6837 22.1824 21.4019 22.2946 21.0628 22.2946C20.7237 22.2946 20.4419 22.1824 20.2176 21.9581L14.3247 16.0652C13.7977 16.4734 13.1899 16.7972 12.5014 17.0366C11.8129 17.276 11.077 17.3957 10.2936 17.3957ZM10.2936 14.9785C11.5834 14.9785 12.6784 14.5285 13.5785 13.6283C14.4787 12.7284 14.9287 11.6334 14.9287 10.3434C14.9287 9.05331 14.4787 7.95831 13.5785 7.05838C12.6784 6.15826 11.5834 5.7082 10.2936 5.7082C9.0035 5.7082 7.90842 6.15826 7.00831 7.05838C6.10837 7.95831 5.6584 9.05331 5.6584 10.3434C5.6584 11.6334 6.10837 12.7284 7.00831 13.6283C7.90842 14.5285 9.0035 14.9785 10.2936 14.9785Z' fill='%231d1d1d'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+/*************haeder에서 fixed 끝 ****************/
+
+
 header .gnb .gnb_open,
 header .gnb .gnb_util,
 header .gnb .gnb_close {
@@ -42,24 +68,71 @@ header .gnb .gnb_close {
 header .gnb .gnb_wrap ul.depth1 {
     display: flex;
 }
-header .gnb .gnb_wrap ul.depth1 li {
+header .gnb .gnb_wrap ul.depth1 > li {
     width: 157px;
     position: relative; /*depth2 정렬기준*/
 }
-header .gnb .gnb_wrap ul.depth1 li a {
+header .gnb .gnb_wrap ul.depth1 > li > a {
     display: block;
     font-size: 20px;
     font-weight: 700;
     line-height: var(--header-h);
     text-align: center;
 }
-header .gnb .gnb_wrap ul.depth1 li > ul.depth2 {
+header .gnb .gnb_wrap ul.depth1 > li.over > a {
+    color: var(--point-color);
+}
+header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
     display: none;
+    position: absolute; /*li 기준정렬*/
+    left: 0;
+    top: var(--header-h);
+    width: 100%;
+    text-align: center;
+}
+header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 a {
+    display: block;
+    color: var(--base-color);
+    line-height: 2;
+}
+header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 a:hover {
+    color: var(--point-color);
+    font-weight: var(--bold-weight);
 }
 
 /*************haeder에서 menu_over 열였을때 ****************/
+
+header.menu_over::before {
+    content: "";
+    position: absolute; /*header기준으로정렬*/
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 375px;
+    background-color: #fff;
+    box-shadow: 0  4px 4px 0 rgba(0,0,0,0.1);
+}
 header.menu_over .gnb .gnb_wrap ul.depth1 li > ul.depth2  {
-    display: block;
+    display: block ;
+}
+
+@media screen and (min-width:1025px) and (max-width:1300px) {
+    /*브라우저1025 ~ 1300 사이일때*/
+    header .logo a {
+        width: 213px;
+        height: 15px;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li {
+        width: 130px;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > a {
+        font-size: 18px;
+    }
+}
+
+footer {
+    margin: 1000px;
 }
 
 
