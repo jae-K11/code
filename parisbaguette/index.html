@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/jquery-3.7.1.min.js"></script>
 
+    <script src="js/slick.min.js"></script>
+    <link rel="stylesheet" href="css/slick.css">
+
     <script src="js/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
     
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/main.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
     <title>파리바게뜨</title>
 </head>
 <body>
@@ -104,8 +107,221 @@
                 <div class="swiper-pagination"></div>  <!-- 컨트롤 요소는 swiper 안에 배치-->
             </div><!--//swiper-->
         </section>
-        <section class="fullmenu"></section>
-        <section class="promotion"></section>
+        <section class="menu">
+            <div class="wrapper">
+            <div class="tit">
+                <h2>BAKERY MENU </h2>
+                <a href="#" class="more">전체보기</a>
+            </div>
+            <div class="list">
+                <div class="tap_list">
+                    <ul role="tablist">
+                        <li role="tab" aria-selected="true" class="item1 active" data-content="tab_item1"><button>브레드<span class="blind">선택됨</span></button></li>
+                        <li role="tab" aria-selected="false" class="item2" data-content="tab_item2"><button>케이크<span class="blind">선택됨</span></button></li>
+                        <li role="tab" aria-selected="false" class="item3" data-content="tab_item3"><button>샌드위치/샐러드<span class="blind">선택됨</span></button></li>
+                        <li role="tab" aria-selected="false" class="item4" data-content="tab_item4"><button>디저트/스낵<span class="blind">선택됨</span></button></li>
+                        <li role="tab" aria-selected="false" class="item5" data-content="tab_item5"><button>커피/음료<span class="blind">선택됨</span></button></li>
+                    </ul>
+                </div><!--//tap_list-->
+                    <div class="tab_content">
+                        <div class="tab_item item1 active" id="tab_item1">
+                            <h3 class="blind">브레드</h3>
+                            <div class="inner">
+                                <ul>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="photo"><img src="images/main/item1_01.jpg" alt=""></div>
+                                            <strong>발효버터 소금빵</strong>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="photo"><img src="images/main/item1_02.jpg" alt=""></div>
+                                            <strong>치즈가 부드러운 시간</strong>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="photo"><img src="images/main/item1_03.jpg" alt=""></div>
+                                            <strong>초코바나나 맘모스</strong>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="photo"><img src="images/main/item1_04.jpg" alt=""></div>
+                                            <strong>[파란라벨]통곡물 깜빠뉴</strong>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--//item1-->
+                        <div class="tab_item item2 " id="tab_item2">
+                            <h3 class="blind">케이크</h3>
+                            <div class="inner">
+                                <ul>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="photo"><img src="images/main/item2_01.jpg" alt=""></div>
+                                            <strong>진한 크림치즈 케이크</strong>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="photo"><img src="images/main/item2_02.jpg" alt=""></div>
+                                            <strong>딸기 블라썸 케이크(자몽/오렌지)</strong>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="photo"><img src="images/main/item2_03.jpg" alt=""></div>
+                                            <strong>마이넘버원</strong>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="photo"><img src="images/main/item2_04.jpg" alt=""></div>
+                                            <strong>고구마반 생크림반 케이크</strong>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--//item2-->
+                        <div class="tab_item item3" id="tab_item3">
+                            <h3 class="blind">샌드위치/샐러드</h3>
+                            <div class="inner">
+                                <ul>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="photo"><img src="images/main/item3_01.jpg" alt=""></div>
+                                            <strong>치킨커틀릿 샐러드랩</strong>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="photo"><img src="images/main/item3_02.jpg" alt=""></div>
+                                            <strong>에그샐러드샌드위치</strong>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="photo"><img src="images/main/item3_03.jpg" alt=""></div>
+                                            <strong>단백질 듬뿍 치킨 에그샐러드</strong>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="photo"><img src="images/main/item3_04.jpg" alt=""></div>
+                                            <strong>랜치 그레인 볼</strong>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--//item3-->
+                        <div class="tab_item item4" id="tab_item4">
+                            <h3 class="blind">디저트/스낵</h3>
+                            <div class="inner">
+                                <ul>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="photo"><img src="images/main/item4_01.jpg" alt=""></div>
+                                            <strong>토트넘 유니폼 쿠키</strong>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="photo"><img src="images/main/item4_02.jpg" alt=""></div>
+                                            <strong>미스터베어</strong>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="photo"><img src="images/main/item4_03.jpg" alt=""></div>
+                                            <strong>말차 젤라또</strong>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="photo"><img src="images/main/item4_04.jpg" alt=""></div>
+                                            <strong>곰곰이 젤리해(사과&딸기)</strong>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--//item4-->
+                        <div class="tab_item item5" id="tab_item5">
+                            <h3 class="blind">커피/음료</h3>
+                            <div class="inner">
+                                <ul>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="photo"><img src="images/main/item5_01.jpg" alt=""></div>
+                                            <strong>(ICE) 아메리카노</strong>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="photo"><img src="images/main/item5_02.jpg" alt=""></div>
+                                            <strong>(ICE) 카페라떼</strong>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="photo"><img src="images/main/item5_03.jpg" alt=""></div>
+                                            <strong>(ICE) 카라멜 마끼아또</strong>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">
+                                            <div class="photo"><img src="images/main/item5_04.jpg" alt=""></div>
+                                            <strong>(HOT) 카페모카</strong>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--//item5-->
+                    </div><!--//tab_content-->
+            </div>
+        </div>
+        </section>
+        <section class="promotion">
+            <div class="rolling">
+                <p>PARIS BAGUETTE PROMOTION</p>
+            </div>
+            <div class="list">             
+                <div class="list_wrap">
+                    <div class="list_item"> 
+                        <a href="#">
+                            <div class="photo"><img src="images/main/promotion01.png" alt=""></div>
+                        </a>
+                    </div>
+                    <div class="list_item">
+                        <a href="#">
+                            <div class="photo"><img src="images/main/promotion02.png" alt=""></div>
+                        </a>
+                    </div>
+                    <div class="list_item">
+                        <a href="#">
+                            <div class="photo"><img src="images/main/promotion03.png" alt=""></div>
+                        </a>
+                    </div>
+                    <div class="list_item">
+                        <a href="#">
+                            <div class="photo"><img src="images/main/promotion04.png" alt=""></div>
+                        </a>
+                    </div>
+                    <div class="list_item">
+                        <a href="#">
+                            <div class="photo"><img src="images/main/promotion05.png" alt=""></div>
+                        </a>
+                    </div>
+                    <div class="list_item">
+                        <a href="#">
+                            <div class="photo"><img src="images/main/promotion06.png" alt=""></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="banner"></section>
         <section class="startup"></section>
     </main>

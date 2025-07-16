@@ -31,6 +31,35 @@ $(document).ready(function(){
         $('header').removeClass('menu_over')
         $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
     })
+
+    /******모바일메뉴 열고닫기 *****/
+    $('header .gnb .gnb_open').on('click', function(){
+        //console.log('눌림')
+        $('header').addClass('menu_open')
+    })
+    $('header .gnb .gnb_close').on('click', function(){
+        //console.log('닫')
+        $('header').removeClass('menu_open')
+    })
+    /******모바일메뉴 li 열고닫기*****/
+    $('header .gnb .gnb_wrap ul.depth1 > li > a ').on('click', function(e){
+        if(device_status == 'mobile'){
+            //console.log('눌려')
+            e.preventDefault()
+            menu_open = $(this).parents('li').hasClass('open')
+            //console.log(menu_open)
+            if(menu_open == true) {
+                $(this).parents('li').removeClass('open')
+                $(this).next().slideUp()
+            }else{
+                $('header .gnb .gnb_wrap ul.depth1 > li.open').removeClass('open')
+                $('header .gnb .gnb_wrap ul.depth1 > li.open > ul.depth2').slideUp()
+                $(this).parents('li').addClass('open')
+                $(this).next() .slideDown()
+            }
+        }
+    })
+
 })
 
 
