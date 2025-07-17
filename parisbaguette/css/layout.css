@@ -273,7 +273,82 @@ header.menu_over .gnb .gnb_wrap ul.depth1 li > ul.depth2  {
 
 
 footer {
-    margin: 1000px;
+    margin: 100px 0 0 0;
+    background-color: #F0F0F0;
+    padding: 76px 0 64px 0;
+}
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+footer .info_wrap .f_nav{
+    margin: 30px 0;
+}
+footer .info_wrap .f_nav ul {
+    display: flex;
+    gap: 46px;
+}
+footer .info_wrap .f_nav ul li {
+    position: relative;
+}
+footer .info_wrap .f_nav ul li::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: -25px;
+    height: 13px;
+    width: 1px;
+    background-color: #ccc;
+}
+footer .info_wrap .f_nav ul li:last-child::after {
+    display: none;
+}
+footer .info_wrap .f_info address {
+    display: inline-block;
+}
+footer .copyright {
+    margin: 25px 0 0 0;
+}
+footer .brand_info {
+    text-align: right;
+}
+footer .brand_info .brand a.spc {
+    display: inline-block;
+    background:url(../images/common/spc.png) no-repeat center center;
+    width: 78px;
+    height: 26px;
+}
+footer .brand_info .brand ul {
+    display: flex;
+    gap: 6px;
+}
+footer .brand_info .brand ul li.ccm {
+    background: url(../images/common/brend01.png) no-repeat center center;
+    width: 29px;
+    height: 29px;
+}
+footer .brand_info .brand ul li.ncsi,
+footer .brand_info .brand ul li.kcsi,
+footer .brand_info .brand ul li.ks_sqi,
+footer .brand_info .brand ul li.nbci {
+    height: 24px;
+    width: 37px;
+}
+footer .brand_info .brand ul li.ncsi {
+    background: url(../images/common/brend02.png)  no-repeat center center;
+}
+
+footer .brand_info .brand ul li.kcsi {
+    background: url(../images/common/brend03.png) no-repeat center center;
+}
+footer .brand_info .brand ul li.ks_sqi {
+    background: url(../images/common/brend04.png) no-repeat center center;
+}
+footer .brand_info .brand ul li.nbci {
+    background: url(../images/common/brend05.png) no-repeat center center;
+}
+footer .brand_info .sns {
+    margin: 55px 0 0 0;
 }
 
 

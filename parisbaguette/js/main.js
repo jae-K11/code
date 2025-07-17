@@ -58,51 +58,32 @@ $(document).ready(function(){
 
     /*************promotion 의 swiper 연결 : 시작 ************/
 
-    $('.promotion .list .list_wrap').slick({
-        autoplay: true, //팝업 자동 실행
-        autoplaySpeed: 1000, //팝업이 머무는 시간
-        speed: 0, //팝업 전환 속도
-        dots: true, //하단 페이지 버튼 (true, false)
-        arrows: true,  //다음, 이전팝업 (true, false)
-        //pauseOnHover: true, //마우스호버시 일시정지
-        infinite: true, //무한반복
-        variableWidth: true, //넓이를 자유롭게 설정
-        slidesToShow: 6, //한번에 보일 팝업 수
-        //slidesToScroll: 1, //한번 드래그에 움직이는 슬라이드 제한
-        swipeToSlide: true, //드래그한만큼 슬라이드 움직이기
-        //centerMode: true, //가운데정렬(가운데가 1번)
-        responsive: [
-            {
-                breakpoint: 1920, //1300px 이하
-                settings: {
-                  slidesToShow: 6
-                }
-              },
-            {
-              breakpoint: 1300, //1300px 이하
-              settings: {
-                slidesToShow: 4
-              }
-            },
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3
-              }
-            },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 2
-              }
-            },
-            {
-              breakpoint: 375,
-              settings: {
-                slidesToShow: 1
-              }
-            },
-        ]
+    const promotion02_swiper = new Swiper('.promotion02 .swiper', { /* 팝업을 감싼는 요소의 class명 */
+      slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+      spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+      breakpoints: {
+        1024: {    /* 640px 이상일때 적용 */
+          slidesPerView: 'auto',    /*    'auto'   라고 쓰면 css에서 적용한 넓이값이 적용됨 */
+          spaceBetween: 60,
+        },
+        768: {    /* 640px 이상일때 적용 */
+          slidesPerView: 'auto',    /*    'auto'   라고 쓰면 css에서 적용한 넓이값이 적용됨 */
+          spaceBetween: 24,
+        },
+        360: {    /* 640px 이상일때 적용 */
+          slidesPerView: 'auto',    /*    'auto'   라고 쓰면 css에서 적용한 넓이값이 적용됨 */
+          spaceBetween:16,
+        },
+        
+      },
+      //centeredSlides: true, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
+      loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+      // autoplay: {  /* 팝업 자동 실행 */
+      //   delay: 2500,
+      //   disableOnInteraction: true,
+      // },
+
+
     });
 
     /*************promotion 의 swiper 연결 : 끝 ************/
