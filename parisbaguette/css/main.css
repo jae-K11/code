@@ -268,7 +268,7 @@
     bottom: 0;
     width: 100%;
 }
-.promotion .rolling p {
+.promotion .rolling h2 {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -289,7 +289,7 @@
     100%{left: -1730px}
 }
 @media screen and (max-width:1024px) {
-    .promotion .rolling p {
+    .promotion .rolling h2 {
         font-size: 90px;
     }
 }
@@ -299,7 +299,7 @@
         margin: 160px 0 0 0;
     }
 
-    .promotion .rolling p {
+    .promotion .rolling h2 {
         position: absolute;
         left: 0;
         bottom: -45px;
