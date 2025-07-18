@@ -216,19 +216,27 @@
         margin: 15px 0 0 0;
     }
     .menu .list .tap_list > ul {
-        margin: 0 auto;
-        flex-wrap: wrap;
-        width: 400px;
-        gap: 16px;
+        flex-wrap: nowrap;
+        width: auto;
+        gap: 0;
+        overflow-x: auto;
     }
     .menu .list .tap_list > ul > li {
         width: auto;
         text-align: center;
     }
     .menu .list .tap_list ul li button {
-        width: 160px;
-        height: 46px;
+        border: 1px solid #ccc;
+        border-left-width:0;
+        width: auto;
+        height: 100%;
+        border-radius: 0;
         font-size: 16px;
+        padding: 10px 20px;
+        white-space: nowrap;
+    }
+    .menu .list .tap_list ul li:first-child button {
+        border-left-width: 1px;
     }
     .menu .list .tab_content {
         margin: 28px 0 0 0;
@@ -243,11 +251,12 @@
         font-size: 17px;
     }
 }
-@media screen and (max-width:460px) {
+@media screen and (max-width:611px) {
     .menu .list .tap_list > ul {
-        width: auto;
+        justify-content: normal;
     }
-}
+} 
+
 
 .promotion {
     margin: 385px 0 0 0;
@@ -363,7 +372,7 @@
     height: 462px;
     background: url(../images/main/banner_ico.png) no-repeat center ;
 }
-.banner h3 {
+.banner h2 {
     font-size: 50px;
     font-weight: var(--bold-weight);
     line-height: var(--tit-line-height);
@@ -438,7 +447,7 @@
         height: 301px;
         background: url(../images/main/bannerico22.png);
     }
-    .banner h3 {
+    .banner h2 {
         font-size: 35px;
         font-weight: var(--bold-weight);
         line-height: var(--tit-line-height);
@@ -458,7 +467,7 @@
     height: 210px;
     background: url(../images/main/banner_ico3.png) ;
 }
-.banner h3 {
+.banner h2 {
     font-size: 25px;
     padding: 48px 0 20px 0;
 }
@@ -521,22 +530,27 @@
     background: #E2E2E2;
 
 }
-.business {
+.startup .business {
     display: flex;
     flex-direction: column-reverse;
+    width: calc(50% - 40px);
+}
+.startup .work {
+    width: calc(50% - 40px);
 }
 
-.work .photo,
-.business .photo {
+
+.startup .work .photo,
+.startup .business .photo {
     overflow: hidden;
     font-size: 0;
     line-height: 0;
 }
-.work .photo img,
-.business .photo img {
+.startup .work .photo img,
+.startup .business .photo img {
     width: 100%;
 }
-.work .txt  h3 {
+.startup .work .txt  h3 {
     font-size: 25px;
     font-weight: var(--bold-weight);
     line-height: var(--tit-line-height);
@@ -544,27 +558,27 @@
     margin: 41px 0 25px 0;
 }
 
-.business .txt  h3 {
+.startup .business .txt  h3 {
     font-size: 25px;
     font-weight: var(--bold-weight);
     line-height: var(--tit-line-height);
     color: var(--tit-color);
     margin: 0 0 25px 0;
 }
-.business .txt a.more {
+.startup .business .txt a.more {
     display: inline-block;
     position: relative;
     margin: 25px 0 41px 0;
     padding: 0 40px 0 0;
 }
-.work .txt a.more {
+.startup .work .txt a.more {
     display: inline-block;
     margin: 25px 0 0 0;
     position: relative;
     padding: 0 40px 0 0;
 }
-.work .txt a.more::before,
-.business .txt a.more::before {
+.startup .work .txt a.more::before,
+.startup .business .txt a.more::before {
     content: "";
     position: absolute;
     right: 0;
@@ -575,8 +589,8 @@
     height: 25px;
 
 } 
-.work .txt a.more::after ,
-.business .txt a.more::after {
+.startup .work .txt a.more::after ,
+.startup .business .txt a.more::after {
     content: "";
     position: absolute;
     right: 0;
@@ -599,20 +613,24 @@
     .startup .inner::before {
         display: none;
     }
-    .business {
+    .startup .business {
         display: block;
         margin: 35px 0 0 0;
+        width: auto;
+    }
+    .startup .work {
+        width: auto;
     }
     
-    .work .txt  h3,
-    .business .txt  h3 {
+    .startup .work .txt  h3,
+    .startup .business .txt  h3 {
         font-size: 20px;
         margin: 35px 0 15px 0;
     }
     
 
-    .work .txt a.more,
-    .business .txt a.more {
+    .startup .work .txt a.more,
+    .startup .business .txt a.more {
         margin: 25px 0 0 0;
     }
 }
