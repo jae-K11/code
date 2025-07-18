@@ -19,7 +19,7 @@ $(document).ready(function(){
 
     scroll_chk()
     resize_chk()
-    $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter', function(){
+    $('header .gnb .gnb_wrap ul.depth1 > li').on('mouseenter focusin', function(){
         //console.log('오버했다')
         if(device_status == 'pc'){
             $('header').addClass('menu_over')
@@ -30,6 +30,12 @@ $(document).ready(function(){
     $('header').on('mouseleave', function(){
         $('header').removeClass('menu_over')
         $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
+    })
+
+    $('header .util .search .search_open').on('focusout', function(){
+        //console.log('아웃임')
+        $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('over')
+        $('header').removeClass('menu_over')
     })
 
     /******모바일메뉴 열고닫기 *****/

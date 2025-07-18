@@ -3,6 +3,27 @@
 @import url(common.css);
 @import url(layout.css);
 
+.skip_nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+.skip_nav a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #1d1d1d;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: -1000px;
+    width: 100%;
+}
+.skip_nav a:focus {
+    top: 0;
+}
 
 .visual .swiper-slide .mobile {
     display: none;
@@ -134,12 +155,11 @@
 }
 .menu .list .tab_content .tab_item > .inner > ul > li a .photo {
     overflow: hidden;
-    height: 256px;
+    font-size: 0;
+    line-height: 0;
 }
 .menu .list .tab_content .tab_item > .inner > ul > li a .photo img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
     transition: 0.5s;
 }
 .menu .list .tab_content .tab_item > .inner > ul > li a:hover .photo img {
@@ -168,6 +188,9 @@
         width: calc(33.333% - 16px);
         text-align: center;
     }
+    
+}
+@media screen and (max-width:900px) {
     .menu .list .tab_content .tab_item .inner > ul {
         flex-wrap: wrap;
         gap: 16px;
@@ -209,9 +232,6 @@
     }
     .menu .list .tab_content {
         margin: 28px 0 0 0;
-    }
-    .menu .list .tab_content .tab_item > .inner > ul > li a .photo {
-        height: 150px;
     }
     .menu .list .tab_content .tab_item > .inner > ul > li a .photo img {
         transition: none;
@@ -297,12 +317,13 @@
 }
 .promotion02 .list ul li a .photo {
     overflow: hidden;
-    height: 380px;
+    height: auto;
 }
 .promotion02 .list ul li a .photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 @media screen and (max-width:768px) {
@@ -313,7 +334,7 @@
         padding: 0 10px 10px;
     }
     .promotion02 .list ul li {
-        width: 152px;
+        width: auto;
     }
     .promotion02 .list ul li a {
         display: block;
@@ -321,13 +342,9 @@
     }
     .promotion02 .list ul li a .photo {
         overflow: hidden;
-        height: 192px;
+        height: auto;
     }
-    .promotion02 .list ul li a .photo img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+
 }
 
 .banner {
@@ -512,12 +529,12 @@
 .work .photo,
 .business .photo {
     overflow: hidden;
+    font-size: 0;
+    line-height: 0;
 }
 .work .photo img,
 .business .photo img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 .work .txt  h3 {
     font-size: 25px;

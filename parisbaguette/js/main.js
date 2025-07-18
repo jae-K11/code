@@ -62,19 +62,22 @@ $(document).ready(function(){
       slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
       spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
       breakpoints: {
-        1024: {    /* 640px 이상일때 적용 */
-          slidesPerView: 'auto',    /*    'auto'   라고 쓰면 css에서 적용한 넓이값이 적용됨 */
-          spaceBetween: 60,
+        1580: {    /* 640px 이상일때 적용 */
+          slidesPerView: 6,    /*    'auto'   라고 쓰면 css에서 적용한 넓이값이 적용됨 */
+          spaceBetween: 30,
         },
-        768: {    /* 640px 이상일때 적용 */
-          slidesPerView: 'auto',    /*    'auto'   라고 쓰면 css에서 적용한 넓이값이 적용됨 */
-          spaceBetween: 24,
+        1330: {    /* 640px 이상일때 적용 */
+          slidesPerView: 5,    /*    'auto'   라고 쓰면 css에서 적용한 넓이값이 적용됨 */
+          spaceBetween: 30,
         },
-        360: {    /* 640px 이상일때 적용 */
-          slidesPerView: 'auto',    /*    'auto'   라고 쓰면 css에서 적용한 넓이값이 적용됨 */
+        900: {    /* 640px 이상일때 적용 */
+          slidesPerView: 4,    /*    'auto'   라고 쓰면 css에서 적용한 넓이값이 적용됨 */
+          spaceBetween:30,
+        },
+        630: {    /* 640px 이상일때 적용 */
+          slidesPerView: 3,    /*    'auto'   라고 쓰면 css에서 적용한 넓이값이 적용됨 */
           spaceBetween:16,
         },
-        
       },
       //centeredSlides: true, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
       loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
