@@ -1,0 +1,6 @@
+.info_01 .info_box01,
+.info_01 .info_box02{
+    display: flex;
+    gap: 44px;
+    align-items: center;
+}
