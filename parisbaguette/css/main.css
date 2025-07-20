@@ -279,7 +279,7 @@
     white-space: nowrap;
 
     animation-name: rolling;
-    animation-duration: 20s;
+    animation-duration: 15s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
