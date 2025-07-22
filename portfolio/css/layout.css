@@ -12,12 +12,12 @@ header {
     justify-content: space-between;
     height: 100px;
 }
-.header_wrap li span {
+.header_wrap ul li span {
     font-size: 24px;
     color: #FF9724;
     line-height: 1.2;
 }
-.header_wrap li.active span{
+.header_wrap ul li.active span{
     font-weight: 700;
     font-size: 30px;
 }

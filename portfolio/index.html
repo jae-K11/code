@@ -10,6 +10,7 @@
     <script src="js/jquery-3.7.1.min.js"></script>
 
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/common.js"></script>
     <script src="js/main.js"></script>
     <title>포트폴리오</title>
 <body>
@@ -17,9 +18,9 @@
         <div class="wrapper">
             <div class="header_wrap">
                 <ul>
-                    <li class="active"><span>PROFILE</span></li>
-                    <li><span>PROJECT01</span></li>
-                    <li><span>PROJECT02</span></li>
+                    <li class=""><a href="#profile"><span>PROFILE</span></a></li>
+                    <li><a href="#project01"><span>PROJECT01</span></a></li>
+                    <li><a href="#project02"><span>PROJECT02</span></a></li>
                 </ul>
             </div>
         </div>
@@ -38,10 +39,10 @@
             </div>
         </section>
         <section class="section fp-auto-height-responsive profile">
-            <div class="profile_wrap">
                 <div class="wrapper">
+                <div class="profile_wrap">
                     <div class="left">
-                        <div class="photo"><img src="" alt=""></div>
+                        <div class="photo"><img src="images/main/proffile.png" alt=""></div>
                         <div class="left_txt">
                             <strong>ABOUT ME</strong>
                             <span>정재경</span>
@@ -69,7 +70,7 @@
                                 정재경입니다</h2>
                         </div>
                         <div class="r_info">
-                            <div class="edu">
+                            <div class="box edu">
                                 <h3>EDUCATION</h3>
                                 <ul>
                                     <li>
@@ -83,7 +84,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="license">
+                            <div class="box license">
                                 <h3>LICENSE</h3>
                                 <ul>
                                     <li>
@@ -104,7 +105,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="work">
+                            <div class="box work">
                                 <h3>WORK EXPERIENCE</h3>
                                 <ul>
                                     <li>
@@ -117,24 +118,31 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="skills">
-                                <h3></h3>
-                                <ul>
-                                    <li>
-                                        <img src="" alt="포토샵">
-                                    </li>
-                                    <li>
-                                        <img src="" alt="일러스트레이터">
-                                    </li>
-                                    <li>
-                                        <img src="" alt="피그마">
-                                    </li>
-                                </ul>
+                            <div class="box skills">
+                                <h3>SKILLS</h3>
+                                <div class="list">
+                                    <ul>
+                                        <li>
+                                            <img src="images/main/potoshop.svg" alt="포토샵">
+                                        </li>
+                                        <li>
+                                            <img src="images/main/Illustrator.svg" alt="일러스트레이터">
+                                        </li>
+                                        <li>
+                                            <img src="images/main/figma.svg" alt="피그마">
+                                        </li>
+                                    </ul>
+                                </div><!--//list-->
+                                <div class="list_sub">
+                                    <span>Html</span>
+                                    <span>Css</span>
+                                    <span>Jquery</span>
+                                </div>
                             </div>
                         </div><!--//r_info-->
                     </div>
+                </div><!--//profile_wrap-->
                 </div><!--//wrapper-->
-            </div>
         </section>
         <section class="section fp-auto-height-responsive project01"> 
             <div class="big">03</div>
@@ -142,7 +150,7 @@
         <section class="section fp-auto-height-responsive project02"> 
             <div class="big">04</div>
         </section>
-        <section class="section fp-auto-height-responsive ending"> 
+        <section class="section fp-auto-height-responsive end"> 
             <div class="big">05</div>
         </section>
     </div>

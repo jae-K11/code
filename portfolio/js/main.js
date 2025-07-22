@@ -32,10 +32,7 @@ $(document).ready(function(){
             if (destination.index === 0) {
             header.style.display = 'none';
             }
-            
-            if(destination.index == 2){ /* index가 2면 슬라이드는 세번째 슬라이드입니다. index 수는 0/1/2/3 */
-                console.log('3번째 슬라이드가 로딩 되었을때');
-            }
+
         },
         
     
