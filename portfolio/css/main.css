@@ -1,0 +1,44 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+@import url(layout.css);
+
+body {
+    background-color: #FCFDF7;
+}
+.home .home_wrap {
+    color: #FF9724;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.home .home_wrap .top {
+    display: flex;
+    height: 125px;
+    width: 100%;
+    padding-top: 65px;
+    padding-left: 249px;
+    padding-right: 291px;
+    justify-content: space-between;
+    align-items: center;
+}
+.home .home_wrap .top span{
+    font-size: 24px;
+    line-height: 1.2;
+}
+.home .home_wrap .top span.name {
+    text-align: center;
+    font-weight: 700;
+}
+.home .home_wrap .text span{
+    display: block;
+    font-family: 'RiaSans';
+    font-size: 180px;
+    font-weight: 700;
+    line-height: 1.2;
+    padding-bottom: 60px;
+}
+
+
