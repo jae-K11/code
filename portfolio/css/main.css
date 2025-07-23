@@ -36,7 +36,7 @@ body {
     display: block;
     font-family: 'RiaSans';
     font-size: 180px;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.2;
     padding-bottom: 60px;
 }
@@ -185,3 +185,239 @@ body {
     color: #1d1d1d;
     padding: 0 10px 0 0 ;
 }
+.project01 .project01_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.project01 .project01_wrap .left {
+    width: 504px;
+}
+.project01 .project01_wrap .left .tit h2 {
+    font-family: 'RiaSans';
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #FF9724;
+    margin: 0 0 20px 0;
+}
+.project01 .project01_wrap .left .tit span {
+    display: block;
+    font-size: 25px;
+    line-height: 1.2;
+    color: #1d1d1d;
+    margin: 0 0 20px 0;
+}
+.project01 .project01_wrap .left .tit p {
+    color: #1d1d1d;
+}
+.project01 .project01_wrap .left .list {
+    margin: 60px 0 0 0;
+}
+.project01 .project01_wrap .left .list ul li {
+    display: flex;
+    gap: 20px;
+    color: #1d1d1d;
+    margin: 0 0 14px 0;
+}
+.project01 .project01_wrap .left .list ul li span {
+    font-weight: 700;
+}
+.project01 .project01_wrap .left .list ul li.color {
+    align-items: center;
+    gap: 10px;
+}
+.project01 .project01_wrap .left .list ul li span.color01 {
+    background-color: #005BAC;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+.project01 .project01_wrap .left .list ul li span.color02 {
+    background-color: #8FC31F;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+.project01 .project01_wrap .left a {
+    display: inline-block;
+    border: 1px solid #3d3d3d;
+    border-radius: 30px;
+    padding: 13px 42px;
+    margin: 30px 0 0 0;
+}
+.project01 .project01_wrap .left a.more {
+    font-family: 'RiaSans';
+    font-weight: 800;
+    color: #FF593B;
+}
+.project01 .project01_wrap .left a:hover.more {
+    border: 0;
+    background-color: #FF593B;
+    color: #fff;
+    transition: 0.5s;
+}
+.project01 .project01_wrap .right {
+    width: 950px;
+}
+.project01 .project01_wrap .photo {
+    height: 643px;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+}
+.project01 .project01_wrap .photo img {
+    width: 950px;
+    height: 100%;
+    object-fit: cover;
+}
+.project02_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.project02 .project02_wrap .left {
+    width: 489px;
+}
+.project02 .project02_wrap .left .tit h2 {
+    font-family: 'RiaSans';
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #FF9724;
+    margin: 0 0 20px 0;
+}
+.project02 .project02_wrap .left .tit span {
+    display: block;
+    font-size: 25px;
+    line-height: 1.2;
+    color: #1d1d1d;
+    margin: 0 0 20px 0;
+}
+.project02 .project02_wrap .left .tit p {
+    color: #1d1d1d;
+}
+.project02 .project02_wrap .left .list {
+    margin: 60px 0 0 0;
+}
+.project02 .project02_wrap .left .list ul li {
+    display: flex;
+    gap: 20px;
+    color: #1d1d1d;
+    margin: 0 0 14px 0;
+}
+.project02 .project02_wrap .left .list ul li span {
+    font-weight: 700;
+}
+.project02 .project02_wrap .left .list ul li.color {
+    align-items: center;
+    gap: 10px;
+}
+.project02 .project02_wrap .left .list ul li span.color01 {
+    background-color: #011E60;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+.project02 .project02_wrap .left .list ul li span.color02 {
+    background-color: #FFD247;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+.project02 .project02_wrap .left a {
+    display: inline-block;
+    border: 1px solid #3d3d3d;
+    border-radius: 30px;
+    padding: 13px 42px;
+    margin: 30px 0 0 0;
+}
+.project02 .project02_wrap .left a.more {
+    font-family: 'RiaSans';
+    font-weight: 800;
+    color: #FF593B;
+}
+.project02 .project02_wrap .left a:hover.more {
+    border: 0;
+    background-color: #FF593B;
+    color: #fff;
+    transition: 0.5s;
+}
+.project02 .project02_wrap .right {
+    width: 1123px;
+}
+.project02 .project02_wrap .photo {
+    height: 632px;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+}
+.project02 .project02_wrap .photo img {
+    width: 1123px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.end .end_wrap {
+    height: 100vh;
+}
+.end .end_wrap .tit {
+    text-align: center;
+    padding: 320px 0 0 0;
+}
+.end .end_wrap .tit h2 {
+    font-family: 'RiaSans';
+    font-size: 60px;
+    font-weight: 800;
+    color: #FF9724;
+}
+.end .end_wrap .txt {
+    text-align: right;
+    margin: 187px 0 0 0;
+}
+.end .end_wrap .txt strong {
+    display: block;
+    font-family: 'RiaSans';
+    font-size: 25px;
+    font-weight: 800;
+    color: #3d3d3d;
+    margin: 0 0 20px 0;
+}
+.end .end_wrap .txt span {
+    display: block;
+    font-size: 20px;
+    color: #3d3d3d;
+    line-height: 1.2;
+    padding: 0 0 10px 0;
+}
+.fp-watermark {
+    display: none !important;
+  }
+
+  .cursor { 
+	position: absolute;  /* 반드시 absolute여야 하고 위치는 jquery에서 적용 시킴 */
+	z-index: 1000;
+	transform: translate(-50%, -50%); /* 커서 위치 조정 */
+	pointer-events: none; /* 생성된 cursor에 마우스 오버 이벤트를 주지 않기 - 이걸 주지 않으면 cursor에 마우스가 오버된 것으로 인식되어 하단 요소가 클릭되지 않음 */
+	display:none; /* 평소에는 보이지 않게 하기 위해서 - 만약 원래도 따라다니는 마우스 포인터를 디자인하려면 스타일을 주면 됨. */
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #FF593B;
+    border: 1px solid #FF593B;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    font-size: 25px;
+    }
+    .cursor.on {
+        display: block;  /* jquery에서 특정 요소에 마우스를 오버하면 class명을 추가해주고 그때 나타남 */
+        /* 기본적인 스타일 주기 */
+   
+    }
+    .project01_wrap a.pj01,
+    .project02_wrap a.pj02 {
+        cursor: none !important; /* 만약 마우스 오버 시 생성한 cursor만 나타나고 실제 마우스 포인터는 안보이게 하려면 오버하는 요소에서 마우스 포인트를 안보이게 해야 함 */
+    }

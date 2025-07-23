@@ -10,8 +10,12 @@ html, body {
     word-wrap: break-word;
     /* 단어가 너무 긴 경우 강제로 줄바꿈을 함 */
 }
-.wrapper {
+.wrapper01 {
     width: 1260px;
+    margin: 0 auto; /* 가운데 정렬 */
+}
+.wrapper02 {
+    width: 1600px;
     margin: 0 auto; /* 가운데 정렬 */
 }
 #wrap {
