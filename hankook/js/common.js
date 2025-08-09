@@ -5,3 +5,13 @@ let window_w // 브라우저의 넓이 값
 let mobile_size = 1024 //모바일로 변경되는 사이트
 let menu_open //모바일에서 사용할 메뉴가 열렸는지 여부를 저장 
 
+$(document).ready(function(){
+    $("header .gnb .gnb_wrap ul.depth1 > li").hover(
+        function(){
+            $(this).children("header .gnb .gnb_wrap ul.depth1 > li > .depth2").stop(true, true).slideDown(200);
+        },
+        function(){
+            $(this).children("header .gnb .gnb_wrap ul.depth1 > li > .depth2").stop(true, true).slideUp(200);
+        }
+    );
+});

@@ -1,6 +1,4 @@
-header,
-header.fixed,
-header.menu_over {
+header {
     position: absolute;
     top: 0;
     left: 0;
@@ -14,41 +12,31 @@ header.menu_over {
     background-color: #fff;
     box-shadow: 0 4px 4px 0 rgba(0,0,0,0.1);
 }
-header .logo a,
-header.fixed .logo a,
-header.menu_over .logo a {
+header .logo a {
     display: block;
     width: 209px;
     height: 44px;
     background: url(../images/common/logo.svg) no-repeat center center / contain;
 }
-header .util .search,
-header.fixed .util .search
-header.menu_over .util .search {
+header .util .search {
     position: relative;
     width: 221px;
 }
-header .util .search input[type="text"],
-header.fixed .util .search input[type="text"],
-header.menu_over .util .search input[type="text"] {
+header .util .search input[type="text"] {
     border: none;
     border-bottom: 1px solid #1D1D1D;
     width: 100%;
     height: 29px;
     padding-right: 30px;
 }
-header .util .search input[type="text"]::placeholder,
-header.fixed .util .search input[type="text"]::placeholder,
-header.menu_over .util .search input[type="text"]::placeholder {
+header .util .search input[type="text"]::placeholder {
     color: #ccc;
 }
 input:focus {
   outline: none;
   border-bottom: 1px solid #1d1d1d; /* 클릭 시 밑줄 강조 등 */
 }
-header .util .search .search_open,
-header.fixed .util .search .search_open,
-header.menu_over .util .search .search_open {
+header .util .search .search_open{
     position: absolute;
     top: 0;
     right: 0;
@@ -71,8 +59,7 @@ header.menu_over .util .search .search_open {
         display: flex;
     }
     header .gnb .gnb_wrap ul.depth1 > li {
-        position: relative;
-        padding: 0 40px;
+        width: 179px;
     }
     header .gnb .gnb_wrap ul.depth1 > li > a {
         display: block;
@@ -80,22 +67,62 @@ header.menu_over .util .search .search_open {
         font-size: 24px;
         font-weight: var(--bold-weight);
         color: var(--tit-color);
+        text-align: center;
     }
-    header .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
+    header .gnb .gnb_wrap ul.depth1 > li > .depth2 {
         display: none;
     }
 
-    header .gnb .gnb_wrap ul.depth1 > li:hover  > ul.depth2 {
-        display: block;
-       position: absolute;
+    header .gnb .gnb_wrap ul.depth1 > li > .depth2 {
+        position: absolute; /* 브라우저 전체 기준 */
         top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100vw;         /* 전체 화면 너비 */
+        left: 0;
+        width: auto; /* 부모 상관없이 전체 너비 */
+        min-width: 100vw; /* 뷰포트 기준 너비 보장 */
         background-color: #fff;
         z-index: 999;
+        box-sizing: border-box;
+
+        display: flex; /* h3와 ul을 가로로 배치 */
+        align-items: flex-start;
+        padding: 40px 0 40px 233px;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > .depth2 h3.title {
+        font-size: 30px;
+        font-weight: var(--bold-weight);
+        color: var(--point-color);
+        padding-right: 40px;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > .depth2 > ul.list {
+        position: relative;
+        display: grid;
+        grid-template-rows: repeat(6, auto); /* 6행 고정 */
+        grid-auto-flow: column;              /* 먼저 세로로 채운 뒤 다음 컬럼으로 */
+        column-gap: 46px
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > .depth2 > ul.list::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        background-color: #ccc;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > .depth2 > ul.list > li {
+        break-inside: avoid;
+        padding-left: 130px;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > .depth2 > ul.list > li > a {
+        display: block;
+        line-height: 2.5;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > .depth2 > ul.list > li > a:hover {
+        color: var(--point-color);
+        font-weight: var(--bold-weight);
     }
 }
+  
 
 
 footer {
