@@ -6,12 +6,22 @@ let mobile_size = 1024 //모바일로 변경되는 사이트
 let menu_open //모바일에서 사용할 메뉴가 열렸는지 여부를 저장 
 
 $(document).ready(function(){
-    $("header .gnb .gnb_wrap ul.depth1 > li").hover(
-        function(){
-            $(this).children("header .gnb .gnb_wrap ul.depth1 > li > .depth2").stop(true, true).slideDown(200);
-        },
-        function(){
-            $(this).children("header .gnb .gnb_wrap ul.depth1 > li > .depth2").stop(true, true).slideUp(200);
+    $("header .gnb .gnb_wrap ul.depth1 > li > .depth2").hide();
+
+    // 1차 메뉴 클릭 시 동작
+    $("header .gnb .gnb_wrap ul.depth1 > li > a").on("click", function(e) {
+        e.preventDefault(); // 링크 이동 방지
+
+        let $depth2 = $(this).siblings(".depth2");
+
+        // 이미 열려있으면 닫기
+        if ($depth2.is(":visible")) {
+            $depth2.stop(true, true).slideUp(200);
+        } else {
+            // 다른 메뉴 닫기
+            $("header .gnb .gnb_wrap ul.depth1 > li > .depth2").slideUp(200);
+            // 클릭한 메뉴 열기
+            $depth2.stop(true, true).slideDown(200);
         }
-    );
+    });
 });

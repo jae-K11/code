@@ -48,10 +48,10 @@ header .util .search .search_open{
     background-size: contain;
 }
 
-
-@media screen and (min-width:1220px) {
+@media screen and (min-width:1025px) {
     
     header .gnb .gnb_open,
+    header .gnb .gnb_util,
     header .gnb .gnb_close {
         display: none;
     }
@@ -69,28 +69,27 @@ header .util .search .search_open{
         color: var(--tit-color);
         text-align: center;
     }
-    header .gnb .gnb_wrap ul.depth1 > li > .depth2 {
-        display: none;
-    }
 
     header .gnb .gnb_wrap ul.depth1 > li > .depth2 {
+        display: none;
         position: absolute; /* 브라우저 전체 기준 */
-        top: 100%;
+        top: 100%; 
         left: 0;
-        width: auto; /* 부모 상관없이 전체 너비 */
-        min-width: 100vw; /* 뷰포트 기준 너비 보장 */
+        width: 100%; /* 내용물 크기만큼 자동 너비 */
         background-color: #fff;
         z-index: 999;
         box-sizing: border-box;
 
         display: flex; /* h3와 ul을 가로로 배치 */
         align-items: flex-start;
-        padding: 40px 0 40px 233px;
+        padding: 40px 0;
     }
     header .gnb .gnb_wrap ul.depth1 > li > .depth2 h3.title {
         font-size: 30px;
         font-weight: var(--bold-weight);
         color: var(--point-color);
+        width: 27.08%;
+        text-align: right;
         padding-right: 40px;
     }
     header .gnb .gnb_wrap ul.depth1 > li > .depth2 > ul.list {
@@ -98,7 +97,6 @@ header .util .search .search_open{
         display: grid;
         grid-template-rows: repeat(6, auto); /* 6행 고정 */
         grid-auto-flow: column;              /* 먼저 세로로 채운 뒤 다음 컬럼으로 */
-        column-gap: 46px
     }
     header .gnb .gnb_wrap ul.depth1 > li > .depth2 > ul.list::before {
         content: "";
@@ -121,9 +119,106 @@ header .util .search .search_open{
         color: var(--point-color);
         font-weight: var(--bold-weight);
     }
-}
-  
+}/*@media*/
 
+@media screen and (min-width:1025px) and (max-width:1300px) {
+    /* 브라우저 1300 ~ 1024사이 일때 */
+    header .util .search {
+    width: 170px;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li {
+        width: 130px; /* 메뉴 좀 버티게 메뉴너비 줄임 */
+    }
+       header .gnb .gnb_wrap ul.depth1 > li > a {
+        font-size: 22px;
+    }
+}/*@media*/
+  
+@media screen and (max-width:1024px) { /*모바일*/
+    header {
+    padding: 0 0 0 20px;
+    }
+    header .logo a {
+        width: 138px;
+        height: 29px;
+    }
+    header .util {
+        display: none;
+    }
+    header .gnb {
+        height: 56px;
+        width: 450px;
+    }
+    header .gnb .gnb_open {
+        display: block;
+        width: var(--header-h);
+        height: var(--header-h);
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='19' viewBox='0 0 24 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_99_65' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='24' height='19'%3E%3Crect width='24' height='18.5231' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_99_65)'%3E%3Cpath d='M4 18.5645C3.71667 18.5645 3.47917 18.4686 3.2875 18.277C3.09583 18.0853 3 17.8478 3 17.5645C3 17.2811 3.09583 17.0436 3.2875 16.852C3.47917 16.6603 3.71667 16.5645 4 16.5645H20C20.2833 16.5645 20.5208 16.6603 20.7125 16.852C20.9042 17.0436 21 17.2811 21 17.5645C21 17.8478 20.9042 18.0853 20.7125 18.277C20.5208 18.4686 20.2833 18.5645 20 18.5645H4ZM4 10.5645C3.71667 10.5645 3.47917 10.4686 3.2875 10.277C3.09583 10.0853 3 9.84779 3 9.56445C3 9.28112 3.09583 9.04362 3.2875 8.85195C3.47917 8.66029 3.71667 8.56445 4 8.56445H20C20.2833 8.56445 20.5208 8.66029 20.7125 8.85195C20.9042 9.04362 21 9.28112 21 9.56445C21 9.84779 20.9042 10.0853 20.7125 10.277C20.5208 10.4686 20.2833 10.5645 20 10.5645H4ZM4 2.56445C3.71667 2.56445 3.47917 2.46862 3.2875 2.27695C3.09583 2.08529 3 1.84779 3 1.56445C3 1.28112 3.09583 1.04362 3.2875 0.851953C3.47917 0.660286 3.71667 0.564453 4 0.564453H20C20.2833 0.564453 20.5208 0.660286 20.7125 0.851953C20.9042 1.04362 21 1.28112 21 1.56445C21 1.84779 20.9042 2.08529 20.7125 2.27695C20.5208 2.46862 20.2833 2.56445 20 2.56445H4Z' fill='%231D1D1D'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    header .gnb .gnb_wrap {
+        position: fixed;
+        background-color: #fff;
+        top: 0;
+        width: 450px;
+        height: 100%;
+        color: var(--tit-color);
+    }
+    header .gnb .gnb_util {
+        position: absolute;
+        left: 20px;
+        top: 12px;
+    }
+    header .gnb .gnb_util .search {
+        position: relative;
+        width: 165px;
+    }
+    header .gnb .gnb_util .search input[type="text"] {
+        border: none;
+        border-bottom: 1px solid #1D1D1D;
+        width: 100%;
+        height: 29px;
+        padding-right: 30px;
+    }
+    header .gnb .gnb_util .search input[type="text"]::placeholder {
+        color: #ccc;
+    }
+    input:focus {
+    outline: none;
+    border-bottom: 1px solid #1d1d1d; /* 클릭 시 밑줄 강조 등 */
+    }
+    header .gnb .gnb_util .search .search_open{
+        position: absolute;
+        top: 4px;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        background-image: url("data:image/svg+xml,%3Csvg width='23' height='23' viewBox='0 0 23 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_90_1411' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='23' height='23'%3E%3Crect width='23' height='23' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_90_1411)'%3E%3Cpath d='M9.0582 15.465C7.28273 15.465 5.77871 14.8488 4.54613 13.6162C3.31355 12.3834 2.69727 10.8794 2.69727 9.1041C2.69727 7.32879 3.31355 5.82476 4.54613 4.59203C5.77871 3.35945 7.28273 2.74316 9.0582 2.74316C10.8335 2.74316 12.3375 3.35945 13.57 4.59203C14.8028 5.82476 15.4191 7.32879 15.4191 9.1041C15.4191 9.81455 15.3112 10.4784 15.0952 11.0955C14.8791 11.7127 14.5871 12.257 14.2191 12.7285L19.54 18.0552C19.7423 18.2614 19.8435 18.5165 19.8435 18.8204C19.8435 19.1245 19.7404 19.3778 19.5342 19.5801C19.3317 19.7825 19.0775 19.8837 18.7716 19.8837C18.4658 19.8837 18.2116 19.7825 18.0093 19.5801L12.6941 14.265C12.2188 14.6331 11.6706 14.9252 11.0496 15.1411C10.4286 15.3571 9.76481 15.465 9.0582 15.465ZM9.0582 13.2848C10.2216 13.2848 11.2093 12.8789 12.0211 12.067C12.833 11.2553 13.2389 10.2677 13.2389 9.1041C13.2389 7.94053 12.833 6.95288 12.0211 6.14118C11.2093 5.32931 10.2216 4.92337 9.0582 4.92337C7.89463 4.92337 6.90691 5.32931 6.09504 6.14118C5.28333 6.95288 4.87747 7.94053 4.87747 9.1041C4.87747 10.2677 5.28333 11.2553 6.09504 12.067C6.90691 12.8789 7.89463 13.2848 9.0582 13.2848Z' fill='%231D1D1D'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    header .gnb .gnb_wrap ul.depth1 {
+        margin: var(--header-h) 0 0 0;
+
+    }
+    header .gnb .gnb_close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: var(--header-h);
+        height: var(--header-h);
+        background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_99_928' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='28' height='28'%3E%3Crect width='28' height='28' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_99_928)'%3E%3Cpath d='M14 15.6333L8.28333 21.3499C8.06944 21.5638 7.79722 21.6708 7.46666 21.6708C7.13611 21.6708 6.86388 21.5638 6.65 21.3499C6.43611 21.136 6.32916 20.8638 6.32916 20.5333C6.32916 20.2027 6.43611 19.9305 6.65 19.7166L12.3667 13.9999L6.65 8.28327C6.43611 8.06938 6.32916 7.79716 6.32916 7.4666C6.32916 7.13605 6.43611 6.86382 6.65 6.64993C6.86388 6.43605 7.13611 6.3291 7.46666 6.3291C7.79722 6.3291 8.06944 6.43605 8.28333 6.64993L14 12.3666L19.7167 6.64993C19.9306 6.43605 20.2028 6.3291 20.5333 6.3291C20.8639 6.3291 21.1361 6.43605 21.35 6.64993C21.5639 6.86382 21.6708 7.13605 21.6708 7.4666C21.6708 7.79716 21.5639 8.06938 21.35 8.28327L15.6333 13.9999L21.35 19.7166C21.5639 19.9305 21.6708 20.2027 21.6708 20.5333C21.6708 20.8638 21.5639 21.136 21.35 21.3499C21.1361 21.5638 20.8639 21.6708 20.5333 21.6708C20.2028 21.6708 19.9306 21.5638 19.7167 21.3499L14 15.6333Z' fill='%231C1B1F'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+
+    
+    
+
+}/*@media*/
 
 footer {
     margin: 1500px 0 0 0;
