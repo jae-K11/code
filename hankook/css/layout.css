@@ -147,7 +147,6 @@ header .util .search .search_open{
     }
     header .gnb {
         height: 56px;
-        width: 450px;
     }
     header .gnb .gnb_open {
         display: block;
@@ -158,12 +157,15 @@ header .util .search .search_open{
         background-repeat: no-repeat;
     }
     header .gnb .gnb_wrap {
+        display: none;
         position: fixed;
         background-color: #fff;
+        right: -100%;
         top: 0;
         width: 450px;
         height: 100%;
         color: var(--tit-color);
+
     }
     header .gnb .gnb_util {
         position: absolute;
@@ -201,9 +203,51 @@ header .util .search .search_open{
     }
     header .gnb .gnb_wrap ul.depth1 {
         margin: var(--header-h) 0 0 0;
-
+        padding: 0 20px;
+        height: calc(100% - var(--header-h));
+        overflow-x: hidden;
+        overflow-y: auto;
+        border-top: 1px solid #ededed;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li {
+        border-bottom: 1px solid #ededed;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > a {
+        display: block;
+        padding: 17px 0;
+        font-size: 20px;
+        font-weight: var(--bold-weight);
+        line-height: var(--tit-line-height);
+        position: relative;
+    }
+    
+    header .gnb .gnb_wrap ul.depth1 > li > a::after {
+        content: "";
+        position: absolute;
+        top: 25px;
+        right: 0;
+        width: 14px;
+        height: 8px;
+        background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.99827 5.64975L11.8983 0.749748C12.0649 0.583081 12.2622 0.502526 12.4899 0.508081C12.7177 0.513637 12.9149 0.599748 13.0816 0.766415C13.2483 0.933081 13.3316 1.1303 13.3316 1.35808C13.3316 1.58586 13.2483 1.78308 13.0816 1.94975L7.94827 7.06641C7.81494 7.19975 7.66494 7.29975 7.49827 7.36641C7.3316 7.43308 7.16494 7.46641 6.99827 7.46641C6.8316 7.46641 6.66494 7.43308 6.49827 7.36641C6.3316 7.29975 6.1816 7.19975 6.04827 7.06641L0.914939 1.93308C0.748273 1.76641 0.667716 1.57197 0.673272 1.34975C0.678827 1.12753 0.764939 0.933081 0.931605 0.766414C1.09827 0.599747 1.2955 0.516414 1.52327 0.516414C1.75105 0.516414 1.94827 0.599747 2.11494 0.766414L6.99827 5.64975Z' fill='%231D1D1D'/%3E%3C/svg%3E%0A");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > .depth2 {
+        background-color: #FAFBFD;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > .depth2 > h3 {
+        display: none;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > .depth2 > ul.list {
+        padding: 20px ;
+    }
+    header .gnb .gnb_wrap ul.depth1 > li > .depth2 > ul.list > li > a {
+        display: block;
+        line-height: 1.7;
     }
     header .gnb .gnb_close {
+        display: none;
         position: absolute;
         right: 0;
         top: 0;
@@ -214,7 +258,25 @@ header .util .search .search_open{
         background-repeat: no-repeat;
     }
 
+    /**** 2차메뉴가 열였을때 ***/ 
+    header .gnb .gnb_wrap ul.depth1 > li.open > a {
+        color: var(--point-color);
+    }
+    header .gnb .gnb_wrap ul.depth1 > li.open > a::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.00173 2.35025L2.10173 7.25025C1.93506 7.41692 1.73784 7.49747 1.51006 7.49192C1.28228 7.48636 1.08506 7.40025 0.918396 7.23359C0.751729 7.06692 0.668396 6.8697 0.668396 6.64192C0.668396 6.41414 0.751729 6.21692 0.918396 6.05025L6.05173 0.933586C6.18506 0.800253 6.33506 0.700253 6.50173 0.633586C6.6684 0.566919 6.83506 0.533587 7.00173 0.533587C7.1684 0.533587 7.33506 0.566919 7.50173 0.633586C7.6684 0.700253 7.8184 0.800253 7.95173 0.933586L13.0851 6.06692C13.2517 6.23359 13.3323 6.42803 13.3267 6.65025C13.3212 6.87247 13.2351 7.06692 13.0684 7.23359C12.9017 7.40025 12.7045 7.48359 12.4767 7.48359C12.249 7.48359 12.0517 7.40025 11.8851 7.23359L7.00173 2.35025Z' fill='%233086C9'/%3E%3C/svg%3E%0A");
+    }
 
+
+    /*****메뉴가 열였을때 menu_open *****/
+
+    header.menu_open .gnb .gnb_wrap {
+        right: 0;
+        display: block;
+
+    }
+    header.menu_open .gnb .gnb_close {
+        display: block;
+    }
     
     
 
