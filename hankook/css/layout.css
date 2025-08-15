@@ -1,5 +1,6 @@
-header {
-    position: absolute;
+header,
+header.fixed {
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
@@ -11,6 +12,7 @@ header {
     align-items: center;
     background-color: #fff;
     box-shadow: 0 4px 4px 0 rgba(0,0,0,0.1);
+    transition: top 0.5s;
 }
 header .logo a {
     display: block;
@@ -48,6 +50,11 @@ header .util .search .search_open{
     background-size: contain;
 }
 
+/*************아래로 스크롤내릴때 header사라짐 .gnb_up ****************/
+header.fixed.gnb_up {
+    top: var(--header-h-m);
+}
+
 @media screen and (min-width:1025px) {
     
     header .gnb .gnb_open,
@@ -78,11 +85,10 @@ header .util .search .search_open{
         width: 100%; /* 내용물 크기만큼 자동 너비 */
         background-color: #fff;
         z-index: 999;
-        box-sizing: border-box;
-
         display: flex; /* h3와 ul을 가로로 배치 */
         align-items: flex-start;
         padding: 40px 0;
+        box-shadow: 0  4px 4px 0 rgba(0,0,0,0.1);
     }
     header .gnb .gnb_wrap ul.depth1 > li > .depth2 h3.title {
         font-size: 30px;
@@ -135,7 +141,8 @@ header .util .search .search_open{
 }/*@media*/
   
 @media screen and (max-width:1024px) { /*모바일*/
-    header {
+    header,
+    header.fixed {
     padding: 0 0 0 20px;
     }
     header .logo a {
@@ -157,15 +164,15 @@ header .util .search .search_open{
         background-repeat: no-repeat;
     }
     header .gnb .gnb_wrap {
-        display: none;
         position: fixed;
         background-color: #fff;
         right: -100%;
         top: 0;
-        width: 450px;
+        width: calc(100% - 58px);
+        max-width: 450px;
         height: 100%;
         color: var(--tit-color);
-
+        transition: 0.5s;
     }
     header .gnb .gnb_util {
         position: absolute;
@@ -272,15 +279,23 @@ header .util .search .search_open{
     header.menu_open .gnb .gnb_wrap {
         right: 0;
         display: block;
-
     }
     header.menu_open .gnb .gnb_close {
         display: block;
     }
     
-    
-
 }/*@media*/
+
+@media screen and (max-width:360px) {
+    header .gnb .gnb_util .search input[type="text"] {
+        display: none;
+    }
+    header .gnb .gnb_util .search .search_open {
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+}
 
 footer {
     margin: 1500px 0 0 0;

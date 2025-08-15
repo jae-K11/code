@@ -52,7 +52,7 @@ html, body {
     display: block;
     text-align: center ;
     padding: 10px 0;
-    background-color: aqua;
+    background-color: #7ADAE9;
     color: #fff;
     position: absolute;
     left: 0;
@@ -71,6 +71,7 @@ html, body {
     --base-color: #3d3d3d;
     --point-color:  #3086C9;
     --bold-weight: 700;
+    --tit-font-size: 32px;
     --tit-line-height: 1.2;
 }
 
@@ -78,5 +79,12 @@ html, body {
     :root {
     --header-h: 56px; /*header 높이*/
     --header-h-m: -56px; /* header 높이 마이너스 값 */
+    --tit-font-size: 28px;
+    }
+}
+
+@media screen and (max-width:768px) { /* 모바일 */
+    :root {
+    --tit-font-size: 22px
     }
 }
