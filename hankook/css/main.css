@@ -360,3 +360,94 @@
         top: 20px;
     }
 }
+/* main_search  끝 */
+
+.medical_center {
+    margin: 180px 0 0 0;
+    position: relative;
+    z-index: 10; /* 타이틀이 위 */
+}
+.medical_center .container {
+    position: relative;
+}
+.medical_center .title {
+    position: relative;
+    width: 404px;
+    height: 550px;
+    padding: 93px 0 0 53px;
+    background-color: #7ADAE9;
+    color: #fff;
+    display: flex;
+    flex-shrink: 0;
+}
+.medical_center .title h3 {
+    font-size: 42px;
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+}
+.medical_center .title .ctrl_wrap .swiper-scrollbar {
+    position: static;
+    width: 210px;
+    margin-top: 150px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.medical_center .title .ctrl_wrap .swiper-scrollbar .swiper-scrollbar-drag {
+   background-color: #fff;
+}
+.medical_center .title .ctrl_wrap button.btn_prev {
+    width: 61px;
+    height: 61px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_90_1227' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='40' height='40'%3E%3Crect x='0.194824' y='0.194336' width='39.6104' height='39.6104' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_90_1227)'%3E%3Cpath d='M15.3534 20.0001L27.7857 32.4324C28.1136 32.7603 28.2734 33.1464 28.2651 33.5906C28.2566 34.0351 28.0884 34.4213 27.7605 34.7492C27.4324 35.0771 27.0462 35.2411 26.6019 35.2411C26.1577 35.2411 25.7715 35.0771 25.4433 34.7492L12.7828 22.1139C12.4844 21.8155 12.2632 21.4811 12.1194 21.1109C11.9755 20.7406 11.9036 20.3704 11.9036 20.0001C11.9036 19.6299 11.9755 19.2596 12.1194 18.8894C12.2632 18.5191 12.4844 18.1848 12.7828 17.8863L25.4433 5.22546C25.7715 4.89757 26.1619 4.73789 26.6147 4.74642C27.0675 4.75495 27.4578 4.92315 27.7857 5.25104C28.1136 5.57892 28.2775 5.96513 28.2775 6.40964C28.2775 6.85388 28.1136 7.23995 27.7857 7.56783L15.3534 20.0001Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    margin: 20px 19px 0 0;
+}
+.medical_center .title .ctrl_wrap button.btn_next {
+    width: 61px;
+    height: 61px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_90_1223' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='40' height='40'%3E%3Crect x='39.6104' y='39.8047' width='39.6104' height='39.6104' transform='rotate(-180 39.6104 39.8047)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_90_1223)'%3E%3Cpath d='M24.4518 19.9999L12.0195 7.56756C11.6916 7.23968 11.5318 6.85362 11.54 6.40937C11.5486 5.96486 11.7168 5.57866 12.0447 5.25077C12.3728 4.92289 12.759 4.75894 13.2033 4.75894C13.6475 4.75894 14.0337 4.92289 14.3619 5.25078L27.0223 17.8861C27.3208 18.1845 27.542 18.5189 27.6858 18.8891C27.8297 19.2594 27.9016 19.6296 27.9016 19.9999C27.9016 20.3701 27.8297 20.7404 27.6858 21.1106C27.542 21.4809 27.3208 21.8152 27.0223 22.1137L14.3619 34.7745C14.0337 35.1024 13.6432 35.2621 13.1905 35.2536C12.7377 35.2451 12.3474 35.0768 12.0195 34.749C11.6916 34.4211 11.5277 34.0349 11.5277 33.5904C11.5277 33.1461 11.6916 32.7601 12.0195 32.4322L24.4518 19.9999Z' fill='white'/%3E%3Ccircle cx='17.3052' cy='20.5' r='30' transform='rotate(-180 17.3052 20.5)' stroke='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+.medical_center .list {
+    position: absolute;
+    top: 50%;
+    left: 646px;
+    transform: translateY(-50%);
+    width: calc(100% + 646px);
+    overflow: hidden;
+}
+.medical_center .list .swiper ul {
+    width: 1260px;
+}
+.medical_center .list .swiper ul li {
+    width: 297px;
+}
+.medical_center .list .swiper ul li a {
+    display: block;
+}
+.medical_center .list .swiper ul li a .photo {
+    height: 382px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+.medical_center .list .swiper ul li a .txt {
+    position: absolute;
+    left: 30px;
+    bottom: 34px;
+    color: #fff;
+}
+.medical_center .list .swiper ul li a .txt span {
+    display: block;
+}
+.medical_center .list .swiper ul li a .txt strong {
+    font-size: var(--tit-font-size);
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+}
