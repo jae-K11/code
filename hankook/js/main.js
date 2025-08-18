@@ -38,7 +38,7 @@ $(document).ready(function(){
 		},
 	},
 	//centeredSlides: true, /* 팝업을 화면에 가운데 정렬(가운데 1번이 옴) */
-	loop: false,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+	loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
 	// autoplay: {  /* 팝업 자동 실행 */
 	// 	delay: 5000,
 	// 	disableOnInteraction: true,
@@ -47,24 +47,69 @@ $(document).ready(function(){
 		nextEl: '.medical_center .ctrl_wrap button.btn_next',
 		prevEl: '.medical_center .ctrl_wrap button.btn_prev',
 	},
+	// pagination: {  /* 몇개의 팝업이 있는지 보여주는 동그라미 */
+	// 	el: '.swiper-pagination', /* 해당 요소의 class명 */
+	// 	clickable: true,  /* 클릭하면 해당 팝업으로 이동할 것인지 값 */
+	// 	type: 'fraction',  /* type fraction을 주면 paging이 숫자로 표시됨 */
+	// },
+	
+});
+
+/********medical_center의 swiper 연결: 끝 ***********/
+
+
+/*************notice 의 tap: 시작 *************/
+	let notice_content // 클릭한메뉴 이름(id)
+	$('.notice .list .tab_list ul li').on('click', function(){
+		//console.log('눌려라')
+		if($(this).hasClass('active') == false){
+			console.log('선택안된메뉴')
+			notice_content = $(this).attr('data-content')
+			console.log(notice_content)
+
+			$('.notice .list .tab_content .tab_item').removeClass('active')
+			$('.notice .list .tab_content').find('#'+notice_content).addClass('active')
+		}
+	})
+
+
+
+
+
+
+
+
+/*************notice 의 tap: 끝 *************/
+
+
+/********notice의 card swiper연결: 시작 ***********/
+const card_swiper = new Swiper('.card .swiper', { /* 팝업을 감싼는 요소의 class명 */
+
+	// autoplay: {  /* 팝업 자동 실행 */
+	// 	delay: 2500,
+	// 	disableOnInteraction: true,
+	// },
+
+	//effect: "fade", /* fade 효과 */
+
+	loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+
 	pagination: {  /* 몇개의 팝업이 있는지 보여주는 동그라미 */
 		el: '.swiper-pagination', /* 해당 요소의 class명 */
 		clickable: true,  /* 클릭하면 해당 팝업으로 이동할 것인지 값 */
 		type: 'fraction',  /* type fraction을 주면 paging이 숫자로 표시됨 */
+		renderBullet: function (index, className) {   /* paging에 특정 코드 넣기 */
+		    return '<span class="' + className + '">' + (index + 1) + "</span>";
+		},
 	},
-	scrollbar: {
-        el: '.medical_center .ctrl_wrap .swiper-scrollbar',
-        hide: false,
-		draggable: true,
-		dragSize: 50,
-    },
+	
+
+	navigation: {  /* 이전, 다음 버튼 */
+		nextEl: '.swiper-button-next',  /* 다음 버튼의 클래스명 */
+		prevEl: '.swiper-button-prev',  
+	},
 
 });
-	medical_center_swiper.slideTo(0);
-	medical_center_swiper.slideToLoop(0, 0, false); 
-
-
-
-/********medical_center의 swiper 연결: 끝 ***********/
+/********notice의 card swiper 연결: 끝 ***********/
 
 })

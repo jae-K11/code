@@ -377,22 +377,14 @@
     padding: 93px 0 0 53px;
     background-color: #7ADAE9;
     color: #fff;
-    display: flex;
-    flex-shrink: 0;
 }
 .medical_center .title h3 {
     font-size: 42px;
     font-weight: var(--bold-weight);
     line-height: var(--tit-line-height);
 }
-.medical_center .title .ctrl_wrap .swiper-scrollbar {
-    position: static;
-    width: 210px;
-    margin-top: 150px;
-    background-color: rgba(255, 255, 255, 0.5);
-}
-.medical_center .title .ctrl_wrap .swiper-scrollbar .swiper-scrollbar-drag {
-   background-color: #fff;
+.medical_center .title .ctrl_wrap {
+    margin-top: 190px;
 }
 .medical_center .title .ctrl_wrap button.btn_prev {
     width: 61px;
@@ -438,6 +430,11 @@
     border-radius: 10px;
     position: relative;
 }
+.medical_center .list .swiper ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .medical_center .list .swiper ul li a .txt {
     position: absolute;
     left: 30px;
@@ -452,3 +449,115 @@
     font-weight: var(--bold-weight);
     line-height: var(--tit-line-height);
 }
+
+@media screen and (max-width: 1300px) {
+
+    .medical_center .title {
+        width: 500px;
+        height: 600px;
+        padding: 50px 0 0 23px;
+    }
+    .medical_center .title .title_hd {
+        display: flex;
+        justify-content: space-between;
+    }
+    .medical_center .title .ctrl_wrap {
+        margin-top: 0;
+        padding-right: 20px;
+    }
+    .medical_center .list {
+        top: 60%;
+        left: auto;
+        width: auto;
+        padding: 0 40px;
+    }
+
+}
+@media screen and (max-width: 1024px) {
+    .medical_center .title h3 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .medical_center {
+        margin: 60px 0 0 0;
+    }
+    .medical_center .title  {
+        width: auto;
+        height: 461px;
+        padding: 50px 0 0 40px;
+    }
+    .medical_center .title h3 {
+        font-size: 28px;
+    }
+    .medical_center .list {
+        padding: 0px 60px;
+        top: 61%;
+    }
+    .medical_center .title .ctrl_wrap {
+        padding-right: 40px; 
+    }
+    .medical_center .title .ctrl_wrap button.btn_prev {
+        width: 45px;
+        height: 45px;
+        background-image: url("data:image/svg+xml,%3Csvg width='33' height='33' viewBox='0 0 33 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_261_5' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='33' height='33'%3E%3Crect width='33' height='33' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_261_5)'%3E%3Cpath d='M12.6288 16.5013L22.9863 26.8589C23.2595 27.132 23.3926 27.4537 23.3858 27.8238C23.3787 28.1941 23.2385 28.5159 22.9654 28.789C22.692 29.0622 22.3702 29.1988 22.0001 29.1988C21.63 29.1988 21.3083 29.0622 21.0349 28.789L10.4872 18.2624C10.2386 18.0137 10.0543 17.7352 9.93448 17.4267C9.81463 17.1182 9.7547 16.8098 9.7547 16.5013C9.7547 16.1929 9.81463 15.8844 9.93448 15.576C10.0543 15.2675 10.2386 14.9889 10.4872 14.7403L21.0349 4.19233C21.3083 3.91917 21.6336 3.78613 22.0108 3.79324C22.388 3.80034 22.7132 3.94048 22.9863 4.21364C23.2595 4.48681 23.3961 4.80856 23.3961 5.1789C23.3961 5.549 23.2595 5.87063 22.9863 6.1438L12.6288 16.5013Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+        margin: 20px 10px 0 0 ;
+    }
+    .medical_center .title .ctrl_wrap button.btn_next {
+        width: 45px;
+        height: 45px;
+        background-image: url("data:image/svg+xml,%3Csvg width='33' height='33' viewBox='0 0 33 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_261_9' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='33' height='33'%3E%3Crect x='33' y='33' width='33' height='33' transform='rotate(-180 33 33)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_261_9)'%3E%3Cpath d='M20.3712 16.4987L10.0137 6.14113C9.74051 5.86797 9.60736 5.54633 9.61424 5.17623C9.62134 4.80589 9.76148 4.48415 10.0346 4.21098C10.308 3.93781 10.6298 3.80123 10.9999 3.80123C11.37 3.80123 11.6917 3.93781 11.9651 4.21098L22.5128 14.7376C22.7614 14.9863 22.9457 15.2648 23.0655 15.5733C23.1854 15.8818 23.2453 16.1902 23.2453 16.4987C23.2453 16.8071 23.1854 17.1156 23.0655 17.424C22.9457 17.7325 22.7614 18.0111 22.5128 18.2597L11.9651 28.8077C11.6917 29.0808 11.3664 29.2139 10.9892 29.2068C10.612 29.1997 10.2868 29.0595 10.0137 28.7864C9.74051 28.5132 9.60392 28.1914 9.60392 27.8211C9.60392 27.451 9.74051 27.1294 10.0137 26.8562L20.3712 16.4987Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+    } 
+    .medical_center .list .swiper ul li a .photo {
+        height: 270px;
+    }
+
+    @media screen and (max-width: 410px) {
+        .medical_center .title .ctrl_wrap {
+            display: none;
+        }
+    }
+}
+/*medical_center 끝*/
+
+.notice {
+    margin: 190px 0 0 0;
+}
+.notice .notice_inner {
+    display: flex;
+    justify-content: space-between;
+}
+.notice .list .tab_list ul {
+    display: flex;
+    gap: 0 60px;
+}
+.notice .list .tab_list ul li button {
+    font-size: var(--tit-font-size);
+    font-weight: var(--bold-weight);
+    line-height: var(--tit-line-height);
+}
+
+
+
+
+
+.notice_inner .card .swiper {
+    width: 318px;
+}
+.notice_inner .card ul li {
+    width: 318px;
+}
+.notice_inner .card ul li a {
+    display: block;
+}
+.notice_inner .card ul li a .photo {
+    height: 422px;
+    overflow: hidden;
+}
+.notice_inner .card ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
