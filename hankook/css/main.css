@@ -417,16 +417,17 @@
 .medical_center .list {
     position: absolute;
     top: 50%;
-    left: 646px;
+    left: calc(50% - 315px);
+    width: calc(50% + 315px - 24px);
     transform: translateY(-50%);
-    width: calc(100% + 646px);
     overflow: hidden;
 }
 .medical_center .list .swiper ul {
     width: 1260px;
 }
 .medical_center .list .swiper ul li {
-    width: 297px;
+    width: auto; /* ← 고정 너비 빼기 */
+    flex-shrink: 0; /* 자동계산 시 줄어들지 않게 */
 }
 .medical_center .list .swiper ul li a {
     display: block;
