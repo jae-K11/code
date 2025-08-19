@@ -523,14 +523,21 @@
 
 .notice {
     margin: 190px 0 0 0;
+    width: 100%;
 }
 .notice .notice_inner {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    gap: 40px; 
 }
 .notice .list {
-    width: 725px;
-    height: 396px;
+    width: 100%;
+    height: auto; /* 높이 고정돼 있으면 반응형에 방해될 수 있어요 */
+    flex: 1 1 300px;  /* 줄어들 수 있게 */
+    max-width: 725px; /* max-width이 제한하고 있다면 제거 */
+    min-width: 0;     /* 이거 중요! */
 }
 .notice .list .tab_list {
     position: relative; /*more 정렬의 기준 */
@@ -576,17 +583,45 @@
 .notice .list .tab_content {
     margin-top: 50px;
 }
+.notice .list .tab_content .tab_item {
+    display: none;
+}
+.notice .list .tab_content .tab_item.active {
+    display: block;
+}
+.notice .list .tab_content ul li {
+    border-bottom: 1px solid #ccc;
+}
+.notice .list .tab_content ul li a {
+    display: flex;
+    padding: 24px 0;
+    justify-content: space-between;
+    position: relative;
+}
+.notice .list .tab_content ul li a strong {
+    display: inline-block;
+    font-size: 22px;
+    line-height: var(--tit-line-height);
+    width: calc(100% - 165px);
 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.notice .list .tab_content ul li a:hover strong span.underline {
+    border-bottom: 1px solid #3d3d3d;
+    
+}
+.notice .list .tab_content ul li a span.date {
+    font-size: 18px;
+    color: #777;
+}
 
-
-
-
-
-
-
-
-
-
+.notice_inner .card {
+    flex: 0 1 318px;
+    width: 100%;
+    max-width: 318px;
+}
 .notice_inner .card .swiper {
     width: 318px;
 }
@@ -595,10 +630,10 @@
 }
 .notice_inner .card ul li a {
     display: block;
+    border: 1px solid #ccc;
 }
 .notice_inner .card ul li a .photo {
     height: 422px;
-    overflow: hidden;
 }
 .notice_inner .card ul li a .photo img {
     width: 100%;
@@ -606,3 +641,8 @@
     object-fit: cover;
 }
 
+@media screen and (max-width: 1024px) {
+    .notice .list .tab_list ul {
+        gap: 0 30px;
+    }
+}
