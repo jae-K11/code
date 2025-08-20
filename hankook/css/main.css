@@ -559,11 +559,11 @@
 .notice .list .tab_list ul li.active button::before {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     width: 100%;
     height: 2px;
-    background:#345A96;
+    background: var(--point-color);
 }
 .notice .list .tab_list .more {
     position: absolute;
