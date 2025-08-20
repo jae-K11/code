@@ -91,9 +91,7 @@ const card_swiper = new Swiper('.card .swiper', { /* 팝업을 감싼는 요소�
 		delay: 2200,
 		disableOnInteraction: true,
 	},
-
-	//effect: "fade", /* fade 효과 */
-
+	slidesPerView: 1,   // 한 화면에 하나씩
 	loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
 
 	// pagination: {  /* 몇개의 팝업이 있는지 보여주는 동그라미 */
